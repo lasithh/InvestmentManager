@@ -25,7 +25,7 @@ def persistCompaniesList(symbolsToUpdate) :
         if not created :
             if company[3]  and companyToSave.issuedQuentity != int(company[3]) :
                 quantityHistory = CompanyIssuedQuantitiesHistory()
-                quantityHistory.issuedQuentity = companyToSave.issuedQuentity
+                quantityHistory.quantityDifference = companyToSave.issuedQuentity
                 quantityHistory.marketCapitalisation = companyToSave.marketCapitalisation                
                 quantityHistory.marketCapitalisationPercentage = companyToSave.marketCapitalisationPercentage
                 quantityHistory.company = companyToSave
@@ -35,7 +35,7 @@ def persistCompaniesList(symbolsToUpdate) :
                 companyToSave.issuedQuentity = int(company[3] or 0)
                 companyToSave.marketCapitalisation = float(company[4] or 0)
                 companyToSave.marketCapitalisationPercentage = float(company[5] or 0)
-                ListedCompany.objects.update(companyToSave)
+                companyToSave.save()
                 
 
 def persistDailyTradingSummary(tradingSummaryInformation):
