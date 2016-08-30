@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+{% load staticfiles %}	
+<script type="text/javascript" src="{% static 'js/jquery-3.1.0.js' %}"></script>
+
+	<title>Investments Helper</title>
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
+	
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h3>Help with your investments</h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+			  <ul class="nav nav-pills nav-stacked">
+				<li><a href='/invest'>Home</a></li>
+				<li><a href='/addInvestment'>Add Investment</a></li>
+				<li><a id="showegistedCompanies">Registered Companies</a></li>
+				<li><a id="reloadCompaniesList">Reload Registered Companies</a></li>
+				<li><a id='showDailyTradingSummary'>Daily Trading Summaries</a></li>
+				<li><a id='storeDailyTradingSummary'>Update Daily Trading Summary</a></li>
+				<li><a id='showDetailedTrades'>Detailed Trades</a></li>
+				<li><a id='storeDetailedTrades'>Update Detailed Trades</a></li>
+				<li><a href='/contact/'>Contact</a></li>
+			  </ul>
+			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+		  
+			<div class='container-fluid' id='pageBody'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+		  </div>
+		</div> 
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>	
+	
+</body>
+
+</html>

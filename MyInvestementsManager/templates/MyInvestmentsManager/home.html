@@ -1,0 +1,49 @@
+{% extends "MyInvestmentsManager/header.html" %}
+
+{% block content %}
+
+<script>
+
+
+	
+$(document).ready( function () {
+
+    var loadBody = function($url) {
+    	$.get( $url, function( data ) {
+    		  $( "#pageBody" ).html( data);
+    		});
+    };
+ 
+    
+    $("#showegistedCompanies").click(function(){
+        loadBody('companiesList');
+    }); 
+    
+    $("#reloadCompaniesList").click(function(){
+        loadBody('reloadCompaniesList');
+    }); 
+    
+    $("#showDailyTradingSummary").click(function(){
+        loadBody('dailyTradingSummaryList');
+    }); 
+    
+    $("#storeDailyTradingSummary").click(function(){
+        loadBody('storeDailyTradingSummary');
+    }); 
+    
+    $("#showDetailedTrades").click(function(){
+        loadBody('detailedTradesList');
+    }); 
+    
+    $("#storeDetailedTrades").click(function(){
+        loadBody('storeDetailedTrades');
+    }); 
+    
+  //load during page load
+    loadBody('investmetsList');
+
+ });
+	
+</script>
+
+{% endblock %}

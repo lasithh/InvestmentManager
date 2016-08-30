@@ -1,0 +1,31 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name</td>
+		<td>Symbol</td>
+		<td>Share Volume</td>
+		<td>Traded Volume</td>
+		<td>Price Change</td>
+		<td>Price Change Percentage</td>
+		<td>Date</td>
+	</tr>
+	{% for data in object_list %}
+	<tr>
+		<td><a href="viewDetailedTrade/{{ data.id }}/" >{{ data.company.companyName }}</a></td>
+		<td>{{ data.company.symbol }}</td>
+		<td> {{data.shareVolume }}</td>
+		<td> {{data.tradeVolume }}</td>
+		<td> {{data.priceChangePercentage }}</td>
+		<td> {{data.date }}</td>
+		<td><a href="viewDetailedTrade/{{ data.id }}/" ><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></a></td>
+	
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}
+
+
+

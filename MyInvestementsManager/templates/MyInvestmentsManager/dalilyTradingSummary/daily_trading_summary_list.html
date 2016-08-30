@@ -1,0 +1,41 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name</td>
+		<td>Symbol</td>
+		<td>Share Volume</td>
+		<td>Traded Volume</td>
+		<td>Previous Close</td>
+		<td>Open</td>
+		<td>High</td>
+		<td>Low</td>
+		<td>Last Traded Price</td>
+		<td>Price Change</td>
+		<td>Price Change Percentage</td>
+		<td>Turnover</td>
+		<td>Date</td>
+	</tr>
+	{% for data in object_list %}
+	<tr>
+		<td><a href="viewTradingSummary/{{ data.id }}/" >{{ data.company.companyName }}</a></td>
+		<td>{{ data.company.symbol }}</td>
+		<td> {{data.shareVolume }}</td>
+		<td> {{data.tradeVolume }}</td>
+		<td> {{data.previouseClose }}</td>
+		<td> {{data.open }}</td>
+		<td> {{data.high }}</td>
+		<td> {{data.low }}</td>
+		<td> {{data.lastTradedPrice }}</td>
+		<td> {{data.priceChange }}</td>
+		<td> {{data.priceChangePercentage }}</td>
+		<td> {{data.turnover }}</td>
+		<td> {{data.date }}</td>
+		<td><a href="viewTradingSummary/{{ data.id }}/" ><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></a></td>
+	
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}

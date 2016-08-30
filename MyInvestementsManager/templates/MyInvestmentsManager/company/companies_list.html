@@ -1,0 +1,29 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name</td>
+		<td>Symbol</td>
+		<td>Price</td>
+		<td>Issued Quantity</td>
+		<td>Market Capitalization</td>
+		<td>Market Capitalization Pct.</td>
+		<td/>
+		<td/>
+	</tr>
+	{% for data in object_list %}
+	<tr>
+		<td><a href="viewCompany/{{ data.id }}/" >{{ data.companyName }}</a></td>
+		<td>{{ data.symbol }}</td>
+		<td> {{data.price }}</td>
+		<td> {{data.issuedQuentity }}</td>
+		<td> {{data.marketCapitalisation }}</td>
+		<td> {{data.marketCapitalisationPercentage }}</td>
+		<td><a href="viewCompany/{{ data.id }}/" ><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></a></td>
+	
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}

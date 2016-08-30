@@ -1,0 +1,21 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name: </td>
+		<td>{{ object.name }}</td>
+		</tr>
+		
+		<tr>
+		<td>Amount: </td>
+		<td>{{ object.amount }}</td>
+		</tr>
+		
+		<tr>
+		<td>Date: </td>
+		<td>{{ object.date}}</td>
+		</tr>
+</table>
+
+{% endblock %}

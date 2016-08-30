@@ -1,0 +1,48 @@
+{% block content %}
+<p>Investments Summary</p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name:</td>
+		<td>{{ object.company.companyName }}</td>
+	</tr>
+
+	<tr>
+		<td>Symbol:</td>
+		<td>{{ object.company.symbol }}</td>
+	</tr>
+
+	<tr>
+		<tr>
+		<td>Share Volume:</td>
+		<td>{{object.shareVolume }}</td>
+	</tr>
+	<tr>
+		<td>Traded Volume:</td>
+		<td>{{object.tradeVolume }}</td>
+	</tr>
+	<tr>
+		<td>Price Change:</td>
+		<td>{{object.priceChange }}</td>
+	</tr>
+	<tr>
+		<td>Price Change Percentage</td>
+		<td>{{object.priceChangePercentage }}</td>
+	</tr>
+	<tr>
+		<td>Date</td>
+		<td>{{object.date }}</td>
+	</tr>
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name: </td>
+		<td>{{ object.companyName }}</td>
+		</tr>
+		
+		<tr>
+		<td>Symbol: </td>
+		<td>{{ object.symbol }}</td>
+		</tr>
+		
+		<tr>
+		<td>Price: </td>
+		<td>{{ object.price}}</td>
+		</tr>
+		
+		<tr>
+		<td>Issued Quantity: </td>
+		<td>{{ object.issuedQuentity}}</td>
+		</tr>
+		
+		<tr>
+		<td>Market Capitalization: </td>
+		<td>{{ object.marketCapitalisation}}</td>
+		</tr>
+		
+		<tr>
+		<td>Market Capitalization Pct. : </td>
+		<td>{{ object.marketCapitalisationPercentage}}</td>
+		</tr>
+</table>
+
+{% endblock %}
