@@ -1,7 +1,10 @@
 from MyInvestementsManager.models import ListedCompany,\
-    CompanyIssuedQuantitiesHistory, DailyTradeSummary, DetailedTrade
+    CompanyIssuedQuantitiesHistory, DailyTradeSummary, DetailedTrade,\
+    SectorIndex, SectorIndexNames
+    
 from pymongo.database import Database
 import datetime
+from MyInvestementsManager.parser.HTMLParser import MarketIndicesHTMLParser
 
 def persistCompaniesList(symbolsToUpdate) :
     """
@@ -96,7 +99,7 @@ def persistDetailedTrades(detailedTrades):
         if referencedCompany :
             summarySaved, created = DetailedTrade.objects.update_or_create(company = referencedCompany, 
                                                                                date = datetime.date.today(),
-                                                                               defaults = {'date' : datetime.datetime.strptime('2016-08-26', "%Y-%m-%d").date(),                                                                                           
+                                                                               defaults = {                                                                                          
                                                                                            'tradeVolume' : int(trade_part2[7] or 0),
                                                                                            'shareVolume' : int(trade_part2[9] or 0),
                                                                                            'priceChange' : float(trade_part1[13] or 0),
@@ -104,9 +107,32 @@ def persistDetailedTrades(detailedTrades):
                                                                                           
                                                                                            },
                                                                                )
-        
-        
-        
-        
-        
-        
+def persistSectorIndices(sectorIndices):
+    """
+    Stores the Sctors Indices information in the Database. if the data already exists for today, data is updated. The input is a html document. It shall be parsed to extract the correct data.
+    """
+    
+    sectorDataString = sectorIndices.read().decode('utf-8')
+    
+    documentParser = MarketIndicesHTMLParser()
+    
+    documentParser.extractedData.clear()
+    documentParser.extractedDataOfCurrentRow.clear()
+    
+    documentParser.feed(sectorDataString)
+    
+    
+    for sectorIndex in documentParser.extractedData:
+        sectorName, created = SectorIndexNames.objects.get_or_create(name = sectorIndex[0])
+                                                                         
+                                                                        
+        if sectorName:
+            sectorIndexSaved, created = SectorIndex.objects.update_or_create(sector = sectorName, 
+                                                                             date = datetime.date.today(),
+                                                                                   defaults = {                                                                                                                                                                                     
+                                                                                               'price' : float(sectorIndex[1].replace(',', '')),
+                                                                                               'value' : float(sectorIndex[3].replace(',', '')),
+                                                                                               'volume' : int(sectorIndex[4].replace(',', '')),
+                                                                                               'trades' : int(sectorIndex[5].replace(',', '')),                                                                                          
+                                                                                               }, 
+                                                                             )

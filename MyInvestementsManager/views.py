@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from MyInvestementsManager.models import Investment, ListedCompany,\
-    DailyTradeSummary, DetailedTrade
+    DailyTradeSummary, DetailedTrade, SectorIndex
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.core.urlresolvers import reverse
@@ -9,7 +9,7 @@ from django.http.response import HttpResponse
 
 import urllib
 from MyInvestementsManager.DataAccessModule.storeData import persistCompaniesList,\
-    persistDailyTradingSummary, persistDetailedTrades
+    persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices
 import datetime
 # Create your views here.
 
@@ -89,7 +89,7 @@ def storeDailyTradingSummary(request):
     return HttpResponse("Success")
 
 
-#Detailed trades related vies
+#Detailed trades related views
 class DetailedTradeListView(ListView):
     model = DetailedTrade
     template_name='MyInvestmentsManager/detailedTrades/detailed_trades_list.html'
@@ -104,3 +104,21 @@ def storeDetailedTrades(request):
     persistDetailedTrades(response)
     
     return HttpResponse("Success")
+
+
+#Stock Indices Related URLs
+class SectorIndexListView(ListView):
+    model = SectorIndex
+    template_name='MyInvestmentsManager/sectorIndices/sector_indices_list.html'
+    
+class SectorIndexView(DetailView):
+    model = SectorIndex
+    template_name = "MyInvestmentsManager/sectorIndices/view_sector_index.html"
+
+def storeSectorIndices(request):
+    response = urllib.request.urlopen('https://www.cse.lk/indices.do')
+    
+    persistSectorIndices(response)
+    
+    return HttpResponse("Success")
+

@@ -27,21 +27,17 @@ class CompanyIssuedQuantitiesHistory(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     company = models.ForeignKey(ListedCompany)
     
-class MarketIndex(models.Model):
-    sector = models.CharField(max_length = 250)
+class SectorIndexNames(models.Model):
+    name = models.CharField(max_length = 250)
+    date = models.DateTimeField(auto_now_add=True)   
+    
+class SectorIndex(models.Model):
+    sector = models.ForeignKey(SectorIndexNames)
     price = models.FloatField();
     value = models.FloatField();
     volume = models.IntegerField();
     trades = models.IntegerField();
-    
-class MarketIndexHistory(models.Model):
-    sector = models.CharField(max_length = 250)
-    price = models.FloatField();
-    value = models.FloatField();
-    volume = models.IntegerField();
-    trades = models.IntegerField();
-    date = models.DateTimeField();
-    
+    date = models.DateTimeField(auto_now_add=True)    
 
 class DailyTradeSummary(models.Model):
     company = models.ForeignKey(ListedCompany)
@@ -64,4 +60,4 @@ class DetailedTrade(models.Model):
     tradeVolume = models.BigIntegerField()
     priceChange = models.FloatField()
     priceChangePercentage = models.FloatField()
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)

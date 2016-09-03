@@ -4,7 +4,7 @@ from MyInvestementsManager.views import InvestmentsListView,\
     InvestmentCreateView, InvestmentDetailView, InvestmentDeleteView,\
     InvestmentUpdateView,  ListedCompanyView, ListedCompanyListView,\
     DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView,\
-    DetailedTradeView
+    DetailedTradeView, SectorIndexListView, SectorIndexView
 
 
 urlpatterns = [ 
@@ -31,6 +31,10 @@ urlpatterns = [
     url(r'^viewDetailedTrade/(?P<pk>\d+)/$', DetailedTradeView.as_view(), name='view_detailed_trade'),
     url(r'^storeDetailedTrades$', views.storeDetailedTrades, name='storeDetailedTrades'),
     
-    
+    #Sector Indices related urls    
+    url(r'^sectorIndicesList$', SectorIndexListView.as_view()),     
+    url(r'^viewSectorIndex/(?P<pk>\d+)/$', SectorIndexView.as_view(), name='view_sector_index'),
+    url(r'^storeSectorIndices$', views.storeSectorIndices, name='storeSectorIndices'),
+
     
 ]    

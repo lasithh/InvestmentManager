@@ -1,0 +1,33 @@
+{% block content %}
+<p>Investments Summary</p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Sector:</td>
+		<td>{{ object.sector }}</td>
+	</tr>
+	
+	<tr>
+		<tr>
+		<td>Price:</td>
+		<td>{{object.price }}</td>
+	</tr>
+	<tr>
+		<td>Value:</td>
+		<td>{{object.value }}</td>
+	</tr>
+	<tr>
+		<td>Volume:</td>
+		<td>{{object.volume }}</td>
+	</tr>
+	<tr>
+		<td>Trades</td>
+		<td>{{object.trades }}</td>
+	</tr>
+	<tr>
+		<td>Date</td>
+		<td>{{object.date }}</td>
+	</tr>
+</table>
+
+{% endblock %}

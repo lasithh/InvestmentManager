@@ -1,0 +1,27 @@
+{% block content %}
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Sector</td>
+		<td>Price</td>
+		<td>Value</td>
+		<td>Volume</td>
+		<td>Trades</td>
+		<td>Date</td>
+	</tr>
+	{% for data in object_list %}
+	<tr>
+		<td><a href="viewSectorIndex/{{ data.id }}/" >{{ data.sector.name }}</a></td>
+		<td>{{ data.price }}</td>
+		<td> {{data.value }}</td>
+		<td> {{data.volume }}</td>
+		<td> {{data.trades }}</td>
+		<td> {{data.date }}</td>
+		<td><a href="viewDetailedTrade/{{ data.id }}/" ><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></a></td>
+	
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}
