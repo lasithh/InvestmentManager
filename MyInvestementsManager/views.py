@@ -2,15 +2,18 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from MyInvestementsManager.models import Investment, ListedCompany,\
     DailyTradeSummary, DetailedTrade, SectorIndex
+    
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.core.urlresolvers import reverse
 from django.http.response import HttpResponse
 
 import urllib
 from MyInvestementsManager.DataAccessModule.storeData import persistCompaniesList,\
     persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices
-import datetime
+from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
+from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
+
 # Create your views here.
 
 
@@ -24,15 +27,53 @@ class InvestmentsListView(ListView):
     model = Investment
     template_name='MyInvestmentsManager/investments_list.html'
     
+    def get_context_data(self, **kwargs):
+        context = super(InvestmentsListView, self).get_context_data(**kwargs)
+        
+        totalAmount = 0.0
+        totalCurrentValue = 0.0
+        totalGrowth = 0.0
+        totalEquityValue = 0.0
+        totalBondValue = 0.0
+        
+        
+        for data in context['object_list']:
+            #Perform the currency Conversion
+            data = valueInDefaultCurrency(data)
+            
+            data.growth = data.currentValue - data.amount
+            
+            
+            
+            if data.amount and float(data.amount) > 0:
+                data.growthPercentage = (data.growth) * 100 / data.amount
+            else :
+                data.growthPercentage = 0
+                
+            totalAmount += data.amount
+            totalCurrentValue += data.currentValue
+            totalGrowth += data.growth
+            
+            if data.investmentType.name == 'Bond' :
+                totalBondValue += data.currentValue
+            elif data.investmentType.name == 'Equity':
+                totalEquityValue += data.currentValue
+        
+        totalGrowhPercentage = (totalGrowth) * 100 / totalAmount
+        
+        context['totalAmount'] = totalAmount
+        context['totalCurrentValue'] = totalCurrentValue 
+        context['totalGrowth'] = totalGrowth
+        context['totalGrowthPercentage'] = totalGrowhPercentage
+        context['currency'] = DEFAULT_CURRENCY
+        
+        context['totalBondValue'] = totalBondValue
+        context['totalEquityValue'] = totalEquityValue
+        
+        return context
+    
 class InvestementDetailView(DetailView):
     model = Investment    
-    
-class InvestmentCreateView(CreateView):
-    model = Investment
-    fields = ['name', 'amount', 'date']
-    template_name = 'MyInvestmentsManager/add_investment.html'
-    def get_success_url(self):
-        return reverse('add_investment')
 
 class InvestmentDetailView(DetailView):
     model = Investment
@@ -47,11 +88,16 @@ class InvestmentDeleteView(DeleteView):
 class InvestmentUpdateView(UpdateView):
     model = Investment
     template_name="MyInvestmentsManager/update_investment.html"
-    fields = ['name', 'amount', 'date']
+    fields = ['name', 'amount', 'investmentType', 'symbol', 'quantity', 'currentValue']
     def get_success_url(self):
         return reverse('index')
     
-
+class InvestmentCreateView(CreateView):
+    model = Investment
+    template_name="MyInvestmentsManager/add_investment.html"
+    fields = ['name', 'amount', 'investmentType', 'symbol', 'quantity', 'currentValue']
+    def get_success_url(self):
+        return reverse('index')
 
 #Symbols related views    
 class ListedCompanyListView(ListView):
@@ -69,10 +115,7 @@ def updateSymbolsList(request):
     
     return HttpResponse("Success")
 
-
-
 #Daily Trading summary related views
-
 class DailyTradingSummaryListView(ListView):
     model = DailyTradeSummary
     template_name='MyInvestmentsManager/dalilyTradingSummary/daily_trading_summary_list.html'

@@ -1,14 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class Investment(models.Model):
-    name = models.CharField(max_length = 100)
-    amount = models.IntegerField()
-    date = models.DateTimeField()
-    
-    def __str__(self):
-        return self.name
-    
 class ListedCompany(models.Model):
     companyName = models.CharField(max_length = 250)
     symbol = models.CharField(max_length = 20)
@@ -19,7 +11,33 @@ class ListedCompany(models.Model):
     
     def __str__(self):
         return self.companyName
+
+class InvestmentType(models.Model):
+    name = models.CharField(max_length = 100)
+    date = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self):
+        return self.name
+
+class Currency(models.Model):
+    name = models.CharField(max_length = 100)
+    value = models.FloatField()
+    date = models.DateField(auto_now=True)
+    
+    def __str__(self):
+        return self.name
+
+
+class Investment(models.Model):
+    name = models.CharField(max_length = 100)
+    amount = models.FloatField()
+    currency = models.ForeignKey(Currency, default=1)
+    date = models.DateTimeField(auto_now_add=True)
+    investmentType = models.ForeignKey(InvestmentType)
+    symbol = models.ForeignKey(ListedCompany)
+    quantity = models.FloatField()
+    currentValue = models.FloatField()
+       
 class CompanyIssuedQuantitiesHistory(models.Model):
     quantityDifference = models.BigIntegerField()
     marketCapitalisation = models.FloatField()

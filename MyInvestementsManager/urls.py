@@ -1,17 +1,18 @@
 from django.conf.urls import url
 from . import views
 from MyInvestementsManager.views import InvestmentsListView,\
-    InvestmentCreateView, InvestmentDetailView, InvestmentDeleteView,\
+    InvestmentDetailView, InvestmentDeleteView,\
     InvestmentUpdateView,  ListedCompanyView, ListedCompanyListView,\
     DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView,\
-    DetailedTradeView, SectorIndexListView, SectorIndexView
+    DetailedTradeView, SectorIndexListView, SectorIndexView,\
+    InvestmentCreateView
 
 
 urlpatterns = [ 
     url(r'^invest$', views.index, name='index'),
                #investmets related urls   
     url(r'^investmetsList$', InvestmentsListView.as_view()),
-    url(r'^addInvestment$', InvestmentCreateView.as_view(), name='add_investment'),     
+    url(r'^addInvestment$', InvestmentCreateView.as_view(), name='add_investment'),
     url(r'^viewInvestment/(?P<pk>\d+)/$', InvestmentDetailView.as_view(), name='view_investment'),
     url(r'^deleteInvestment/(?P<pk>\d+)/$', InvestmentDeleteView.as_view(), name='delete_investment'),
     url(r'^updateInvestment/(?P<pk>\d+)/$', InvestmentUpdateView.as_view(), name='update_investment'),

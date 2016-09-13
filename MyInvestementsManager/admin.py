@@ -1,8 +1,10 @@
 from django.contrib import admin
 from MyInvestementsManager.models import Investment, ListedCompany,\
-    DailyTradeSummary, CompanyIssuedQuantitiesHistory, DetailedTrade
+    DailyTradeSummary, CompanyIssuedQuantitiesHistory, DetailedTrade,\
+    InvestmentType, Currency
 
-
+admin.site.register(Currency)
+admin.site.register(InvestmentType)
 admin.site.register(Investment)
 admin.site.register(ListedCompany)
 admin.site.register(DailyTradeSummary)
