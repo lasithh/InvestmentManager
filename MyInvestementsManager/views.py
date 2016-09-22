@@ -41,6 +41,12 @@ class InvestmentsListView(ListView):
             #Perform the currency Conversion
             data = valueInDefaultCurrency(data)
             
+            #Set the current value based on teh symbol
+            if data.symbol and data.symbol.symbol != 'NA' :
+                data.currentValue = data.symbol.price * data.quantity
+            else:
+                data.currentValue = data.amount
+                    
             data.growth = data.currentValue - data.amount
             
             

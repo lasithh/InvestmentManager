@@ -34,7 +34,7 @@ class Investment(models.Model):
     currency = models.ForeignKey(Currency, default=1)
     date = models.DateTimeField(auto_now_add=True)
     investmentType = models.ForeignKey(InvestmentType)
-    symbol = models.ForeignKey(ListedCompany)
+    symbol = models.ForeignKey(ListedCompany, null = True, default = None)
     quantity = models.FloatField()
     currentValue = models.FloatField()
        

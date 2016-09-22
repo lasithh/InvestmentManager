@@ -34,11 +34,11 @@ def persistCompaniesList(symbolsToUpdate) :
                 quantityHistory.company = companyToSave
                 quantityHistory.save()
                 
-                
-                companyToSave.issuedQuentity = int(company[3] or 0)
-                companyToSave.marketCapitalisation = float(company[4] or 0)
-                companyToSave.marketCapitalisationPercentage = float(company[5] or 0)
-                companyToSave.save()
+            companyToSave.price = float(company[2] or 0)
+            companyToSave.issuedQuentity = int(company[3] or 0)
+            companyToSave.marketCapitalisation = float(company[4] or 0)
+            companyToSave.marketCapitalisationPercentage = float(company[5] or 0)
+            companyToSave.save()
                 
 
 def persistDailyTradingSummary(tradingSummaryInformation):
