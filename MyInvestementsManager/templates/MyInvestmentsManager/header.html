@@ -7,7 +7,7 @@
 <script type="text/javascript" src="{% static 'js/jquery-3.1.0.js' %}"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script type="text/javascript" src="{% static 'js/charts/piechart.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/charts/charts.js' %}"></script>
 
 	<title>Investments Helper</title>
 	<meta charset="utf-8" />
@@ -25,16 +25,8 @@
 </head>
 
 <body class="body" style="background-color:#f6f6f6">
-	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row">
-			  
-			  <div class="col-sm-10">
-				  <br>
-				  <center>
-				  <h3>Help with your investments</h3>
-				  </center>
-			  </div>
-		</div><hr>
+	<div class="container-fluid" style="min-height:95%; ">		
+		<hr style="height:1px"/>
 
 		<div class="row">
 		  <div class="col-sm-2">
@@ -46,15 +38,11 @@
 			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
 			  <ul class="nav nav-pills nav-stacked">
 				<li><a href='/invest'>Home</a></li>
-				<li><a href="/addInvestment">Add Investment</a></li>
-				<li><a id="showegistedCompanies">Registered Companies</a></li>
-				<li><a id="reloadCompaniesList">Reload Registered Companies</a></li>
-				<li><a id='showDailyTradingSummary'>Daily Trading Summaries</a></li>
-				<li><a id='storeDailyTradingSummary'>Update Daily Trading Summary</a></li>
-				<li><a id='showDetailedTrades'>Detailed Trades</a></li>
-				<li><a id='storeDetailedTrades'>Update Detailed Trades</a></li>
-				<li><a id='viewSectorIndices'>Sector Indices</a></li>
-				<li><a id='storeSectorIndices'>Update Sector Indices</a></li>
+				<!-- <li><a id="companiesList">Registered Companies</a></li> -->				
+				<li><a id='dailyTradingSummaryList'>Daily Trading Summaries</a></li>				
+				<li><a id='detailedTradesList'>Detailed Trades</a></li>				
+				<li><a id='sectorIndicesList'>Sector Indices</a></li>				
+				<li><a id='loadLatestData'>Load Latest Data</a></li>
 				<li><a href='/contact/'>Contact</a></li>
 			  </ul>
 			</div> <!--well bs-sidebar affix-->

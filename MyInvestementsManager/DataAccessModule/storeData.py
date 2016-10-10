@@ -5,13 +5,16 @@ from MyInvestementsManager.models import ListedCompany,\
 from pymongo.database import Database
 import datetime
 from MyInvestementsManager.parser.HTMLParser import MarketIndicesHTMLParser
+import urllib.request
 
-def persistCompaniesList(symbolsToUpdate) :
+def persistCompaniesList(url) :
     """
     This method retrieves a list of symbols in the CSV format and create the models for each of them.
     If the symbol already exists following steps are taken.
     If the quantities of the symbol has been updated, update it on the database. And store the current status on the history table
     """
+    symbolsToUpdate = urllib.request.urlopen(url)
+    
      #Ignore the first line
     next(symbolsToUpdate, None)
 
@@ -41,10 +44,12 @@ def persistCompaniesList(symbolsToUpdate) :
             companyToSave.save()
                 
 
-def persistDailyTradingSummary(tradingSummaryInformation):
+def persistDailyTradingSummary(url):
     """
     Stores the daily trading summary information in the Database. if the data already exists for today, data is updated
     """
+    tradingSummaryInformation = urllib.request.urlopen(url)
+    
     #Skip the line with headers
     next(tradingSummaryInformation, None)
     
@@ -77,10 +82,14 @@ def persistDailyTradingSummary(tradingSummaryInformation):
                                                                                )
         
                                                                            
-def persistDetailedTrades(detailedTrades):
+def persistDetailedTrades(url):
     """
     Stores the detailed trades information in the Database. if the data already exists for today, data is updated
     """
+    
+    detailedTrades = urllib.request.urlopen(url)
+    
+    
     #Skip the line with headers
     next(detailedTrades, None)
     next(detailedTrades, None)
@@ -104,15 +113,19 @@ def persistDetailedTrades(detailedTrades):
                                                                                            'shareVolume' : int(trade_part2[9] or 0),
                                                                                            'priceChange' : float(trade_part1[13] or 0),
                                                                                            'priceChangePercentage' : float(trade_part2[11] or 0),
+                                                                                           'date' : datetime.date.today()
                                                                                           
                                                                                            },
                                                                                )
-def persistSectorIndices(sectorIndices):
+def persistSectorIndices(url):
     """
     Stores the Sctors Indices information in the Database. if the data already exists for today, data is updated. The input is a html document. It shall be parsed to extract the correct data.
     """
+    sectorIndices = urllib.request.urlopen(url)
     
     sectorDataString = sectorIndices.read().decode('utf-8')
+    
+   # saveFile(sectorDataString, 'SectorData', '.csv')
     
     documentParser = MarketIndicesHTMLParser()
     
@@ -133,6 +146,12 @@ def persistSectorIndices(sectorIndices):
                                                                                                'price' : float(sectorIndex[1].replace(',', '')),
                                                                                                'value' : float(sectorIndex[3].replace(',', '')),
                                                                                                'volume' : int(sectorIndex[4].replace(',', '')),
-                                                                                               'trades' : int(sectorIndex[5].replace(',', '')),                                                                                          
+                                                                                               'trades' : int(sectorIndex[5].replace(',', '')), 
+                                                                                               'date' : datetime.date.today()                                                                                         
                                                                                                }, 
                                                                              )
+            
+def saveFile(url, fileName, extension):
+    date = datetime.date.today()
+    dateStr = date.strftime('_%d_%m_%Y')
+    urllib.request.urlretrieve(url, fileName + dateStr + extension)

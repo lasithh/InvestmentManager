@@ -10,9 +10,18 @@ from django.http.response import HttpResponse
 
 import urllib
 from MyInvestementsManager.DataAccessModule.storeData import persistCompaniesList,\
-    persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices
-from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
+    persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices,\
+    saveFile
+from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY,\
+    URL_SECTOR_DATA_DOWNLOAD, FILE_NAME_SECTOR_DATA_DOWNLOAD,\
+    FILE_TYPE_DATA_FILES, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD,\
+    URL_TRADE_SUMMARY_DATA_DOWNLOAD, URL_COMPANY_DATA_DOWNLOAD,\
+    FILE_NAME_COMPANY_DATA_DOWNLOAD, URL_DETAILED_TRADES_DATA_DOWNLOAD,\
+    FILE_NAME_DETAILED_TRADES_DATA_DOWNLOAD, FILE_TYPE_SECTOR_DATA_FILES
 from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
+from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulatedInvestementData,\
+    calculateAccumulatedSectorData
+from _datetime import datetime
 
 # Create your views here.
 
@@ -28,54 +37,13 @@ class InvestmentsListView(ListView):
     template_name='MyInvestmentsManager/investments_list.html'
     
     def get_context_data(self, **kwargs):
+        #Get the context object
         context = super(InvestmentsListView, self).get_context_data(**kwargs)
         
-        totalAmount = 0.0
-        totalCurrentValue = 0.0
-        totalGrowth = 0.0
-        totalEquityValue = 0.0
-        totalBondValue = 0.0
-        
-        
-        for data in context['object_list']:
-            #Perform the currency Conversion
-            data = valueInDefaultCurrency(data)
-            
-            #Set the current value based on teh symbol
-            if data.symbol and data.symbol.symbol != 'NA' :
-                data.currentValue = data.symbol.price * data.quantity
-            else:
-                data.currentValue = data.amount
-                    
-            data.growth = data.currentValue - data.amount
-            
-            
-            
-            if data.amount and float(data.amount) > 0:
-                data.growthPercentage = (data.growth) * 100 / data.amount
-            else :
-                data.growthPercentage = 0
-                
-            totalAmount += data.amount
-            totalCurrentValue += data.currentValue
-            totalGrowth += data.growth
-            
-            if data.investmentType.name == 'Bond' :
-                totalBondValue += data.currentValue
-            elif data.investmentType.name == 'Equity':
-                totalEquityValue += data.currentValue
-        
-        totalGrowhPercentage = (totalGrowth) * 100 / totalAmount
-        
-        context['totalAmount'] = totalAmount
-        context['totalCurrentValue'] = totalCurrentValue 
-        context['totalGrowth'] = totalGrowth
-        context['totalGrowthPercentage'] = totalGrowhPercentage
-        context['currency'] = DEFAULT_CURRENCY
-        
-        context['totalBondValue'] = totalBondValue
-        context['totalEquityValue'] = totalEquityValue
-        
+        #Calculate the accumulated data 
+        processedData= calculateAccumulatedInvestementData(context['object_list'])
+        context.update(processedData)
+
         return context
     
 class InvestementDetailView(DetailView):
@@ -115,9 +83,11 @@ class ListedCompanyView(DetailView):
     template_name = "MyInvestmentsManager/company/view_company.html"
     
 def updateSymbolsList(request):
-    response = urllib.request.urlopen('http://www.cse.lk/marketcap_report.do?reportType=CSV')
+    #PErsists data to the database
+    persistCompaniesList(URL_COMPANY_DATA_DOWNLOAD)
     
-    persistCompaniesList(response)
+    #Store the data to the file
+    saveFile(URL_COMPANY_DATA_DOWNLOAD, FILE_NAME_COMPANY_DATA_DOWNLOAD, FILE_TYPE_DATA_FILES)
     
     return HttpResponse("Success")
 
@@ -131,9 +101,11 @@ class DailyTradingSummaryView(DetailView):
     template_name = "MyInvestmentsManager/dalilyTradingSummary/view_daily_trading_summary.html"
 
 def storeDailyTradingSummary(request):
-    response = urllib.request.urlopen('http://www.cse.lk/trade_summary_report.do?reportType=CSV')
+    #Store data on the database
+    persistDailyTradingSummary(URL_TRADE_SUMMARY_DATA_DOWNLOAD)
     
-    persistDailyTradingSummary(response)
+    #Store the data to the file
+    saveFile(URL_TRADE_SUMMARY_DATA_DOWNLOAD, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD, FILE_TYPE_DATA_FILES)
     
     return HttpResponse("Success")
 
@@ -148,26 +120,56 @@ class DetailedTradeView(DetailView):
     template_name = "MyInvestmentsManager/detailedTrades/view_detailed_trade.html"
 
 def storeDetailedTrades(request):
-    response = urllib.request.urlopen('http://www.cse.lk/detail_trades_report.do?reportType=CSV')
+    #Store in the database
+    persistDetailedTrades(URL_DETAILED_TRADES_DATA_DOWNLOAD)
     
-    persistDetailedTrades(response)
+    #Store data in the file
+    saveFile(URL_DETAILED_TRADES_DATA_DOWNLOAD, FILE_NAME_DETAILED_TRADES_DATA_DOWNLOAD, FILE_TYPE_DATA_FILES)
     
     return HttpResponse("Success")
-
 
 #Stock Indices Related URLs
 class SectorIndexListView(ListView):
     model = SectorIndex
     template_name='MyInvestmentsManager/sectorIndices/sector_indices_list.html'
     
+    def get_queryset(self):
+        max_date = SectorIndex.objects.latest('date').date.date()
+        return SectorIndex.objects.filter(date__range = [max_date, datetime.today()]).order_by('-value')
+    
+    def get_context_data(self, **kwargs):
+        #Get the context object
+        context = super(SectorIndexListView, self).get_context_data(**kwargs)
+        
+        #Calculate the accumulated data 
+        cumilatedSectorValue = calculateAccumulatedSectorData(context['object_list'])
+        context['cumilatedSectorValue'] = cumilatedSectorValue
+
+        return context
+    
+    
 class SectorIndexView(DetailView):
     model = SectorIndex
     template_name = "MyInvestmentsManager/sectorIndices/view_sector_index.html"
 
 def storeSectorIndices(request):
-    response = urllib.request.urlopen('https://www.cse.lk/indices.do')
+    #Store data on the database    
+    persistSectorIndices(URL_SECTOR_DATA_DOWNLOAD)
     
-    persistSectorIndices(response)
+    #Store the back up file
+    saveFile(URL_SECTOR_DATA_DOWNLOAD, FILE_NAME_SECTOR_DATA_DOWNLOAD, FILE_TYPE_SECTOR_DATA_FILES)
     
     return HttpResponse("Success")
 
+def loadLatestData(request):
+    storeSectorIndices(request)
+    
+    updateSymbolsList(request)
+    
+    storeDailyTradingSummary(request)
+    
+    storeDetailedTrades(request)
+    
+    return HttpResponse("Success")
+
+    

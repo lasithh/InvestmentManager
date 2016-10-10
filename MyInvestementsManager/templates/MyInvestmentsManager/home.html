@@ -15,7 +15,7 @@ $(document).ready( function () {
     };
  
     
-    $("#showegistedCompanies").click(function(){
+/*     $("#showegistedCompanies").click(function(){
         loadBody('companiesList');
     }); 
     
@@ -51,11 +51,26 @@ $(document).ready( function () {
         loadBody('addInvestment');
     });
     
+    $("#readPdfData").click(function(){
+        loadBody('readPdfData');
+    });
+    
+    $("#readPdfData").click(function(){
+        loadBody('readPdfData');
+    });
+    ; */
+    
+    $("#sidebar").find("li").click(function(event){
+        loadBody(event.target.id);
+    });    
+    
+    
            
   //load during page load
     loadBody('investmetsList');
   
-   
+  //setup the tooltips
+    $('[data-toggle="tooltip"]').tooltip();
 
  });
 	

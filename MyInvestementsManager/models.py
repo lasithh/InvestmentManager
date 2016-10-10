@@ -79,3 +79,18 @@ class DetailedTrade(models.Model):
     priceChange = models.FloatField()
     priceChangePercentage = models.FloatField()
     date = models.DateField(auto_now_add=True)
+
+class CompanyFinanceReportSumary(models.Model):
+    company = models.ForeignKey(ListedCompany)
+    revenue = models.FloatField()
+    profitBeforeTax = models.FloatField()
+    profitAfterTax = models.FloatField()
+    grossDividends = models.FloatField()
+    interestCover = models.FloatField()
+    totalAssets = models.FloatField()
+    currentRatio = models.FloatField()
+    issueDate = models.DateTimeField()
+    description = models.CharField(max_length = 100)
+    date = models.DateTimeField(auto_now_add=True)
+    totalShareHolderFunds = models.FloatField(default=0)
+    numberOfShares = models.IntegerField(default=0)

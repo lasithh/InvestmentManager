@@ -36,6 +36,8 @@ urlpatterns = [
     url(r'^sectorIndicesList$', SectorIndexListView.as_view()),     
     url(r'^viewSectorIndex/(?P<pk>\d+)/$', SectorIndexView.as_view(), name='view_sector_index'),
     url(r'^storeSectorIndices$', views.storeSectorIndices, name='storeSectorIndices'),
-
+    
+    #Load latest data from the exchange
+    url(r'^loadLatestData$', views.loadLatestData, name='loadLatestData'),
     
 ]    
