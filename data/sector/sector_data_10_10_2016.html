@@ -1,0 +1,1190 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<link rel="icon" href="/images/favicon.ico;jsessionid=236A1F5F81B39D5F287B34D4E5F9A079" type="image/x-icon" />
+<link rel="shortcut icon" href="/images/favicon.ico;jsessionid=236A1F5F81B39D5F287B34D4E5F9A079" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/jquery.autocomplete.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script src='/js/min/cse.common.min.js'></script>
+    <script src="/js/jquery.snow.js"></script>
+
+	
+    <script>
+          Highcharts.setOptions({
+               global: {
+                  useUTC: false
+               },
+			    credits: {
+                       enabled: false
+                      }
+            });
+
+        function getCompanyInfo(url,id,symbol){
+            $("#frmCompany").attr("action",url);
+            $("#companyId").val(id);
+            $("#companySymbol").val(symbol);
+            $("#frmCompany").submit();
+        }
+    </script>
+    
+    <script src="/js/min/jquery.autocomplete.min.js"></script>
+    
+
+    <script src='/dwr/engine.js'></script>
+    <script>
+        dwr.engine.defaultErrorHandler = function(message, ex) {
+            dwr.engine._debug("Error: " + ex.name + ", " + ex.message, true);
+            if (message == null || message == "") alert("A server error has occurred.");
+            // Ignore NS_ERROR_NOT_AVAILABLE if Mozilla is being narky
+            else if (message.indexOf("0x80040111") != -1) dwr.engine._debug(message);
+            else ;//alert(message);
+          };
+    </script>
+    <script src='/dwr/util.js'></script>
+    <script src='/dwr/interface/MarketData.js'></script>
+    <script src='/dwr/interface/PagingData.js'></script>
+
+    
+
+    <script src='/js/min/cse.common2.min.js'></script>
+	
+	 <script>
+        Common.tradeStartTime=new Date(1476158400000);
+        Common.tradeEndTime=new Date(1476176400000);
+    </script>
+
+    <title>CSE</title>
+
+   <style>
+.annual-report {
+	list-style:none;
+}
+.annual-report li {
+	float:left;
+	width:320px;
+	height:90px;
+}
+table.padding-5 tr td.col1{  text-align:left;}
+</style>
+
+    <script>
+     setTimeout("RefreshData.dynamicInvocation()", RefreshData.dynamicFunctionTimer);
+    </script>
+    
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3118968-1']);
+      _gaq.push(['_setCustomVar', 1, 'Content Language', 'en', 3]);
+      _gaq.push(['_trackPageview']);
+
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      /*$(document).ready( function(){
+          $.fn.snow({ minSize: 5, maxSize: 50, newOn: 500, flakeColor: '#FFFFFF' });
+      });*/
+
+    </script>
+
+</head>
+<body>
+
+    <div id="header">
+        
+
+
+
+
+
+
+<style>
+    nav a {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 8px 5px 5px 5px;
+        display: block;
+        color: #93989A;
+        border-right: 1px solid #545555;
+    }
+
+    nav a:hover {
+        color: #FFF;
+    }
+
+    nav {
+        list-style: none;
+        width: 90px;
+        display: block;
+        float: right;
+    }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        list-style: none;
+        background: #000;
+        padding: 5px 20px;
+        margin-left: -10px;
+        z-index: 999999;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav ul li:hover > ul {
+           display: block;
+       }
+</style>
+
+<!-- Header start -->
+
+<div id="nav">
+    <div class="loginuser float-left">
+    
+    	<img src="images/followusontwitterlogo.png" width="230px" height="25px" border="0" usemap="#Map"/>
+        <map name="Map" id="Map"><area shape="rect" target="_blank" coords="104,2,125,22" href="https://twitter.com/CSE_Media" /><area shape="rect" target="_blank" coords="136,2,157,22" href="https://www.facebook.com/cseonline2014" />
+          <area shape="rect" target="_blank" coords="167,3,188,23" href="https://www.linkedin.com/company/colombo-stock-exchange " />
+          
+          <area shape="rect" target="_blank" coords="197,3,224,22" href="https://www.youtube.com/channel/UCEVI_v1N1biPiiqdyYBRkMQ" />
+        </map> 
+        </a>
+    
+    
+        <!--<a href="https://twitter.com/CSE_Media" target="_blank"><img width="33px" height="24px"
+                                                                    src="images/twitter.png"/></a>
+        <a href="https://www.facebook.com/cseonline2014" target="_blank"><img width="33px" height="24px"
+                                                                    src="images/facebooklogocse.png" style="margin-top:1px"/></a>
+        <a href="https://www.linkedin.com/company/colombo-stock-exchange" target="_blank"><img width="33px" height="24px"
+                                                                    src="images/Linkedin.png" style="margin-top:1px"/> </a>-->
+</div>
+
+    <a href="contactus.do">Contact Us</a>
+    <a href="disclaimer.do">Disclaimer</a>
+    <a href="site-map.do">Site Map</a>
+    <nav>
+        <ul style="margin-left:10px;">
+            <li><a href="#">Products</a>
+                <ul>
+                    <li><a href="trade_summary.do" style="border-right:none;">Equity</a>
+                   </li>
+                    <li><a href="debt_market.do" style="border-right:none;">Debt</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <a href="aboutus.do">About Us</a>
+    <a href="index.jsp" class="selected">Home</a>
+    <div class="clear"></div>
+</div>
+
+<form action="company_info.do" method="POST" style="display:none" id="frmCompany">
+    <input type="hidden" id="companyId" name="id" value=""/>
+    <input type="hidden" id="companySymbol" name="symbol" value=""/>
+</form>
+
+<div class="search-panel">
+    <div class="logo float-left">
+        <a href="home.do"></a>
+        
+
+    </div>
+    <div class="search float-right">
+        <div class="search-item">
+            <a href="#symbol" class="select">Symbol Search</a>
+            <a href="#site">Site Search</a>
+        </div>
+        <div class="search-input">
+            <form action="symbol_search.do" method="POST" class="symbolSearch">
+                <span><input type="text" onclick="this.value=''" onblur="this.value='Enter Stock Code or Company Name'"
+                             class="txt-search" value="Enter Stock Code or Company Name" id="t3Textfield" name="symbol"></span>
+                <span><input type="image" src="images/button-search.png"></span>
+                <div class="clear"></div>
+            </form>
+            <form action="site_search.do" method="POST" style="display:none;" class="siteSearch">
+                <span><input type="text" onclick="this.value=''"
+                             onblur="if(this.value==''){this.value='Enter Search Text';}" class="txt-search"
+                             value="Enter Search Text" id="" name="site"></span>
+                <span><input type="image" src="images/button-search.png"></span>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="member-of-wfe">
+            	<span style="float: right" class="langtag">
+                    
+                        <a class="lang_sin" href="?lang=si"></a>
+                        <a class="lang_ta" href="?lang=ta"></a>
+                        <a class="lang_ja" href="?lang=ja"></a>
+                    
+                    
+                    
+                    
+                    <div class="clear"></div>
+                </span>
+            <div class="language"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!--<div class="new_baner_left"><img src="  images/new_year_left.png"></div>
+<div class="new_baner_right"><img src=" images/new_year_right.png"></div>
+-->
+
+
+
+<!-- Header end -->
+<script type="text/javascript">
+    Symbol.getAllSecurityCodes();
+    $(document).ready(function () {
+        $(".search-item a").click(function () {
+            $(".search-item a").removeClass("select");
+            $(this).addClass("select");
+            if ($(this).attr("href") == "#site") {
+                $(".search-item").addClass("symbol-select");
+                $(".symbolSearch").hide();
+                $(".siteSearch").show();
+            } else if ($(this).attr("href") == "#symbol") {
+                $(".search-item").removeClass("symbol-select");
+                $(".symbolSearch").show();
+                $(".siteSearch").hide();
+            }
+        });
+
+        //page();
+    });
+
+    $(".d-menu")
+            .mouseover(function () {
+                $(".drop-menu").show();
+            })
+            .mouseout(function () {
+                $(".drop-menu").hide();
+            });
+</script>
+    </div>
+
+    <div id="tickerWid">
+        
+            
+            
+             
+            
+                
+
+<!-- ticker -->
+<div id="ticker-container">
+    <div class="t_l"></div>
+    <div class="t_m">
+
+        <div class="t-date">
+            <div class="t_l"></div>
+            <div class="t_m" id="date_text">11 Oct 2016, 01:44 AM</div>
+            <div class="t_r"></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="t-ticker">
+            <div class="t_l"></div>
+            <div class="t_m">
+                <ul id="ticker"> </ul>
+            </div>
+            <div class="t_r"></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="t-search">
+            <div class="t_l"></div>
+            <div class="t_m">
+
+                <input type="text" id="live-symbol-search" onclick="this.value=''"  value="Symbol Search">
+
+            </div>
+            <div class="t_r"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="t_r"></div>
+    <div class="clear"></div>
+</div>
+<div id="ticker-details">
+
+    <div class="ticker-details-left">
+
+        <table width="100%" cellspacing="0" cellpadding="10" border="0" class="ci_r">
+            <tbody>
+            <tr>
+                <td colspan="3"><b id="ticker_s">YORK.N0000</b> <i id="ticker_d"> As of 11 Oct 2016 </i></td>
+            </tr>
+            <tr>
+                <td>Last Trade</td>
+                <td id="ticker_dt">01:25:19</td>
+                <td id="ticker_lt">10.10</td>
+            </tr>
+            <tr>
+                <td>Change</td>
+                <td id="ticker_cp">0.00</td>
+                <td id="ticker_c">0.00</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td colspan="2" id="ticker_v">300</td>
+            </tr>
+            <tr>
+                <td>Today's Open</td>
+                <td colspan="2" id="ticker_o">0.00</td>
+            </tr>
+            <tr>
+                <td>Today's High</td>
+                <td colspan="2" id="ticker_h">10.50</td>
+            </tr>
+            <tr>
+                <td>Today's Low</td>
+                <td colspan="2" id="ticker_l">10.10</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="ticker-details-right">
+    	<div align="right"><a class="close-ticker-details" style="color:#F30" href="#"><strong>X</strong></a></div>
+		<div id="tiker-chart">Loading....</div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ticker end-->
+
+
+<script >function setValues(info){$("#ticker_s").html(info.s);$("#ticker_dt").html($.format.date(info.d,"hh:mm:ss"));$("#ticker_lt").html(info.lt.toFixed(2));$("#ticker_cp").html(info.cp.toFixed(2));$("#ticker_c").html(info.c.toFixed(2));$("#ticker_v").html(info.v);$("#ticker_o").html(info.o.toFixed(2));$("#ticker_h").html(info.h.toFixed(2));$("#ticker_l").html(info.l.toFixed(2));}
+function TickerPop(){};TickerPop.min=0;TickerPop.max=0;TickerPop.getTickerChartData=function(id){MarketData.getStockChartCompanyData(id,{callback:TickerPop.refreshTickerChart,errorHandler:function(errorString,exception){}});}
+TickerPop.refreshTickerChart=function(data){TickerPop.chartData=[];var chartData=data.chartData;TickerPop.min=0;TickerPop.max=0;for(var i=0;i<chartData.length;i++){if(i==0){TickerPop.min=chartData[i].p;TickerPop.max=chartData[i].p;}
+if(TickerPop.max<chartData[i].p){TickerPop.max=chartData[i].p;}
+if(chartData[i].p<TickerPop.min){TickerPop.min=chartData[i].p;}
+TickerPop.chartData.push([chartData[i].t.getTime(),chartData[i].p]);}
+$(function(){window.tickerChart=new Highcharts.Chart({chart:{renderTo:'tiker-chart',zoomType:'y'},exporting:{enabled:false},plotOptions:{series:{marker:{enabled:false}}},scrollbar:{height:10},title:{text:false},xAxis:[{type:'datetime',dateTimeLabelFormats:{minute:'%H:%M',hour:'%H:%M'}}],yAxis:[{gridLineWidth:0,title:{text:'Price',style:{color:'#4572A7'}},labels:{style:{color:'#4572A7'}}}],series:[{name:'Price',color:'#4572A7',type:'line',data:TickerPop.chartData}]});});}
+$(document).ready(function(){var jsonUrl="js/ticker/a.json";var listClicked=false;var tickerData=[]
+getJsonData();$("#live-symbol-search").live('keyup',function(e){var symbol=$(this).val().toUpperCase();if(symbol){$("#ticker li").hide();symbol='#ticker li:contains("'+symbol+'")';$(symbol).show();}else{$("#ticker li").show();}
+startTicker();});$(".close-ticker-details").click(function(){startTicker();});function getJsonData(){MarketData.getTickerData({callback:function(tData){var data=tData.data;var t=[];if(data!=null&&data.length>0){for(var i=0;i<data.length;i++){var info=data[i];var listId=info.s.replace('.','-'),val2;tickerData[listId]=info;if(info.c>0){val2='<span class="t-green"> ▲ '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+else if(info.c<0){val2='<span class="t-red"> ▼ '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+else{val2='<span class="t-blue"> - '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+t.push('<li id="'+listId+'"><span class="key">'+info.s+'</span><span>'+(info.v!=null?info.v:"0")+' @ '+(info.lt!=null?info.lt.toFixed(2):"0")+'</span>'+val2+'</li>\n');}
+$('#ticker').html(t.join(''));setTimeout(function(){getJsonLive();},RefreshData.tickerRequestTimer);}else{setTimeout(function(){getJsonData();},RefreshData.tickerRequestTimer);}
+ticker();},errorHandler:function(errorString,exception){}});}
+function getJsonLive(){MarketData.getTickerData({callback:function(tData){var data=tData.data;if(tData!=null&&tData.status!="Market Close"){var t=[];if(data!=null){for(var i=0;i<data.length;i++){var info=data[i];var listId='#ticker li#'+info.s.replace('.','-');tickerData[listId]=info;if(info.c>0){val2='<span class="t-green"> ▲ '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+else if(info.c<0){val2='<span class="t-red"> ▼ '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+else{val2='<span class="t-blue"> - '+(info.c!=null?info.c.toFixed(2):"0")+'</span>';}
+$(listId).html('<span class="key">'+info.s+'</span><span>'+(info.v!=null?info.v:"0")+' @ '+(info.lt!=null?info.lt.toFixed(2):"0")+'</span>'+val2);}
+setTimeout(function(){getJsonLive();},RefreshData.tickerRequestTimer);}}else{$('#ticker').html('');}},errorHandler:function(errorString,exception){}});}
+function ticker(){var ticker=$("#ticker");ticker.children().filter("li").each(function(){var dt=$(this);});function animator(currentItem){var distance=currentItem.outerWidth();duration=(distance+parseInt(currentItem.css("marginLeft")))/0.025;currentItem.animate({marginLeft:-distance},duration,"linear",function(){currentItem.appendTo(currentItem.parent()).css("marginLeft",0);animator(currentItem.parent().children(":first"));});};animator(ticker.children(":first"));ticker.mouseenter(function(){ticker.children().stop();});ticker.mouseleave(function(){if(!listClicked){animator(ticker.children(":first"));}});ticker.children("li").click(function(){ticker.children().stop();listClicked=true;var info=tickerData[$(this).attr("id")];TickerPop.getTickerChartData(info.id);setValues(info);$("#ticker li").removeClass("hover");$(this).addClass("hover");$("#ticker-details").show();});}
+function startTicker(){listClicked=false;$("#ticker-details").hide();$("#ticker li.hover").removeClass("hover");ticker().animator($("#ticker").children(":first"));}});
+</script>
+
+
+
+            
+        
+    </div>
+
+    <div id="wrapper">
+        
+
+<!-- Mrket Activity -->
+
+
+
+<!-- Mrket Activity -->
+
+<div id="market-activity">
+  <div class="mbox">
+    <div class="mb-head"> <span class="left"></span> <span class="right"></span> <span class="middle"> <span class="flleft">
+      <p><span>Market Activity</span><span class="as_at">As of 11 Oct 2016</span></p>
+      <p>Market | <b class="mb_values" id="market_status_home">-</b></p>
+      <p><span>Turnover<b class="mb_values" id="m_turnover" >-</b></span><span>Share Volume<b class="mb_values" id="m_share_volume">-</b></span></p>
+      </span> <span class="flright">
+      <div class="cb-body padding-bottom-5">
+        <div class="padding-bottom-5 border-botton-ccc">
+          <div id="bg_1_MST" class="inner_aspi aspi_down" style="background-color:#1059C6">
+            <!-- id = _sectorid _MST -->
+            <span id="iv_1_MST">-</span> <span id="cv_1_MST">-</span> <span id="ip_1_MST">-%</span></div>
+          
+          
+            <div id="bg_40_MST" class="inner_sp sp_up"  style="background-color:#1059C6"> <span id="iv_40_MST">-</span> <span id="cv_40_MST">-</span> <span id="ip_40_MST">-%</span> </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      </span><span class="clear"></span> </span><span class="clear"></span> </div>
+  </div>
+    </div>
+<!-- Mrket Activity end-->
+
+  <div class="inner-body">
+    <div class="breadcrumb"> <a href="home.do"> Home </a> &raquo; <a href=""> Listed Entities </a> &raquo; Indices &raquo; </div>
+    <div class="inner-body-left">
+      <h1>Indices</h1>
+      
+      <!--Listed Company Directory-->      
+
+<div class="tab-nav" style="height:27px;">
+    <ul>
+        <li><a href="indices.do">Sector Indices</a></li>
+        <li><a href="gics_indices.do">GICS Indices</a></li>
+
+        <span style="clear:both;"></span>
+    </ul>
+</div>
+<script> tabMenuSelect();</script>
+<!--Listed Company Directory-->
+      
+   
+     
+      <div class="inner_grid">
+      
+      
+       <table class="inner-table padding-5" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th colspan="6" class="tital"><span class="left"></span><span class="right">As of 10 Oct 2016, 03:22:42 PM</span></th>
+        </tr>
+        <tr>
+          <th>Sector</th>
+          <th colspan="2">Price Index</th>
+          <th colspan="3">Turnover</th>
+         
+        </tr>
+        <tr>
+          <th></th>
+          <th>Today</th>
+          <th>Previous</th>
+          <th>Value</th>
+          <th>Volume</th>
+          <th>Trades</th>
+         
+        </tr>
+
+            
+
+                <tr>
+                        <td class="col1">ALL SHARE PRICE INDEX</td>
+                        <td>6,562.50</td>
+                        <td>6,582.34</td>
+                        <td>0.00</td>
+                        <td>0</td>
+                        <td>0</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">S&amp;P SL20</td>
+                        <td>3,661.23</td>
+                        <td>3,664.48</td>
+                        <td>0.00</td>
+                        <td>0</td>
+                        <td>0</td>
+
+
+                </tr>
+             
+           <tr>
+              <td colspan="6">&nbsp</td>
+           </tr>
+           
+
+                <tr>
+                        <td class="col1">BANK FINANCE AND INSURANCE</td>
+                        <td>16,692.02</td>
+                        <td>16,733.53</td>
+                        <td>70,249,027.20</td>
+                        <td>6,846,232</td>
+                        <td>1,157</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">BEVERAGE FOOD AND TOBACCO</td>
+                        <td>21,091.88</td>
+                        <td>21,283.18</td>
+                        <td>58,693,568.40</td>
+                        <td>307,764</td>
+                        <td>274</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">CONSTRUCTION AND ENGINEERING</td>
+                        <td>2,809.24</td>
+                        <td>2,815.28</td>
+                        <td>41,513,239.80</td>
+                        <td>6,820,776</td>
+                        <td>518</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">CHEMICALS AND PHARMACEUTICALS</td>
+                        <td>7,208.83</td>
+                        <td>7,208.41</td>
+                        <td>3,835,672.50</td>
+                        <td>69,037</td>
+                        <td>22</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">CLOSED END FUNDS</td>
+                        <td>97.69</td>
+                        <td>98.10</td>
+                        <td>83,933.80</td>
+                        <td>7,716</td>
+                        <td>5</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">DIVERSIFIED HOLDINGS</td>
+                        <td>1,713.05</td>
+                        <td>1,714.84</td>
+                        <td>53,144,194.20</td>
+                        <td>720,260</td>
+                        <td>296</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">FOOTWEAR AND TEXTILE</td>
+                        <td>961.21</td>
+                        <td>967.80</td>
+                        <td>1,548,106.10</td>
+                        <td>76,340</td>
+                        <td>38</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">HOTELS AND TRAVELS</td>
+                        <td>3,160.43</td>
+                        <td>3,154.06</td>
+                        <td>12,066,751.50</td>
+                        <td>2,248,418</td>
+                        <td>501</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">HEALTH CARE</td>
+                        <td>1,109.19</td>
+                        <td>1,108.63</td>
+                        <td>984,954.40</td>
+                        <td>88,775</td>
+                        <td>53</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">INVESTMENT TRUSTS</td>
+                        <td>14,407.87</td>
+                        <td>14,397.34</td>
+                        <td>2,225,245.10</td>
+                        <td>108,475</td>
+                        <td>33</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">INFORMATION TECHNOLOGY</td>
+                        <td>48.36</td>
+                        <td>46.13</td>
+                        <td>2,201,540.50</td>
+                        <td>254,697</td>
+                        <td>144</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">LAND AND PROPERTY</td>
+                        <td>647.48</td>
+                        <td>648.63</td>
+                        <td>14,631,466.40</td>
+                        <td>933,748</td>
+                        <td>351</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">MANUFACTURING</td>
+                        <td>4,657.66</td>
+                        <td>4,684.16</td>
+                        <td>70,320,561.40</td>
+                        <td>2,152,659</td>
+                        <td>706</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">MOTORS</td>
+                        <td>16,638.10</td>
+                        <td>16,626.80</td>
+                        <td>189,146.40</td>
+                        <td>1,301</td>
+                        <td>15</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">OIL PALMS</td>
+                        <td>68,061.74</td>
+                        <td>68,061.74</td>
+                        <td>69,079.80</td>
+                        <td>56</td>
+                        <td>9</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">POWER &amp; ENERGY</td>
+                        <td>157.03</td>
+                        <td>156.74</td>
+                        <td>1,898,476.80</td>
+                        <td>145,476</td>
+                        <td>78</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">PLANTATIONS</td>
+                        <td>652.44</td>
+                        <td>656.68</td>
+                        <td>412,091.00</td>
+                        <td>27,830</td>
+                        <td>53</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">STORES SUPPLIES</td>
+                        <td>28,660.78</td>
+                        <td>28,810.96</td>
+                        <td>335,369.90</td>
+                        <td>332</td>
+                        <td>18</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">SERVICES</td>
+                        <td>19,073.73</td>
+                        <td>19,071.67</td>
+                        <td>161,908.50</td>
+                        <td>8,177</td>
+                        <td>18</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">TELECOMMUNICATIONS</td>
+                        <td>181.93</td>
+                        <td>182.74</td>
+                        <td>225,382.40</td>
+                        <td>13,069</td>
+                        <td>31</td>
+
+
+                </tr>
+             
+
+                <tr>
+                        <td class="col1">TRADING</td>
+                        <td>17,033.61</td>
+                        <td>17,094.43</td>
+                        <td>1,617,260.80</td>
+                        <td>811,314</td>
+                        <td>60</td>
+
+
+                </tr>
+             
+
+           
+        
+      </table>
+      </div> 
+      <br>
+      
+      
+
+<p>20 sector indices are calculated on an on-going basis and closing values are published at the end of trading daily. These price indices reflect the price movements of companies in the 20 respective service sectors.</p>
+
+<p>The sector price indices will therefore be an indication as to the trends of the market.</p>
+    
+     
+
+
+
+
+
+
+ 
+
+
+      
+      
+     
+   
+     
+     
+     
+     
+    </div>
+    
+    <!-- right member firms menu -->
+    
+
+<!-- right common menu  start -->
+<div class="inner-body-right">
+        <h1>&nbsp;</h1>
+    	<div>
+    	<ul class="icon-menu inner-page">
+           <li><a href="trade_summary.do"><span class="icon-tec"></span> Trade Summary</a></li>
+          <li><a href="detailed_trades.do"><span class="icon-tec"></span>  Detailed Trades</a></li>
+          <li  ><a href="list_by_market_cap.do"  ><span class="icon-tec"></span> Listed Company Directory</a></li>
+          <li><a href="main_boards.do"><span class="icon-tec"></span> Boards</a></li>
+          <li><a href="indices.do"><span class="icon-tec"></span> Indices</a></li>
+          
+          <li><a href="funds.do"><span class="icon-tec"></span> Funds</a></li>
+            <div class="clear"></div>
+        </ul>
+        </div>
+
+       <!-- <div class="trade-s-banner">
+            <a href=" http://cal.lk/mobileapp/?utm_source=CSE%20Website&utm_medium=Clicks&utm_campaign=CSE" target="_blank"><img src="images/trade-summery-banner/CSE-Share.gif"/></a>
+        </div>-->
+
+    </div>
+    <div class="clear"></div>
+<!-- right common menu -->
+
+
+    <!-- right member firms menu end-->
+  </div>
+
+
+    </div>
+
+    <div id="footer">
+        
+
+
+
+
+
+<!-- FOOTER start -->
+
+<
+<div class="footer-content" >
+
+
+    <ul>
+
+
+        <li class="quicklink-title">
+
+
+            Listed Entities
+
+
+        </li>
+
+
+        <li><a href="trade_summary.do">
+
+
+            Trade Summary
+
+
+        </a></li>
+
+
+        <li><a href="detailed_trades.do">
+
+
+            Detailed Trades
+
+
+        </a></li>
+
+
+        <li><a href="list_by_market_cap.do">
+
+
+            Listed Company Directory
+
+
+        </a></li>
+        
+
+        <li><a href="list_by_sector.do">
+
+
+            Sector Classification
+
+
+        </a></li>
+
+
+        <li><a href="main_boards.do">
+
+
+            Boards
+
+
+        </a></li>
+
+
+        <li><a href="aspi.do">
+
+
+            Indices
+
+
+        </a></li>
+
+
+        <li><a href="debt_market.do">
+
+
+            Debt
+
+
+        </a></li>
+
+
+        <li><a href="funds.do">
+
+
+            Funds
+
+
+        </a></li>
+
+
+    </ul>
+
+
+    <ul>
+
+
+        <li class="quicklink-title">
+
+
+            Member Firms
+
+
+        </li>
+
+
+        <li><a href="members.do">
+
+
+            Members
+
+
+        </a></li>
+
+
+        <li><a href="trading_members.do">
+
+
+            Trading Members
+
+
+        </a></li>
+
+
+        <li><a href="internet_trading.do">
+
+
+            Internet Trading
+
+
+        </a></li>
+
+
+        <li><a href="branch_offices_sales_outlets.do">
+
+
+            Branch Offices / Sales Outlets
+
+
+        </a></li>
+
+
+        
+
+
+        
+
+
+    </ul>
+
+
+    <ul>
+
+
+        <li class="quicklink-title">
+
+
+            General Information
+
+
+            
+
+
+        </li>
+
+
+        <li><a href="transaction_costs.do">
+
+
+            Transaction Costs
+
+
+        </a></li>
+
+
+        <li><a href="trading_sessions.do">
+
+
+            Trading Sessions
+
+
+        </a></li>
+
+
+        
+
+
+        
+
+
+        <li><a target="_blank" href="http://www.cse.lk/csecmt/">
+
+
+            Media Room
+
+
+        </a></li>
+
+
+        
+
+
+    </ul>
+
+
+    <ul>
+
+
+        <li class="quicklink-title">
+
+
+            Publications
+
+
+            
+
+
+        </li>
+
+
+        <li><a href="cse_daily.do">
+
+
+            CSE Daily
+
+
+        </a></li>
+
+
+        <li><a href="cse_weekly.do">
+
+
+            CSE Weekly
+
+
+        </a></li>
+
+
+        <li><a href="cse_monthly.do">
+
+
+            CSE Monthly
+
+
+        </a></li>
+
+
+        <li><a href="quarterly_summary.do">
+
+
+            Quarterly Summary
+
+
+        </a></li>
+
+
+        <li><a href="publications_of_the_cse.do">
+
+
+            CSE Publications
+
+
+        </a></li>
+
+
+        <li><a href="order_publications.do">
+
+
+            Order Publications
+
+
+        </a></li>
+
+
+    </ul>
+
+
+    <ul>
+
+
+        <li class="quicklink-title">
+
+
+            CSE Rules</li>
+
+
+        <li><a href="stockbroker_rules.do">Stockbroker Rules</a></li>
+
+
+        <li><a href="listing_rules.do">Listing Rules</a></li>
+
+
+        <li><a href="ats_rules_regulations.do">ATS Rules</a></li>
+
+
+        <li><a href="cds_rules_regulations.do">CDS Rules</a></li>
+
+
+        
+
+
+        <li><a target="_blank" href="capital_reorganization.do">Capital Reorganisation
+
+
+        </a></li>
+
+
+        <li><a href="cse_circulars_2016.do">CSE Circulars</a></li>
+
+
+        <li><a href="sec_directives_2016.do?year=2016">SEC Directives</a></li>
+
+
+    </ul>
+
+
+    <div class="clear"></div>
+
+
+</div>
+
+
+<div class="footer-social">
+    <p> © 2016 Colombo Stock Exchange. All Rights Reserved. Solution by
+        <a href="http://www.efuturesworld.com/">EFutures</a>
+        <img src="images/followusontwitterlogo.png" width="230px" height="25px" border="0" usemap="#Map"/>
+        <map name="Map" id="Map">
+            <area shape="rect" target="_blank" coords="102,2,123,22" href="https://twitter.com/CSE_Media"/>
+            <area shape="rect" target="_blank" coords="134,2,155,22" href="https://www.facebook.com/cseonline2014"/>
+            <area shape="rect" target="_blank" coords="165,3,186,23"
+                  href="https://www.linkedin.com/company/colombo-stock-exchange "/>
+                  
+            <area shape="rect" target="_blank" coords="195,3,222,22"
+                  href="https://www.youtube.com/channel/UCEVI_v1N1biPiiqdyYBRkMQ"/>      
+        </map>
+    </p>
+</div>
+
+
+<!-- FOOTER end -->
+
+
+
+
+    </div>
+
+</body>
+</html>
+

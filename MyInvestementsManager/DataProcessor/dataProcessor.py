@@ -52,8 +52,34 @@ def calculateAccumulatedInvestementData(investmentData):
 
 def calculateAccumulatedSectorData(sectorData):    
     totalValue = 0.0
+    currentDate = sectorData[0].date.date()
+    
+    earliestSectorIndexes = {}
+    latestSectorIndexes = []
     
     for data in sectorData:
-        totalValue += data.value
+        if data.date.date() == currentDate:
+            earliestSectorIndexes[data.sector.name] = data.price
+        else:
+            latestSectorIndexes.append(data)
     
-    return totalValue
+    for data in latestSectorIndexes:
+        initialValue = earliestSectorIndexes[data.sector.name]
+        growthPercentage = ((data.price - initialValue) / initialValue) * 100
+        earliestSectorIndexes[data.sector.name] = growthPercentage
+        
+    latestSectorIndexes = [data for data in latestSectorIndexes if data.sector.name != 'ALL SHARE PRICE INDEX' and data.sector.name != 'SP SL20']
+    
+    latestSectorIndexes.sort(key=sortByPrice)
+    
+        
+    context = {}
+    
+    context['cumilatedSectorValue'] = totalValue
+    context['latestSectorIndexes'] = latestSectorIndexes
+    context['sectorGrowthPercentage'] = earliestSectorIndexes 
+    
+    return context
+
+def sortByPrice(item):
+    return item.price

@@ -35,3 +35,30 @@ function drawPieChart(containerID, title, dataType, dataArray) {
 						} ]
 					});
 }
+
+
+
+
+function drawBarChart(containerID, title, names, values){
+	$(function () {
+	    // Create the chart
+	    $('#' + containerID).highcharts({
+	        chart: {
+	            type: 'column'
+	        },
+	        title: {
+	            text: title
+	        },
+	        xAxis: {
+	            categories: names
+	        },
+	        credits: {
+	            enabled: false
+	        },
+	        series: [{
+	            name: 'Sectors',
+	            data: values
+	        }]
+	    });
+	});
+}

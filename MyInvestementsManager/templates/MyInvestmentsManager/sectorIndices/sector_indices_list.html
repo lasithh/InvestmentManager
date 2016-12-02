@@ -4,23 +4,54 @@
 <h3> Sector Indices</h3>
 
 <div id="sectorCapitalization"/>
+
+ 
+<div id="sectorGrowth" style="min-height:95%; "/>
 <script>	
 
 //JSON text for investments
-var jsonTextInvestments ='[' +
-{% for data in object_list %}
-	'{"name" : "{{ data.sector.name }}", "y" :  {{ data.value|div:cumilatedSectorValue }} },'+
+var jsonSectorIndices ='[' +
+{% for data in latestSectorIndexes %}
+	'{"name" : "{{ data.sector.name }}", "y" :  {{ data.price }} },'+
 {% endfor%}
 	']';
 
 	//remove the comma of last item
-	jsonTextInvestments = jsonTextInvestments.slice(0, -2) + ']';
+	jsonSectorIndices = jsonSectorIndices.slice(0, -2) + ']';
 
-	var jsonObjectInvestments = jQuery.parseJSON(jsonTextInvestments);
+	var jsonObjectInvestments = jQuery.parseJSON(jsonSectorIndices);
 
 	//draw the chart for investments
 	drawPieChart('sectorCapitalization', 'Sector Market Capitalization', 'Sectors', jsonObjectInvestments);
+	
+	
+	
+	
+	//JSON text for investments
+	var jsonSectorNames ='[' +
+	{% for name, value in sectorGrowthPercentage.items %}
+		'"{{ name }}",'+
+	{% endfor%}
+		']';
+	//remove the comma of last item
+	jsonSectorNames = jsonSectorNames.slice(0, -2) + ']';	
+	
+	var jsonObjectSectorNames = jQuery.parseJSON(jsonSectorNames);
 
+	
+	//JSON text for investments
+	var jsonSectorIndicesGrowthPercentage ='[' +
+	{% for name, value in sectorGrowthPercentage.items %}
+		'{{ value|floatformat:2 }},'+
+	{% endfor%}
+	']';
+	
+	jsonSectorIndicesGrowthPercentage = jsonSectorIndicesGrowthPercentage.slice(0, -2) + ']';
+	
+	var jsonObjectSectorIndicesGrowthPercentage = jQuery.parseJSON(jsonSectorIndicesGrowthPercentage);
+
+	drawBarChart('sectorGrowth', 'Relative Sector Growth', jsonObjectSectorNames, jsonObjectSectorIndicesGrowthPercentage);
+	
 	
 	
 </script>
