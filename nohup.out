@@ -66,3 +66,185 @@ System check identified 1 issue (0 silenced).
 /usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2016-12-06 00:00:00) while time zone support is active.
   RuntimeWarning)
 
+[05/Dec/2016 10:22:49] "GET /loadLatestData HTTP/1.1" 200 7
+[05/Dec/2016 10:25:36] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 10:25:36] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 10:25:36] "GET /static/js/jquery-3.1.0.js HTTP/1.1" 304 0
+[05/Dec/2016 10:25:36] "GET /static/js/charts/charts.js HTTP/1.1" 304 0
+[05/Dec/2016 10:25:37] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 10:25:37] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[05/Dec/2016 14:57:56] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 14:57:59] "GET /favicon.ico HTTP/1.1" 404 5592
+[05/Dec/2016 14:57:59] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 15:37:39] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 15:37:42] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 15:37:54] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 15:37:54] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 15:37:54] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 15:37:54] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 15:37:54] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 15:37:55] "GET /investmetsList HTTP/1.1" 200 6212
+[05/Dec/2016 15:37:56] "GET /invest HTTP/1.1" 200 3553
+[05/Dec/2016 15:37:57] "GET /investmetsList HTTP/1.1" 200 6212
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[05/Dec/2016 17:00:01] "GET /loadLatestData HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+[06/Dec/2016 17:00:01] "GET /loadLatestData HTTP/1.1" 500 59
+[06/Dec/2016 20:08:04] "GET /invest HTTP/1.1" 200 3553
+[06/Dec/2016 20:08:07] "GET /static/js/jquery-3.1.0.js HTTP/1.1" 304 0
+[06/Dec/2016 20:08:07] "GET /static/js/charts/charts.js HTTP/1.1" 304 0
+[06/Dec/2016 20:08:08] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[06/Dec/2016 20:08:12] "GET /favicon.ico HTTP/1.1" 404 5592
+[06/Dec/2016 20:08:12] "GET /investmetsList HTTP/1.1" 200 6212
+[06/Dec/2016 20:08:14] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
