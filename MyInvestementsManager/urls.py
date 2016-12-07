@@ -5,7 +5,7 @@ from MyInvestementsManager.views import InvestmentsListView,\
     InvestmentUpdateView,  ListedCompanyView, ListedCompanyListView,\
     DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView,\
     DetailedTradeView, SectorIndexListView, SectorIndexView,\
-    InvestmentCreateView
+    InvestmentCreateView, DividendsCreateView
 
 
 urlpatterns = [ 
@@ -39,5 +39,8 @@ urlpatterns = [
     
     #Load latest data from the exchange
     url(r'^loadLatestData$', views.loadLatestData, name='loadLatestData'),
+    
+    #Dividends 
+    url(r'^addDividend/(?P<investmentId>[0-9]+)/$', DividendsCreateView.as_view(), name='add_dividend'),
     
 ]    

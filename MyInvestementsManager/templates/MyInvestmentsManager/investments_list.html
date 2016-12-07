@@ -3,19 +3,22 @@
 {% block content %}
 
 
-<h3> Investments Summary </h3>
+<h3> Investments Summary <small>Last Update Date: {{ lastUpdateDate }}</small></h3>
         
 <table class="table table-striped table-bordered" id = "investmentsList">
 	<tr>
 		<td>Name</td>
 		<td>Currency</td>
-		<td>Investment Type</td>
-		<td>Invested Amount</td>
+		<td>Type</td>
 		<td>Symbol</td>
 		<td>Quantity</td>
 		<td>Current Value</td>
+		<td>Paid Price</td>
+		<td>Current Price</td>
 		<td>Growth</td>
-		<td>Growth Percentage</td>
+		<td>Growth Pct.</td>
+		<td>Dividends</td>
+		<td>Profit with Dividends</td>
 		<td>Invested Date</td>
 		<td colspan="2" align="center" data-toggle="tooltip" title="Add Investment"><a href="/addInvestment" ><span class="glyphicon glyphicon-plus" aria-hidden = "true"/></a></td>
 		
@@ -25,15 +28,18 @@
 		<td><a href="viewInvestment/{{ data.id }}/" >{{ data.name }}</a></td>
 		<td>{{ data.currency }}</td>
 		<td>{{ data.investmentType.name }}</td>		
-		<td>{{ data.amount| floatformat:2 | intcomma }}</td>
 		<td>{{ data.symbol.symbol }}</td>
 		<td>{{ data.quantity| floatformat:2 | intcomma}}</td>
 		<td>{{ data.currentValue| floatformat:2 | intcomma}}</td>
+		<td>{{ data.paidPrice | floatformat:2 | intcomma}}</td>
+		<td>{{ data.symbol.price | floatformat:2 | intcomma}}</td>
 		<td>{{ data.growth| floatformat:2 | intcomma}}</td>
 		<td>{{ data.growthPercentage | floatformat:2 | intcomma}}%</td>
-		<td>{{ data.date }}</td>
+		<td>{{ data.dividends | floatformat:2 | intcomma}}</td>
+		<td>{{ data.profitWithDividends | floatformat:2 | intcomma}}</td>
+		<td>{{ data.date.date }}</td>
 		<td><a href="deleteInvestment/{{ data.id }}/" ><span class="glyphicon glyphicon-remove" aria-hidden = "true"/></a></td>
-		<td><a href="updateInvestment/{{ data.id }}/" ><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></a></td>
+		<td><a href="addDividend/{{ data.id }}/" ><span class="glyphicon glyphicon-euro" aria-hidden = "true"/></a></td>
 	
 	</tr>
 	{% endfor%}
@@ -42,13 +48,15 @@
 		<th>Total</th>
 		<th>{{ currency }}</th>
 		<th></th>		
-		<th>{{ totalAmount| floatformat:2 | intcomma}}</th>
 		<th></th>
 		<th></th>
-		<th>{{ totalCurrentValue | floatformat:2 | intcomma}}</th>
+		<th>{{ totalCurrentValue | floatformat:2 | intcomma}}
+		<th></th>
+		<th></th>
 		<th>{{ totalGrowth| floatformat:2 | intcomma}}</th>
 		<th>{{ totalGrowthPercentage| floatformat:2 | intcomma}}%</th>
-		<th></th>
+		<th>{{ totalDividends | floatformat:2 | intcomma}}</th>
+		<th>{{ totalProfitWithDividends | floatformat:2 | intcomma}}</th>
 		<th></th>
 		<th></th>
 	

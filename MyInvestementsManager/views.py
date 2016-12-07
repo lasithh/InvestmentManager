@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from MyInvestementsManager.models import Investment, ListedCompany,\
-    DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames
+    DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames, Dividends
     
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
@@ -157,6 +157,15 @@ class SectorIndexView(DetailView):
     model = SectorIndex
     template_name = "MyInvestmentsManager/sectorIndices/view_sector_index.html"
 
+class DividendsCreateView(CreateView):
+    model = Dividends
+    fields = ['investment', 'amount']
+    template_name = 'MyInvestmentsManager/dividend/add_dividend.html'
+
+    def form_valid(self, form):
+        form.instance.env = Investment.objects.get(pk=self.kwargs['investmentId'])
+        return super(DividendsCreateView, self).form_valid(form)
+
 def storeSectorIndices(request):
     #Store data on the database    
     persistSectorIndices(URL_SECTOR_DATA_DOWNLOAD)
@@ -174,4 +183,3 @@ def loadLatestData(request):
     
     return HttpResponse("Success")
 
-    

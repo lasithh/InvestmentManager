@@ -37,6 +37,9 @@ class Investment(models.Model):
     symbol = models.ForeignKey(ListedCompany, null = True, default = None)
     quantity = models.FloatField()
     currentValue = models.FloatField()
+    
+    def __str__(self):
+        return self.name
        
 class CompanyIssuedQuantitiesHistory(models.Model):
     quantityDifference = models.BigIntegerField()
@@ -94,3 +97,8 @@ class CompanyFinanceReportSumary(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     totalShareHolderFunds = models.FloatField(default=0)
     numberOfShares = models.IntegerField(default=0)
+    
+class Dividends(models.Model):
+    investment = models.ForeignKey(Investment)
+    amount = models.FloatField()
+    date = models.DateField(auto_now_add=True)
