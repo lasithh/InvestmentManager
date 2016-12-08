@@ -116,8 +116,18 @@ def persistSectorIndices(url):
     SectorIndex.objects.filter(date__range=(today, today + timedelta(1))).delete()
     
     sectorIndicesJson = json.loads(sectorIndices);
+    
+    errorMessage = sectorIndicesJson.get('error', [])
+    print(errorMessage)
+    if errorMessage:
+        print('Error occured. No data recieved from exchange.')
+        return
+        
     for sectorIndex2 in sectorIndicesJson:
+        print(sectorIndex2)
         for sectorIndex in sectorIndex2:
+            print(sectorIndex)
+            print(sectorIndex['name'])
             sectorName, created = SectorIndexNames.objects.get_or_create(name = sectorIndex['name'])
             
             if sectorName:
