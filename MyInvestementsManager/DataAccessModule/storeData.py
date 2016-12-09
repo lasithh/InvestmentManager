@@ -117,11 +117,10 @@ def persistSectorIndices(url):
     
     sectorIndicesJson = json.loads(sectorIndices);
     
-    errorMessage = sectorIndicesJson.get('error', [])
-    print(errorMessage)
-    if errorMessage:
-        print('Error occured. No data recieved from exchange.')
-        return
+    #errorMessage = sectorIndicesJson.get('error', [])
+    #if errorMessage:
+    #    print('Error occured. No data recieved from exchange.')
+    #    return
         
     for sectorIndex2 in sectorIndicesJson:
         print(sectorIndex2)
