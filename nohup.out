@@ -964,4 +964,217 @@ TRADING
 ALL SHARE PRICE INDEX
 {'symbol': 'S&P SL20', 'id': 49939, 'name': 'S&P SL20', 'change': -6.69, 'percentage': -0.19097207354565773, 'indexValue': 3496.44, 'sectorPreviousClose': 3503.13, 'transactionTime': 1483070429565, 'sectorId': 40, 'sectorVolumeToday': None, 'sectorTurnoverToday': None, 'sectorTradeToday': None}
 S&P SL20
-[{'symbol': 'BFI', 'id': 49918, 'name': 'BANK FINANCE AND INSURANCE', 'change': 7.71, 'percentage': 0.04876897862830764, 'indexValue': 15816.94, 'sectorPreviousClose': 15809.23, 'transactionTime': 1483090082077, 'sectorId': 14, 'sectorVolumeToday': 1967642, 'sectorTurnoverToday': 68817188, 'sectorTradeToday': 768.0}, {'symbol': 'BFT', 'id': 49919, 'name': 'BEVERAGE FOOD AND TOBACCO', 'change': -63.62, 'percentage': -0.29920209638991646, 'indexValue': 21199.6, 'sectorPreviousClose': 21263.22, 'transactionTime': 1483090082077, 'sectorId': 10, 'sectorVolumeToday': 315552, 'sectorTurnoverToday': 6528033, 'sectorTradeToday': 137.0}, {'symbol': 'C&E', 'id': 49920, 'name': 'CONSTRUCTION AND ENGINEERING', 'change': 28.05, 'percentage': 1.115667471432151, 'indexValue': 2542.24, 'sectorPreviousClose': 2514.19, 'transactionTime': 1483090082078, 'sectorId': 9, 'sectorVolumeToday': 103746, 'sectorTurnoverToday': 2779974, 'sectorTradeToday': 65.0}, {'symbol': 'C&P', 'id': 49921, 'name': 'CHEMICALS AND PHARMACEUTICALS', 'change': 103.37, 'percentage': 1.6042473678982916, 'indexValue': 6546.89, 'sectorPreviousClose': 6443.52, 'transactionTime': 1483090082078, 'sectorId': 6, 'sectorVolumeToday': 11685, 'sectorTurnoverToday': 761193, 'sectorTradeToday': 20.0}, {'symbol': 'CLF', 'id': 49938, 'name': 'CLOSED END FUNDS', 'change': 0.0, 'percentage': 0.0, 'indexValue': 95.96, 'sectorPreviousClose': 95.96, 'transactionTime': 1483090082083, 'sectorId': 141, 'sectorVolumeToday': 100, 'sectorTurnoverToday': 890, 'sectorTradeToday': 1.0}, {'symbol': 'DIV', 'id': 49930, 'name': 'DIVERSIFIED HOLDINGS', 'change': -30.42, 'percentage': -1.930056087099967, 'indexValue': 1545.7, 'sectorPreviousClose': 1576.12, 'transactionTime': 1483090082081, 'sectorId': 11, 'sectorVolumeToday': 1335933, 'sectorTurnoverToday': 66942891, 'sectorTradeToday': 601.0}, {'symbol': 'F&T', 'id': 49922, 'name': 'FOOTWEAR AND TEXTILE', 'change': -5.96, 'percentage': -0.6230464462308826, 'indexValue': 950.63, 'sectorPreviousClose': 956.59, 'transactionTime': 1483090082078, 'sectorId': 16, 'sectorVolumeToday': 43393, 'sectorTurnoverToday': 712972, 'sectorTradeToday': 46.0}, {'symbol': 'H&T', 'id': 49923, 'name': 'HOTELS AND TRAVELS', 'change': 0.43, 'percentage': 0.014177101672897997, 'indexValue': 3033.49, 'sectorPreviousClose': 3033.06, 'transactionTime': 1483090082079, 'sectorId': 21, 'sectorVolumeToday': 315039, 'sectorTurnoverToday': 3186299, 'sectorTradeToday': 134.0}, {'symbol': 'HLT', 'id': 49932, 'name': 'HEALTH CARE', 'change': -17.14, 'percentage': -1.6942953451360676, 'indexValue': 994.49, 'sectorPreviousClose': 1011.63, 'transactionTime': 1483090082081, 'sectorId': 17, 'sectorVolumeToday': 141172, 'sectorTurnoverToday': 799688, 'sectorTradeToday': 41.0}, {'symbol': 'INV', 'id': 49924, 'name': 'INVESTMENT TRUSTS', 'change': -14.59, 'percentage': -0.1158593964035147, 'indexValue': 12578.26, 'sectorPreviousClose': 12592.85, 'transactionTime': 1483090082079, 'sectorId': 4, 'sectorVolumeToday': 69205, 'sectorTurnoverToday': 1619236, 'sectorTradeToday': 34.0}, {'symbol': 'IT', 'id': 49933, 'name': 'INFORMATION TECHNOLOGY', 'change': 0.0, 'percentage': 0.0, 'indexValue': 40.56, 'sectorPreviousClose': 40.56, 'transactionTime': 1483090082082, 'sectorId': 5, 'sectorVolumeToday': 2005, 'sectorTurnoverToday': 14072, 'sectorTradeToday': 6.0}, {'symbol': 'L&P', 'id': 49925, 'name': 'LAND AND PROPERTY', 'change': 27.64, 'percentage': 4.556319337981966, 'indexValue': 634.27, 'sectorPreviousClose': 606.63, 'transactionTime': 1483090082079, 'sectorId': 12, 'sectorVolumeToday': 47761, 'sectorTurnoverToday': 2349612, 'sectorTradeToday': 160.0}, {'symbol': 'MFG', 'id': 49926, 'name': 'MANUFACTURING', 'change': -6.91, 'percentage': -0.16004076291501163, 'indexValue': 4310.74, 'sectorPreviousClose': 4317.65, 'transactionTime': 1483090082080, 'sectorId': 18, 'sectorVolumeToday': 2445011, 'sectorTurnoverToday': 41171384, 'sectorTradeToday': 492.0}, {'symbol': 'MTR', 'id': 49927, 'name': 'MOTORS', 'change': -49.64, 'percentage': -0.3267967401959332, 'indexValue': 15140.23, 'sectorPreviousClose': 15189.87, 'transactionTime': 1483090082080, 'sectorId': 8, 'sectorVolumeToday': 237, 'sectorTurnoverToday': 39633, 'sectorTradeToday': 13.0}, {'symbol': 'OIL', 'id': 49935, 'name': 'OIL PALMS', 'change': 0.0, 'percentage': 0.0, 'indexValue': 71716.8, 'sectorPreviousClose': 71716.8, 'transactionTime': 1483090082082, 'sectorId': 20, 'sectorVolumeToday': 103, 'sectorTurnoverToday': 167208, 'sectorTradeToday': 14.0}, {'symbol': 'P&E', 'id': 49931, 'name': 'POWER & ENERGY', 'change': 1.67, 'percentage': 1.1585154353104405, 'indexValue': 145.82, 'sectorPreviousClose': 144.15, 'transactionTime': 1483090082081, 'sectorId': 13, 'sectorVolumeToday': 187052, 'sectorTurnoverToday': 4830861, 'sectorTradeToday': 135.0}, {'symbol': 'PLT', 'id': 49937, 'name': 'PLANTATIONS', 'change': 8.56, 'percentage': 1.3531029686067466, 'indexValue': 641.18, 'sectorPreviousClose': 632.62, 'transactionTime': 1483090082083, 'sectorId': 7, 'sectorVolumeToday': 51150, 'sectorTurnoverToday': 387322, 'sectorTradeToday': 41.0}, {'symbol': 'S&S', 'id': 49928, 'name': 'STORES SUPPLIES', 'change': 124.73, 'percentage': 0.45951747901630174, 'indexValue': 27268.42, 'sectorPreviousClose': 27143.69, 'transactionTime': 1483090082080, 'sectorId': 3, 'sectorVolumeToday': 355, 'sectorTurnoverToday': 147673, 'sectorTradeToday': 5.0}, {'symbol': 'SRV', 'id': 49929, 'name': 'SERVICES', 'change': 0.0, 'percentage': 0.0, 'indexValue': 17481.49, 'sectorPreviousClose': 17481.49, 'transactionTime': 1483090082080, 'sectorId': 22, 'sectorVolumeToday': 22202, 'sectorTurnoverToday': 52104, 'sectorTradeToday': 12.0}, {'symbol': 'TLE', 'id': 49934, 'name': 'TELECOMMUNICATIONS', 'change': 1.11, 'percentage': 0.6639947358975893, 'indexValue': 168.28, 'sectorPreviousClose': 167.17, 'transactionTime': 1483090082082, 'sectorId': 15, 'sectorVolumeToday': 4635, 'sectorTurnoverToday': 152832, 'sectorTradeToday': 33.0}, {'symbol': 'TRD', 'id': 49936, 'name': 'TRADING', 'change': 254.64, 'percentage': 1.6277687218333494, 'indexValue': 15898.14, 'sectorPreviousClose': 15643.5, 'transactionTime': 1483090082082, 'sectorId': 19, 'sectorVolumeToday': 145216, 'sectorTurnoverToday': 544710, 'sectorTradeToday': 55.0}]
+[{'symbol': 'BFI', 'id': 49918, 'name': 'BANK FINANCE AND INSURANCE', 'change': 7.71, 'percentage': 0.04876897862830764, 'indexValue': 15816.94, 'sectorPreviousClose': 15809.23, 'transactionTime': 1483090082077, 'sectorId': 14, 'sectorVolumeToday': 1967642, 'sectorTurnoverToday': 68817188, 'sectorTradeToday': 768.0}, {'symbol': 'BFT', 'id': 49919, 'name': 'BEVERAGE FOOD AND TOBACCO', 'change': -63.62, 'percentage': -0.29920209638991646, 'indexValue': 21199.6, 'sectorPreviousClose': 21263.22, 'transactionTime': 1483090082077, 'sectorId': 10, 'sectorVolumeToday': 315552, 'sectorTurnoverToday': 6528033, 'sectorTradeToday': 137.0}, {'symbol': 'C&E', 'id': 49920, 'name': 'CONSTRUCTION AND ENGINEERING', 'change': 28.05, 'percentage': 1.115667471432151, 'indexValue': 2542.24, 'sectorPreviousClose': 2514.19, 'transactionTime': 1483090082078, 'sectorId': 9, 'sectorVolumeToday': 103746, 'sectorTurnoverToday': 2779974, 'sectorTradeToday': 65.0}, {'symbol': 'C&P', 'id': 49921, 'name': 'CHEMICALS AND PHARMACEUTICALS', 'change': 103.37, 'percentage': 1.6042473678982916, 'indexValue': 6546.89, 'sectorPreviousClose': 6443.52, 'transactionTime': 1483090082078, 'sectorId': 6, 'sectorVolumeToday': 11685, 'sectorTurnoverToday': 761193, 'sectorTradeToday': 20.0}, {'symbol': 'CLF', 'id': 49938, 'name': 'CLOSED END FUNDS', 'change': 0.0, 'percentage': 0.0, 'indexValue': 95.96, 'sectorPreviousClose': 95.96, 'transactionTime': 1483090082083, 'sectorId': 141, 'sectorVolumeToday': 100, 'sectorTurnoverToday': 890, 'sectorTradeToday': 1.0}, {'symbol': 'DIV', 'id': 49930, 'name': 'DIVERSIFIED HOLDINGS', 'change': -30.42, 'percentage': -1.930056087099967, 'indexValue': 1545.7, 'sectorPreviousClose': 1576.12, 'transactionTime': 1483090082081, 'sectorId': 11, 'sectorVolumeToday': 1335933, 'sectorTurnoverToday': 66942891, 'sectorTradeToday': 601.0}, {'symbol': 'F&T', 'id': 49922, 'name': 'FOOTWEAR AND TEXTILE', 'change': -5.96, 'percentage': -0.6230464462308826, 'indexValue': 950.63, 'sectorPreviousClose': 956.59, 'transactionTime': 1483090082078, 'sectorId': 16, 'sectorVolumeToday': 43393, 'sectorTurnoverToday': 712972, 'sectorTradeToday': 46.0}, {'symbol': 'H&T', 'id': 49923, 'name': 'HOTELS AND TRAVELS', 'change': 0.43, 'percentage': 0.014177101672897997, 'indexValue': 3033.49, 'sectorPreviousClose': 3033.06, 'transactionTime': 1483090082079, 'sectorId': 21, 'sectorVolumeToday': 315039, 'sectorTurnoverToday': 3186299, 'sectorTradeToday': 134.0}, {'symbol': 'HLT', 'id': 49932, 'name': 'HEALTH CARE', 'change': -17.14, 'percentage': -1.6942953451360676, 'indexValue': 994.49, 'sectorPreviousClose': 1011.63, 'transactionTime': 1483090082081, 'sectorId': 17, 'sectorVolumeToday': 141172, 'sectorTurnoverToday': 799688, 'sectorTradeToday': 41.0}, {'symbol': 'INV', 'id': 49924, 'name': 'INVESTMENT TRUSTS', 'change': -14.59, 'percentage': -0.1158593964035147, 'indexValue': 12578.26, 'sectorPreviousClose': 12592.85, 'transactionTime': 1483090082079, 'sectorId': 4, 'sectorVolumeToday': 69205, 'sectorTurnoverToday': 1619236, 'sectorTradeToday': 34.0}, {'symbol': 'IT', 'id': 49933, 'name': 'INFORMATION TECHNOLOGY', 'change': 0.0, 'percentage': 0.0, 'indexValue': 40.56, 'sectorPreviousClose': 40.56, 'transactionTime': 1483090082082, 'sectorId': 5, 'sectorVolumeToday': 2005, 'sectorTurnoverToday': 14072, 'sectorTradeToday': 6.0}, {'symbol': 'L&P', 'id': 49925, 'name': 'LAND AND PROPERTY', 'change': 27.64, 'percentage': 4.556319337981966, 'indexValue': 634.27, 'sectorPreviousClose': 606.63, 'transactionTime': 1483090082079, 'sectorId': 12, 'sectorVolumeToday': 47761, 'sectorTurnoverToday': 2349612, 'sectorTradeToday': 160.0}, {'symbol': 'MFG', 'id': 49926, 'name': 'MANUFACTURING', 'change': -6.91, 'percentage': -0.16004076291501163, 'indexValue': 4310.74, 'sectorPreviousClose': 4317.65, 'transactionTime': 1483090082080, 'sectorId': 18, 'sectorVolumeToday': 2445011, 'sectorTurnoverToday': 41171384, 'sectorTradeToday': 492.0}, {'symbol': 'MTR', 'id': 49927, 'name': 'MOTORS', 'change': -49.64, 'percentage': -0.3267967401959332, 'indexValue': 15140.23, 'sectorPreviousClose': 15189.87, 'transactionTime': 1483090082080, 'sectorId': 8, 'sectorVolumeToday': 237, 'sectorTurnoverToday': 39633, 'sectorTradeToday': 13.0}, {'symbol': 'OIL', 'id': 49935, 'name': 'OIL PALMS', 'change': 0.0, 'percentage': 0.0, 'indexValue': 71716.8, 'sectorPreviousClose': 71716.8, 'transactionTime': 1483090082082, 'sectorId': 20, 'sectorVolumeToday': 103, 'sectorTurnoverToday': 167208, 'sectorTradeToday': 14.0}, {'symbol': 'P&E', 'id': 49931, 'name': 'POWER & ENERGY', 'change': 1.67, 'percentage': 1.1585154353104405, 'indexValue': 145.82, 'sectorPreviousClose': 144.15, 'transactionTime': 1483090082081, 'sectorId': 13, 'sectorVolumeToday': 187052, 'sectorTurnoverToday': 4830861, 'sectorTradeToday': 135.0}, {'symbol': 'PLT', 'id': 49937, 'name': 'PLANTATIONS', 'change': 8.56, 'percentage': 1.3531029686067466, 'indexValue': 641.18, 'sectorPreviousClose': 632.62, 'transactionTime': 1483090082083, 'sectorId': 7, 'sectorVolumeToday': 51150, 'sectorTurnoverToday': 387322, 'sectorTradeToday': 41.0}, {'symbol': 'S&S', 'id': 49928, 'name': 'STORES SUPPLIES', 'change': 124.73, 'percentage': 0.45951747901630174, 'indexValue': 27268.42, 'sectorPreviousClose': 27143.69, 'transactionTime': 1483090082080, 'sectorId': 3, 'sectorVolumeToday': 355, 'sectorTurnoverToday': 147673, 'sectorTradeToday': 5.0}, {'symbol': 'SRV', 'id': 49929, 'name': 'SERVICES', 'change': 0.0, 'percentage': 0.0, 'indexValue': 17481.49, 'sectorPreviousClose': 17481.49, 'transactionTime': 1483090082080, 'sectorId': 22, 'sectorVolumeToday': 22202, 'sectorTurnoverToday': 52104, 'sectorTradeToday': 12.0}, {'symbol': 'TLE', 'id': 49934, 'name': 'TELECOMMUNICATIONS', 'change': 1.11, 'percentage': 0.6639947358975893, 'indexValue': 168.28, 'sectorPreviousClose': 167.17, 'transactionTime': 1483090082082, 'sectorId': 15, 'sectorVolumeToday': 4635, 'sectorTurnoverToday': 152832, 'sectorTradeToday': 33.0}, {'symbol': 'TRD', 'id': 49936, 'name': 'TRADING', 'change': 254.64, 'percentage': 1.6277687218333494, 'indexValue': 15898.14, 'sectorPreviousClose': 15643.5, 'transactionTime': 1483090082082, 'sectorId': 19, 'sectorVolumeToday': 145216, 'sectorTurnoverToday': 544710, 'sectorTradeToday': 55.0}]System check identified some issues:
+
+WARNINGS:
+?: (1_7.W001) MIDDLEWARE_CLASSES is not set.
+	HINT: Django 1.7 changed the global defaults for the MIDDLEWARE_CLASSES. django.contrib.sessions.middleware.SessionMiddleware, django.contrib.auth.middleware.AuthenticationMiddleware, and django.contrib.messages.middleware.MessageMiddleware were removed from the defaults. If your project needs these middleware then you should configure this setting.
+
+System check identified 1 issue (0 silenced).
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+[23/Jan/2017 14:17:26] "GET /invest HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+[23/Jan/2017 14:17:27] "GET /favicon.ico HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+[23/Jan/2017 14:17:36] "GET /invest HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/lib/python3/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/lib/python3/dist-packages/django/contrib/staticfiles/handlers.py", line 63, in __call__
+    return self.application(environ, start_response)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python3/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/lib/python3/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.123.35:8000'. You may need to add '192.168.123.35' to ALLOWED_HOSTS.
