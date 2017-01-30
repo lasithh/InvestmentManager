@@ -1,20 +1,10 @@
 from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
 from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
-import datetime
 from MyInvestementsManager.models import Dividends, DetailedTrade
 
 
 def calculateAccumulatedInvestementData(investmentData):
-    totalAmount = 0.0
-    totalCurrentValue = 0.0
-    totalGrowth = 0.0
-    totalEquityValue = 0.0
-    totalBondValue = 0.0
-    totalDividends = 0.0
-    totalProfitWithDividends = 0.0
-    
     cumulativeDividendValue = 0.0
-        
     context = {}
     
     for data in investmentData:
@@ -35,14 +25,6 @@ def calculateAccumulatedInvestementData(investmentData):
         else :
             data.growthPercentage = 0
                 
-        totalAmount += data.amount
-        totalCurrentValue += data.currentValue
-        totalGrowth += data.growth
-            
-        if data.investmentType.name == 'Bond' :
-            totalBondValue += data.currentValue
-        elif data.investmentType.name == 'Equity':
-            totalEquityValue += data.currentValue
             
         data.paidPrice = data.amount / data.quantity
         
@@ -54,10 +36,78 @@ def calculateAccumulatedInvestementData(investmentData):
         
         data.dividends = cumulativeDividendValue
         data.profitWithDividends = data.growth + data.dividends
+            
+    #Get the last updated date of the data --> select the last updated Trade Summary and get the date
+    latestDetailedTrade = DetailedTrade.objects.latest('date')
+    context['lastUpdateDate'] = latestDetailedTrade.date
+    
+    
+    #Group by symbols
+    investmentData = groupInvestmentDataBySymbol(investmentData)
+    for data in investmentData:
+        print(data)
+        print(data.quantity)
+    
+    context['investDataBySymbol'] = investmentData
+    # Calculate the total values of the investments
+    totalValues = calculateTotalValuesOfInvestmentData(investmentData)
+    
+    context.update(totalValues)
+    return context
+
+def groupInvestmentDataBySymbol (investmentData):
+    dataGroupedBySymbol = {}
+    finalResult = []
+    for data in investmentData:
+        if data.investmentType.name != 'Equity':
+            finalResult.append(data)
+        else :
+            symbol = data.symbol.symbol
+            if symbol == 'NA':
+                finalResult.append(data)
+            else :
+                dataForSymbol = dataGroupedBySymbol.get(symbol)
+                if dataForSymbol is None:
+                    dataGroupedBySymbol[symbol] = data
+                else :
+                    dataForSymbol.currentValue += data.currentValue
+                    dataForSymbol.growth += data.growth
+                    dataForSymbol.amount += data.amount
+                    dataForSymbol.quantity += data.quantity
+                    dataForSymbol.dividends += data.dividends
+                    
+                    dataForSymbol.growthPercentage = (dataForSymbol.growth * 100) / dataForSymbol.amount
+                    dataForSymbol.paidPrice = dataForSymbol.amount / dataForSymbol.quantity
+                    
+    
+    groupedEquities = list(dataGroupedBySymbol.values())
+    finalResult += groupedEquities
+    return finalResult;
+
+def calculateTotalValuesOfInvestmentData(investmentData):
+    totalAmount = 0.0
+    totalCurrentValue = 0.0
+    totalGrowth = 0.0
+    totalEquityValue = 0.0
+    totalBondValue = 0.0
+    totalDividends = 0.0
+    totalProfitWithDividends = 0.0
         
+    context = {}
+    
+    for data in investmentData:
+        totalAmount += data.amount
+        totalCurrentValue += data.currentValue
+        totalGrowth += data.growth
+            
+        if data.investmentType.name == 'Bond' :
+            totalBondValue += data.currentValue
+        elif data.investmentType.name == 'Equity':
+            totalEquityValue += data.currentValue
+            
+        data.profitWithDividends = data.growth + data.dividends
         totalProfitWithDividends += data.profitWithDividends
-        
-        totalDividends += cumulativeDividendValue
+        totalDividends += data.dividends 
             
     totalGrowhPercentage = (totalGrowth) * 100 / totalAmount
         
@@ -66,20 +116,12 @@ def calculateAccumulatedInvestementData(investmentData):
     context['totalGrowth'] = totalGrowth
     context['totalGrowthPercentage'] = totalGrowhPercentage
     context['currency'] = DEFAULT_CURRENCY
-        
     context['totalBondValue'] = totalBondValue
     context['totalEquityValue'] = totalEquityValue
-    
     context['totalDividends'] = totalDividends
     context['totalProfitWithDividends'] = totalProfitWithDividends
     
-    #Get the last updated date of the data --> select the last updated Trade Summary and get the date
-    latestDetailedTrade = DetailedTrade.objects.latest('date')
-    context['lastUpdateDate'] = latestDetailedTrade.date
-    
-    
     return context
-
 
 def calculateAccumulatedSectorData(sectorData):    
     totalValue = 0.0

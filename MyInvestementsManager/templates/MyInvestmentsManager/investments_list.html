@@ -23,7 +23,7 @@
 		<td colspan="2" align="center" data-toggle="tooltip" title="Add Investment"><a href="/addInvestment" ><span class="glyphicon glyphicon-plus" aria-hidden = "true"/></a></td>
 		
 	</tr>
-	{% for data in object_list %}
+	{% for data in investDataBySymbol %}
 	<tr>
 		<td><a href="viewInvestment/{{ data.id }}/" >{{ data.name }}</a></td>
 		<td>{{ data.currency }}</td>
@@ -78,7 +78,7 @@
 
 //JSON text for investments
 var jsonTextInvestments ='[' +
-{% for data in object_list %}
+{% for data in investDataBySymbol %}
 	'{"name" : "{{ data.name }}", "y" :  {{ data.currentValue|div:totalCurrentValue }} },'+
 {% endfor%}
 	']';
