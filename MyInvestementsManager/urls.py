@@ -5,7 +5,8 @@ from MyInvestementsManager.views import InvestmentsListView,\
     InvestmentUpdateView,  ListedCompanyView, ListedCompanyListView,\
     DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView,\
     DetailedTradeView, SectorIndexListView, SectorIndexView,\
-    InvestmentCreateView, DividendsCreateView
+    InvestmentCreateView, DividendsCreateView,\
+    CompanyFinanceReportSumaryListView
 
 
 urlpatterns = [ 
@@ -43,4 +44,6 @@ urlpatterns = [
     #Dividends 
     url(r'^addDividend/(?P<investmentId>[0-9]+)/$', DividendsCreateView.as_view(), name='add_dividend'),
     
+    #Finacial Data
+    url(r'^financialDataList$', CompanyFinanceReportSumaryListView.as_view(), name='company_finance_report_summary'),
 ]    

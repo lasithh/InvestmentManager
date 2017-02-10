@@ -1,0 +1,37 @@
+{% load custom_filters %}
+{% load humanize %}
+{% block content %}
+
+<p> Investments Summary </p>
+
+<table class="table table-striped">
+	<tr>
+		<td>Name</td>
+		<td>Symbol</td>
+		<td>Revenue</td>
+		<td>PAT</td>
+		<td>Dividends</td>
+		<td>Liability Ratio</td>
+		<td>EPS Ratio</td>
+		<td>P/E Ratio</td>
+		
+	</tr>
+	{% for data in object_list %}
+	<tr>
+		<td><a href="viewDetailedTrade/{{ data.id }}/" >{{ data.company.companyName }}</a></td>
+		<td>{{ data.company.symbol }}</td>
+		<td> {{data.revenue }}</td>
+		<td> {{data.profitAfterTax }}</td>
+		<td> {{data.grossDividends|div:data.numberOfShares }}</td>
+		<td> {{data.currentRatio }}</td>
+		<td> {{data.profitAfterTax|div:data.numberOfShares}}</td>
+		<td> {{data.grossDividends|div:data.numberOfShares }}</td>
+		
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}
+
+
+
