@@ -5,17 +5,18 @@ WARNINGS:
 	HINT: Django 1.7 changed the global defaults for the MIDDLEWARE_CLASSES. django.contrib.sessions.middleware.SessionMiddleware, django.contrib.auth.middleware.AuthenticationMiddleware, and django.contrib.messages.middleware.MessageMiddleware were removed from the defaults. If your project needs these middleware then you should configure this setting.
 
 System check identified 1 issue (0 silenced).
-[09/Feb/2017 13:25:03] "GET /invest HTTP/1.1" 200 3567
-[09/Feb/2017 13:25:04] "GET /investmetsList HTTP/1.1" 200 7748
-/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-09 00:00:00) while time zone support is active.
+[19/Feb/2017 02:40:47] "GET /invest HTTP/1.1" 200 3567
+[19/Feb/2017 02:40:47] "GET /favicon.ico HTTP/1.1" 404 5808
+[19/Feb/2017 02:40:48] "GET /investmetsList HTTP/1.1" 200 7750
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-20 00:00:00) while time zone support is active.
   RuntimeWarning)
 
-/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-10 00:00:00) while time zone support is active.
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-21 00:00:00) while time zone support is active.
   RuntimeWarning)
 
 Performing system checks...
 
-February 09, 2017 - 13:23:47
+February 19, 2017 - 02:40:28
 Django version 1.8.7, using settings 'InvestmentsHelper.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
@@ -23,99 +24,239 @@ Gemalto Monetary Bonds
 90.342
 Gemalto Obligetory Bonds
 46.253
-KHL Shares
-850.0
+JKH Shares
+200.0
 Gemalto Shares GESPP
 95.729
 Rocell Shares
 242.0
-AEL Shares
-1250.0
-JKH Shares
-200.0
-NDB Shares
-184.0
-JINS shares
-900.0
 SPEN Shares
 1170.0
-[{'symbol': 'ASI', 'transactionTime': 1486632482010, 'sectorPreviousClose': 6096.39, 'percentage': -0.03674305613650045, 'indexValue': 6094.15, 'sectorVolumeToday': None, 'change': -2.24, 'sectorId': 1, 'id': 50631, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'ALL SHARE PRICE INDEX'}, {'symbol': 'S&P SL20', 'transactionTime': 1486612829791, 'sectorPreviousClose': 3485.2, 'percentage': 0.09468610122805005, 'indexValue': 3488.5, 'sectorVolumeToday': None, 'change': 3.3, 'sectorId': 40, 'id': 50630, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'S&P SL20'}]
-{'symbol': 'ASI', 'transactionTime': 1486632482010, 'sectorPreviousClose': 6096.39, 'percentage': -0.03674305613650045, 'indexValue': 6094.15, 'sectorVolumeToday': None, 'change': -2.24, 'sectorId': 1, 'id': 50631, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'ALL SHARE PRICE INDEX'}
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
+[{'sectorTradeToday': None, 'sectorPreviousClose': 6159.87, 'sectorVolumeToday': None, 'symbol': 'ASI', 'id': 50786, 'percentage': -0.33052645591546576, 'sectorTurnoverToday': None, 'sectorId': 1, 'indexValue': 6139.51, 'transactionTime': 1487582881880, 'change': -20.36, 'name': 'ALL SHARE PRICE INDEX'}, {'sectorTradeToday': None, 'sectorPreviousClose': 3543.63, 'sectorVolumeToday': None, 'symbol': 'S&P SL20', 'id': 50785, 'percentage': -0.1569012566210355, 'sectorTurnoverToday': None, 'sectorId': 40, 'indexValue': 3538.07, 'transactionTime': 1487563229909, 'change': -5.56, 'name': 'S&P SL20'}]
+{'sectorTradeToday': None, 'sectorPreviousClose': 6159.87, 'sectorVolumeToday': None, 'symbol': 'ASI', 'id': 50786, 'percentage': -0.33052645591546576, 'sectorTurnoverToday': None, 'sectorId': 1, 'indexValue': 6139.51, 'transactionTime': 1487582881880, 'change': -20.36, 'name': 'ALL SHARE PRICE INDEX'}
 ALL SHARE PRICE INDEX
-{'symbol': 'S&P SL20', 'transactionTime': 1486612829791, 'sectorPreviousClose': 3485.2, 'percentage': 0.09468610122805005, 'indexValue': 3488.5, 'sectorVolumeToday': None, 'change': 3.3, 'sectorId': 40, 'id': 50630, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'S&P SL20'}
+{'sectorTradeToday': None, 'sectorPreviousClose': 3543.63, 'sectorVolumeToday': None, 'symbol': 'S&P SL20', 'id': 50785, 'percentage': -0.1569012566210355, 'sectorTurnoverToday': None, 'sectorId': 40, 'indexValue': 3538.07, 'transactionTime': 1487563229909, 'change': -5.56, 'name': 'S&P SL20'}
 S&P SL20
-[{'symbol': 'BFI', 'transactionTime': 1486632482011, 'sectorPreviousClose': 15110.58, 'percentage': -0.0068825948441423165, 'indexValue': 15109.54, 'sectorVolumeToday': 1808371, 'change': -1.04, 'sectorId': 14, 'id': 50609, 'sectorTurnoverToday': 101700898, 'sectorTradeToday': 531.0, 'name': 'BANK FINANCE AND INSURANCE'}, {'symbol': 'BFT', 'transactionTime': 1486632482011, 'sectorPreviousClose': 20933.8, 'percentage': 0.17158853146585903, 'indexValue': 20969.72, 'sectorVolumeToday': 434184, 'change': 35.92, 'sectorId': 10, 'id': 50610, 'sectorTurnoverToday': 74388978, 'sectorTradeToday': 104.0, 'name': 'BEVERAGE FOOD AND TOBACCO'}, {'symbol': 'C&E', 'transactionTime': 1486632482011, 'sectorPreviousClose': 2469.88, 'percentage': 0.12794143845045103, 'indexValue': 2473.04, 'sectorVolumeToday': 73308, 'change': 3.16, 'sectorId': 9, 'id': 50611, 'sectorTurnoverToday': 1632789, 'sectorTradeToday': 48.0, 'name': 'CONSTRUCTION AND ENGINEERING'}, {'symbol': 'C&P', 'transactionTime': 1486632482012, 'sectorPreviousClose': 6422.65, 'percentage': -0.1497824106871774, 'indexValue': 6413.03, 'sectorVolumeToday': 19355, 'change': -9.62, 'sectorId': 6, 'id': 50612, 'sectorTurnoverToday': 3641749, 'sectorTradeToday': 14.0, 'name': 'CHEMICALS AND PHARMACEUTICALS'}, {'symbol': 'CLF', 'transactionTime': 1486632482016, 'sectorPreviousClose': 91.43, 'percentage': 0.0, 'indexValue': 91.43, 'sectorVolumeToday': 0, 'change': 0.0, 'sectorId': 141, 'id': 50629, 'sectorTurnoverToday': 0, 'sectorTradeToday': 0.0, 'name': 'CLOSED END FUNDS'}, {'symbol': 'DIV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 1553.81, 'percentage': 0.36040442525147864, 'indexValue': 1559.41, 'sectorVolumeToday': 4056651, 'change': 5.6, 'sectorId': 11, 'id': 50621, 'sectorTurnoverToday': 429640594, 'sectorTradeToday': 530.0, 'name': 'DIVERSIFIED HOLDINGS'}, {'symbol': 'F&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 830.23, 'percentage': 4.083205858617491, 'indexValue': 864.13, 'sectorVolumeToday': 23823, 'change': 33.9, 'sectorId': 16, 'id': 50613, 'sectorTurnoverToday': 382576, 'sectorTradeToday': 38.0, 'name': 'FOOTWEAR AND TEXTILE'}, {'symbol': 'H&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 2958.71, 'percentage': -0.06523113113485268, 'indexValue': 2956.78, 'sectorVolumeToday': 1606196, 'change': -1.93, 'sectorId': 21, 'id': 50614, 'sectorTurnoverToday': 2636366, 'sectorTradeToday': 188.0, 'name': 'HOTELS AND TRAVELS'}, {'symbol': 'HLT', 'transactionTime': 1486632482014, 'sectorPreviousClose': 946.75, 'percentage': -1.0351201478743068, 'indexValue': 936.95, 'sectorVolumeToday': 55322, 'change': -9.8, 'sectorId': 17, 'id': 50623, 'sectorTurnoverToday': 805019, 'sectorTradeToday': 62.0, 'name': 'HEALTH CARE'}, {'symbol': 'INV', 'transactionTime': 1486632482012, 'sectorPreviousClose': 11781.19, 'percentage': -0.24657950512639215, 'indexValue': 11752.14, 'sectorVolumeToday': 158845, 'change': -29.05, 'sectorId': 4, 'id': 50615, 'sectorTurnoverToday': 2484738, 'sectorTradeToday': 68.0, 'name': 'INVESTMENT TRUSTS'}, {'symbol': 'IT', 'transactionTime': 1486632482015, 'sectorPreviousClose': 40.56, 'percentage': 0.0, 'indexValue': 40.56, 'sectorVolumeToday': 1301, 'change': 0.0, 'sectorId': 5, 'id': 50624, 'sectorTurnoverToday': 9107, 'sectorTradeToday': 5.0, 'name': 'INFORMATION TECHNOLOGY'}, {'symbol': 'L&P', 'transactionTime': 1486632482013, 'sectorPreviousClose': 596.95, 'percentage': -0.1323393919088701, 'indexValue': 596.16, 'sectorVolumeToday': 18266, 'change': -0.79, 'sectorId': 12, 'id': 50616, 'sectorTurnoverToday': 212720, 'sectorTradeToday': 38.0, 'name': 'LAND AND PROPERTY'}, {'symbol': 'MFG', 'transactionTime': 1486632482013, 'sectorPreviousClose': 4261.39, 'percentage': -0.4803596948413546, 'indexValue': 4240.92, 'sectorVolumeToday': 2571259, 'change': -20.47, 'sectorId': 18, 'id': 50617, 'sectorTurnoverToday': 93664750, 'sectorTradeToday': 363.0, 'name': 'MANUFACTURING'}, {'symbol': 'MTR', 'transactionTime': 1486632482013, 'sectorPreviousClose': 14710.32, 'percentage': 0.0057102768668526585, 'indexValue': 14711.16, 'sectorVolumeToday': 250, 'change': 0.84, 'sectorId': 8, 'id': 50618, 'sectorTurnoverToday': 17500, 'sectorTradeToday': 2.0, 'name': 'MOTORS'}, {'symbol': 'OIL', 'transactionTime': 1486632482015, 'sectorPreviousClose': 68378.65, 'percentage': 0.0, 'indexValue': 68378.65, 'sectorVolumeToday': 19, 'change': 0.0, 'sectorId': 20, 'id': 50626, 'sectorTurnoverToday': 5032, 'sectorTradeToday': 2.0, 'name': 'OIL PALMS'}, {'symbol': 'P&E', 'transactionTime': 1486632482014, 'sectorPreviousClose': 136.96, 'percentage': 1.7523364485981308, 'indexValue': 139.36, 'sectorVolumeToday': 648416, 'change': 2.4, 'sectorId': 13, 'id': 50622, 'sectorTurnoverToday': 7099378, 'sectorTradeToday': 88.0, 'name': 'POWER & ENERGY'}, {'symbol': 'PLT', 'transactionTime': 1486632482016, 'sectorPreviousClose': 657.17, 'percentage': 0.5569335179633884, 'indexValue': 660.83, 'sectorVolumeToday': 19792, 'change': 3.66, 'sectorId': 7, 'id': 50628, 'sectorTurnoverToday': 254517, 'sectorTradeToday': 27.0, 'name': 'PLANTATIONS'}, {'symbol': 'S&S', 'transactionTime': 1486632482013, 'sectorPreviousClose': 26415.83, 'percentage': 0.0, 'indexValue': 26415.83, 'sectorVolumeToday': 65, 'change': 0.0, 'sectorId': 3, 'id': 50619, 'sectorTurnoverToday': 36013, 'sectorTradeToday': 8.0, 'name': 'STORES SUPPLIES'}, {'symbol': 'SRV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 16379.04, 'percentage': 0.0, 'indexValue': 16379.04, 'sectorVolumeToday': 86, 'change': 0.0, 'sectorId': 22, 'id': 50620, 'sectorTurnoverToday': 19550, 'sectorTradeToday': 6.0, 'name': 'SERVICES'}, {'symbol': 'TLE', 'transactionTime': 1486632482015, 'sectorPreviousClose': 170.81, 'percentage': -2.131022773842281, 'indexValue': 167.17, 'sectorVolumeToday': 11511, 'change': -3.64, 'sectorId': 15, 'id': 50625, 'sectorTurnoverToday': 156187, 'sectorTradeToday': 9.0, 'name': 'TELECOMMUNICATIONS'}, {'symbol': 'TRD', 'transactionTime': 1486632482016, 'sectorPreviousClose': 15676.19, 'percentage': -0.055370597064720445, 'indexValue': 15667.51, 'sectorVolumeToday': 401001, 'change': -8.68, 'sectorId': 19, 'id': 50627, 'sectorTurnoverToday': 525051, 'sectorTradeToday': 8.0, 'name': 'TRADING'}]
-{'symbol': 'BFI', 'transactionTime': 1486632482011, 'sectorPreviousClose': 15110.58, 'percentage': -0.0068825948441423165, 'indexValue': 15109.54, 'sectorVolumeToday': 1808371, 'change': -1.04, 'sectorId': 14, 'id': 50609, 'sectorTurnoverToday': 101700898, 'sectorTradeToday': 531.0, 'name': 'BANK FINANCE AND INSURANCE'}[09/Feb/2017 13:28:59] "GET /loadLatestData HTTP/1.1" 200 7
-[09/Feb/2017 15:09:58] "GET /invest HTTP/1.1" 200 3567
-[09/Feb/2017 15:10:01] "GET /investmetsList HTTP/1.1" 200 7752
-/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-11 00:00:00) while time zone support is active.
+[{'sectorTradeToday': 947.0, 'sectorPreviousClose': 15323.92, 'sectorVolumeToday': 4938269, 'symbol': 'BFI', 'id': 50764, 'percentage': -0.04085116602018282, 'sectorTurnoverToday': 146313885, 'sectorId': 14, 'indexValue': 15317.66, 'transactionTime': 1487582881880, 'change': -6.26, 'name': 'BANK FINANCE AND INSURANCE'}, {'sectorTradeToday': 149.0, 'sectorPreviousClose': 21195.7, 'sectorVolumeToday': 884731, 'symbol': 'BFT', 'id': 50765, 'percentage': -0.4758512339767028, 'sectorTurnoverToday': 133783095, 'sectorId': 10, 'indexValue': 21094.84, 'transactionTime': 1487582881880, 'change': -100.86, 'name': 'BEVERAGE FOOD AND TOBACCO'}, {'sectorTradeToday': 48.0, 'sectorPreviousClose': 2497.2, 'sectorVolumeToday': 37703, 'symbol': 'C&E', 'id': 50766, 'percentage': -0.12013455069678039, 'sectorTurnoverToday': 980918, 'sectorId': 9, 'indexValue': 2494.2, 'transactionTime': 1487582881881, 'change': -3.0, 'name': 'CONSTRUCTION AND ENGINEERING'}, {'sectorTradeToday': 8.0, 'sectorPreviousClose': 6471.05, 'sectorVolumeToday': 1072, 'symbol': 'C&P', 'id': 50767, 'percentage': -0.6360636990905649, 'sectorTurnoverToday': 54116, 'sectorId': 6, 'indexValue': 6429.89, 'transactionTime': 1487582881881, 'change': -41.16, 'name': 'CHEMICALS AND PHARMACEUTICALS'}, {'sectorTradeToday': 0.0, 'sectorPreviousClose': 91.43, 'sectorVolumeToday': 0, 'symbol': 'CLF', 'id': 50784, 'percentage': 0.0, 'sectorTurnoverToday': 0, 'sectorId': 141, 'indexValue': 91.43, 'transactionTime': 1487582881886, 'change': 0.0, 'name': 'CLOSED END FUNDS'}, {'sectorTradeToday': 315.0, 'sectorPreviousClose': 1573.08, 'sectorVolumeToday': 13515598, 'symbol': 'DIV', 'id': 50776, 'percentage': -0.6541307498665039, 'sectorTurnoverToday': 360235887, 'sectorId': 11, 'indexValue': 1562.79, 'transactionTime': 1487582881884, 'change': -10.29, 'name': 'DIVERSIFIED HOLDINGS'}, {'sectorTradeToday': 33.0, 'sectorPreviousClose': 856.6, 'sectorVolumeToday': 25996, 'symbol': 'F&T', 'id': 50768, 'percentage': 0.0, 'sectorTurnoverToday': 394788, 'sectorId': 16, 'indexValue': 856.6, 'transactionTime': 1487582881881, 'change': 0.0, 'name': 'FOOTWEAR AND TEXTILE'}, {'sectorTradeToday': 105.0, 'sectorPreviousClose': 2964.74, 'sectorVolumeToday': 251142, 'symbol': 'H&T', 'id': 50769, 'percentage': -0.25870734027267145, 'sectorTurnoverToday': 1381778, 'sectorId': 21, 'indexValue': 2957.07, 'transactionTime': 1487582881882, 'change': -7.67, 'name': 'HOTELS AND TRAVELS'}, {'sectorTradeToday': 48.0, 'sectorPreviousClose': 944.42, 'sectorVolumeToday': 134441, 'symbol': 'HLT', 'id': 50778, 'percentage': -0.6829588530526672, 'sectorTurnoverToday': 2221108, 'sectorId': 17, 'indexValue': 937.97, 'transactionTime': 1487582881884, 'change': -6.45, 'name': 'HEALTH CARE'}, {'sectorTradeToday': 42.0, 'sectorPreviousClose': 11854.46, 'sectorVolumeToday': 43579, 'symbol': 'INV', 'id': 50770, 'percentage': -0.4011148546622959, 'sectorTurnoverToday': 847913, 'sectorId': 4, 'indexValue': 11806.91, 'transactionTime': 1487582881882, 'change': -47.55, 'name': 'INVESTMENT TRUSTS'}, {'sectorTradeToday': 9.0, 'sectorPreviousClose': 39.45, 'sectorVolumeToday': 38909, 'symbol': 'IT', 'id': 50779, 'percentage': 0.0, 'sectorTurnoverToday': 264579, 'sectorId': 5, 'indexValue': 39.45, 'transactionTime': 1487582881884, 'change': 0.0, 'name': 'INFORMATION TECHNOLOGY'}, {'sectorTradeToday': 61.0, 'sectorPreviousClose': 610.46, 'sectorVolumeToday': 91871, 'symbol': 'L&P', 'id': 50771, 'percentage': -0.9238934573927857, 'sectorTurnoverToday': 1826171, 'sectorId': 12, 'indexValue': 604.82, 'transactionTime': 1487582881882, 'change': -5.64, 'name': 'LAND AND PROPERTY'}, {'sectorTradeToday': 406.0, 'sectorPreviousClose': 4302.42, 'sectorVolumeToday': 1386026, 'symbol': 'MFG', 'id': 50772, 'percentage': -0.050669158287661366, 'sectorTurnoverToday': 73002697, 'sectorId': 18, 'indexValue': 4300.24, 'transactionTime': 1487582881882, 'change': -2.18, 'name': 'MANUFACTURING'}, {'sectorTradeToday': 17.0, 'sectorPreviousClose': 14957.68, 'sectorVolumeToday': 4005, 'symbol': 'MTR', 'id': 50773, 'percentage': 0.0, 'sectorTurnoverToday': 333450, 'sectorId': 8, 'indexValue': 14957.68, 'transactionTime': 1487582881883, 'change': 0.0, 'name': 'MOTORS'}, {'sectorTradeToday': 8.0, 'sectorPreviousClose': 69664.27, 'sectorVolumeToday': 32, 'symbol': 'OIL', 'id': 50781, 'percentage': 0.0, 'sectorTurnoverToday': 26345, 'sectorId': 20, 'indexValue': 69664.27, 'transactionTime': 1487582881885, 'change': 0.0, 'name': 'OIL PALMS'}, {'sectorTradeToday': 124.0, 'sectorPreviousClose': 138.8, 'sectorVolumeToday': 216721, 'symbol': 'P&E', 'id': 50777, 'percentage': -0.9365994236311239, 'sectorTurnoverToday': 3858907, 'sectorId': 13, 'indexValue': 137.5, 'transactionTime': 1487582881884, 'change': -1.3, 'name': 'POWER & ENERGY'}, {'sectorTradeToday': 48.0, 'sectorPreviousClose': 687.55, 'sectorVolumeToday': 44323, 'symbol': 'PLT', 'id': 50783, 'percentage': -0.5250527234382953, 'sectorTurnoverToday': 958003, 'sectorId': 7, 'indexValue': 683.94, 'transactionTime': 1487582881885, 'change': -3.61, 'name': 'PLANTATIONS'}, {'sectorTradeToday': 7.0, 'sectorPreviousClose': 25703.89, 'sectorVolumeToday': 1885, 'symbol': 'S&S', 'id': 50774, 'percentage': -0.08204983759267566, 'sectorTurnoverToday': 328650, 'sectorId': 3, 'indexValue': 25682.8, 'transactionTime': 1487582881883, 'change': -21.09, 'name': 'STORES SUPPLIES'}, {'sectorTradeToday': 32.0, 'sectorPreviousClose': 17085.97, 'sectorVolumeToday': 229059, 'symbol': 'SRV', 'id': 50775, 'percentage': 0.5093652862553312, 'sectorTurnoverToday': 484625, 'sectorId': 22, 'indexValue': 17173.0, 'transactionTime': 1487582881883, 'change': 87.03, 'name': 'SERVICES'}, {'sectorTradeToday': 20.0, 'sectorPreviousClose': 168.8, 'sectorVolumeToday': 10366, 'symbol': 'TLE', 'id': 50780, 'percentage': -0.23696682464454977, 'sectorTurnoverToday': 250670, 'sectorId': 15, 'indexValue': 168.4, 'transactionTime': 1487582881885, 'change': -0.4, 'name': 'TELECOMMUNICATIONS'}, {'sectorTradeToday': 35.0, 'sectorPreviousClose': 15960.62, 'sectorVolumeToday': 89314, 'symbol': 'TRD', 'id': 50782, 'percentage': 0.2786232615023727, 'sectorTurnoverToday': 1325200, 'sectorId': 19, 'indexValue': 16005.09, 'transactionTime': 1487582881885, 'change': 44.47, 'name': 'TRADING'}]
+{'sectorTradeToday': 947.0, 'sectorPreviousClose': 15323.92, 'sectorVolumeToday': 4938269, 'symbol': 'BFI', 'id': 50764, 'percentage': -0.04085116602018282, 'sectorTurnoverToday': 146313885, 'sectorId': 14, 'indexValue': 15317.66, 'transactionTime': 1487582881880, 'change': -6.26, 'name': 'BANK FINANCE AND INSURANCE'}[20/Feb/2017 10:33:16] "GET /loadLatestData HTTP/1.1" 200 7
+[20/Feb/2017 14:34:00] "GET /invest HTTP/1.1" 200 3567
+[20/Feb/2017 14:34:03] "GET /investmetsList HTTP/1.1" 200 7754
+[20/Feb/2017 14:52:31] "GET /addDividend/15/ HTTP/1.1" 200 1077
+[20/Feb/2017 14:52:49] "POST /addDividend/15/ HTTP/1.1" 500 113520
+[20/Feb/2017 14:53:04] "GET /investmetsList HTTP/1.1" 200 7760
+[20/Feb/2017 14:54:15] "GET /addDividend/7/ HTTP/1.1" 200 1077
+[20/Feb/2017 14:54:31] "POST /addDividend/7/ HTTP/1.1" 500 113506
+[20/Feb/2017 14:54:53] "GET /invest HTTP/1.1" 200 3567
+[20/Feb/2017 14:54:53] "GET /investmetsList HTTP/1.1" 200 7763
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-02-22 00:00:00) while time zone support is active.
   RuntimeWarning)
 
 
 BANK FINANCE AND INSURANCE
-{'symbol': 'BFT', 'transactionTime': 1486632482011, 'sectorPreviousClose': 20933.8, 'percentage': 0.17158853146585903, 'indexValue': 20969.72, 'sectorVolumeToday': 434184, 'change': 35.92, 'sectorId': 10, 'id': 50610, 'sectorTurnoverToday': 74388978, 'sectorTradeToday': 104.0, 'name': 'BEVERAGE FOOD AND TOBACCO'}
+{'sectorTradeToday': 149.0, 'sectorPreviousClose': 21195.7, 'sectorVolumeToday': 884731, 'symbol': 'BFT', 'id': 50765, 'percentage': -0.4758512339767028, 'sectorTurnoverToday': 133783095, 'sectorId': 10, 'indexValue': 21094.84, 'transactionTime': 1487582881880, 'change': -100.86, 'name': 'BEVERAGE FOOD AND TOBACCO'}
 BEVERAGE FOOD AND TOBACCO
-{'symbol': 'C&E', 'transactionTime': 1486632482011, 'sectorPreviousClose': 2469.88, 'percentage': 0.12794143845045103, 'indexValue': 2473.04, 'sectorVolumeToday': 73308, 'change': 3.16, 'sectorId': 9, 'id': 50611, 'sectorTurnoverToday': 1632789, 'sectorTradeToday': 48.0, 'name': 'CONSTRUCTION AND ENGINEERING'}
+{'sectorTradeToday': 48.0, 'sectorPreviousClose': 2497.2, 'sectorVolumeToday': 37703, 'symbol': 'C&E', 'id': 50766, 'percentage': -0.12013455069678039, 'sectorTurnoverToday': 980918, 'sectorId': 9, 'indexValue': 2494.2, 'transactionTime': 1487582881881, 'change': -3.0, 'name': 'CONSTRUCTION AND ENGINEERING'}
 CONSTRUCTION AND ENGINEERING
-{'symbol': 'C&P', 'transactionTime': 1486632482012, 'sectorPreviousClose': 6422.65, 'percentage': -0.1497824106871774, 'indexValue': 6413.03, 'sectorVolumeToday': 19355, 'change': -9.62, 'sectorId': 6, 'id': 50612, 'sectorTurnoverToday': 3641749, 'sectorTradeToday': 14.0, 'name': 'CHEMICALS AND PHARMACEUTICALS'}
+{'sectorTradeToday': 8.0, 'sectorPreviousClose': 6471.05, 'sectorVolumeToday': 1072, 'symbol': 'C&P', 'id': 50767, 'percentage': -0.6360636990905649, 'sectorTurnoverToday': 54116, 'sectorId': 6, 'indexValue': 6429.89, 'transactionTime': 1487582881881, 'change': -41.16, 'name': 'CHEMICALS AND PHARMACEUTICALS'}
 CHEMICALS AND PHARMACEUTICALS
-{'symbol': 'CLF', 'transactionTime': 1486632482016, 'sectorPreviousClose': 91.43, 'percentage': 0.0, 'indexValue': 91.43, 'sectorVolumeToday': 0, 'change': 0.0, 'sectorId': 141, 'id': 50629, 'sectorTurnoverToday': 0, 'sectorTradeToday': 0.0, 'name': 'CLOSED END FUNDS'}
+{'sectorTradeToday': 0.0, 'sectorPreviousClose': 91.43, 'sectorVolumeToday': 0, 'symbol': 'CLF', 'id': 50784, 'percentage': 0.0, 'sectorTurnoverToday': 0, 'sectorId': 141, 'indexValue': 91.43, 'transactionTime': 1487582881886, 'change': 0.0, 'name': 'CLOSED END FUNDS'}
 CLOSED END FUNDS
-{'symbol': 'DIV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 1553.81, 'percentage': 0.36040442525147864, 'indexValue': 1559.41, 'sectorVolumeToday': 4056651, 'change': 5.6, 'sectorId': 11, 'id': 50621, 'sectorTurnoverToday': 429640594, 'sectorTradeToday': 530.0, 'name': 'DIVERSIFIED HOLDINGS'}
+{'sectorTradeToday': 315.0, 'sectorPreviousClose': 1573.08, 'sectorVolumeToday': 13515598, 'symbol': 'DIV', 'id': 50776, 'percentage': -0.6541307498665039, 'sectorTurnoverToday': 360235887, 'sectorId': 11, 'indexValue': 1562.79, 'transactionTime': 1487582881884, 'change': -10.29, 'name': 'DIVERSIFIED HOLDINGS'}
 DIVERSIFIED HOLDINGS
-{'symbol': 'F&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 830.23, 'percentage': 4.083205858617491, 'indexValue': 864.13, 'sectorVolumeToday': 23823, 'change': 33.9, 'sectorId': 16, 'id': 50613, 'sectorTurnoverToday': 382576, 'sectorTradeToday': 38.0, 'name': 'FOOTWEAR AND TEXTILE'}
+{'sectorTradeToday': 33.0, 'sectorPreviousClose': 856.6, 'sectorVolumeToday': 25996, 'symbol': 'F&T', 'id': 50768, 'percentage': 0.0, 'sectorTurnoverToday': 394788, 'sectorId': 16, 'indexValue': 856.6, 'transactionTime': 1487582881881, 'change': 0.0, 'name': 'FOOTWEAR AND TEXTILE'}
 FOOTWEAR AND TEXTILE
-{'symbol': 'H&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 2958.71, 'percentage': -0.06523113113485268, 'indexValue': 2956.78, 'sectorVolumeToday': 1606196, 'change': -1.93, 'sectorId': 21, 'id': 50614, 'sectorTurnoverToday': 2636366, 'sectorTradeToday': 188.0, 'name': 'HOTELS AND TRAVELS'}
+{'sectorTradeToday': 105.0, 'sectorPreviousClose': 2964.74, 'sectorVolumeToday': 251142, 'symbol': 'H&T', 'id': 50769, 'percentage': -0.25870734027267145, 'sectorTurnoverToday': 1381778, 'sectorId': 21, 'indexValue': 2957.07, 'transactionTime': 1487582881882, 'change': -7.67, 'name': 'HOTELS AND TRAVELS'}
 HOTELS AND TRAVELS
-{'symbol': 'HLT', 'transactionTime': 1486632482014, 'sectorPreviousClose': 946.75, 'percentage': -1.0351201478743068, 'indexValue': 936.95, 'sectorVolumeToday': 55322, 'change': -9.8, 'sectorId': 17, 'id': 50623, 'sectorTurnoverToday': 805019, 'sectorTradeToday': 62.0, 'name': 'HEALTH CARE'}
+{'sectorTradeToday': 48.0, 'sectorPreviousClose': 944.42, 'sectorVolumeToday': 134441, 'symbol': 'HLT', 'id': 50778, 'percentage': -0.6829588530526672, 'sectorTurnoverToday': 2221108, 'sectorId': 17, 'indexValue': 937.97, 'transactionTime': 1487582881884, 'change': -6.45, 'name': 'HEALTH CARE'}
 HEALTH CARE
-{'symbol': 'INV', 'transactionTime': 1486632482012, 'sectorPreviousClose': 11781.19, 'percentage': -0.24657950512639215, 'indexValue': 11752.14, 'sectorVolumeToday': 158845, 'change': -29.05, 'sectorId': 4, 'id': 50615, 'sectorTurnoverToday': 2484738, 'sectorTradeToday': 68.0, 'name': 'INVESTMENT TRUSTS'}
+{'sectorTradeToday': 42.0, 'sectorPreviousClose': 11854.46, 'sectorVolumeToday': 43579, 'symbol': 'INV', 'id': 50770, 'percentage': -0.4011148546622959, 'sectorTurnoverToday': 847913, 'sectorId': 4, 'indexValue': 11806.91, 'transactionTime': 1487582881882, 'change': -47.55, 'name': 'INVESTMENT TRUSTS'}
 INVESTMENT TRUSTS
-{'symbol': 'IT', 'transactionTime': 1486632482015, 'sectorPreviousClose': 40.56, 'percentage': 0.0, 'indexValue': 40.56, 'sectorVolumeToday': 1301, 'change': 0.0, 'sectorId': 5, 'id': 50624, 'sectorTurnoverToday': 9107, 'sectorTradeToday': 5.0, 'name': 'INFORMATION TECHNOLOGY'}
+{'sectorTradeToday': 9.0, 'sectorPreviousClose': 39.45, 'sectorVolumeToday': 38909, 'symbol': 'IT', 'id': 50779, 'percentage': 0.0, 'sectorTurnoverToday': 264579, 'sectorId': 5, 'indexValue': 39.45, 'transactionTime': 1487582881884, 'change': 0.0, 'name': 'INFORMATION TECHNOLOGY'}
 INFORMATION TECHNOLOGY
-{'symbol': 'L&P', 'transactionTime': 1486632482013, 'sectorPreviousClose': 596.95, 'percentage': -0.1323393919088701, 'indexValue': 596.16, 'sectorVolumeToday': 18266, 'change': -0.79, 'sectorId': 12, 'id': 50616, 'sectorTurnoverToday': 212720, 'sectorTradeToday': 38.0, 'name': 'LAND AND PROPERTY'}
+{'sectorTradeToday': 61.0, 'sectorPreviousClose': 610.46, 'sectorVolumeToday': 91871, 'symbol': 'L&P', 'id': 50771, 'percentage': -0.9238934573927857, 'sectorTurnoverToday': 1826171, 'sectorId': 12, 'indexValue': 604.82, 'transactionTime': 1487582881882, 'change': -5.64, 'name': 'LAND AND PROPERTY'}
 LAND AND PROPERTY
-{'symbol': 'MFG', 'transactionTime': 1486632482013, 'sectorPreviousClose': 4261.39, 'percentage': -0.4803596948413546, 'indexValue': 4240.92, 'sectorVolumeToday': 2571259, 'change': -20.47, 'sectorId': 18, 'id': 50617, 'sectorTurnoverToday': 93664750, 'sectorTradeToday': 363.0, 'name': 'MANUFACTURING'}
+{'sectorTradeToday': 406.0, 'sectorPreviousClose': 4302.42, 'sectorVolumeToday': 1386026, 'symbol': 'MFG', 'id': 50772, 'percentage': -0.050669158287661366, 'sectorTurnoverToday': 73002697, 'sectorId': 18, 'indexValue': 4300.24, 'transactionTime': 1487582881882, 'change': -2.18, 'name': 'MANUFACTURING'}
 MANUFACTURING
-{'symbol': 'MTR', 'transactionTime': 1486632482013, 'sectorPreviousClose': 14710.32, 'percentage': 0.0057102768668526585, 'indexValue': 14711.16, 'sectorVolumeToday': 250, 'change': 0.84, 'sectorId': 8, 'id': 50618, 'sectorTurnoverToday': 17500, 'sectorTradeToday': 2.0, 'name': 'MOTORS'}
+{'sectorTradeToday': 17.0, 'sectorPreviousClose': 14957.68, 'sectorVolumeToday': 4005, 'symbol': 'MTR', 'id': 50773, 'percentage': 0.0, 'sectorTurnoverToday': 333450, 'sectorId': 8, 'indexValue': 14957.68, 'transactionTime': 1487582881883, 'change': 0.0, 'name': 'MOTORS'}
 MOTORS
-{'symbol': 'OIL', 'transactionTime': 1486632482015, 'sectorPreviousClose': 68378.65, 'percentage': 0.0, 'indexValue': 68378.65, 'sectorVolumeToday': 19, 'change': 0.0, 'sectorId': 20, 'id': 50626, 'sectorTurnoverToday': 5032, 'sectorTradeToday': 2.0, 'name': 'OIL PALMS'}
+{'sectorTradeToday': 8.0, 'sectorPreviousClose': 69664.27, 'sectorVolumeToday': 32, 'symbol': 'OIL', 'id': 50781, 'percentage': 0.0, 'sectorTurnoverToday': 26345, 'sectorId': 20, 'indexValue': 69664.27, 'transactionTime': 1487582881885, 'change': 0.0, 'name': 'OIL PALMS'}
 OIL PALMS
-{'symbol': 'P&E', 'transactionTime': 1486632482014, 'sectorPreviousClose': 136.96, 'percentage': 1.7523364485981308, 'indexValue': 139.36, 'sectorVolumeToday': 648416, 'change': 2.4, 'sectorId': 13, 'id': 50622, 'sectorTurnoverToday': 7099378, 'sectorTradeToday': 88.0, 'name': 'POWER & ENERGY'}
+{'sectorTradeToday': 124.0, 'sectorPreviousClose': 138.8, 'sectorVolumeToday': 216721, 'symbol': 'P&E', 'id': 50777, 'percentage': -0.9365994236311239, 'sectorTurnoverToday': 3858907, 'sectorId': 13, 'indexValue': 137.5, 'transactionTime': 1487582881884, 'change': -1.3, 'name': 'POWER & ENERGY'}
 POWER & ENERGY
-{'symbol': 'PLT', 'transactionTime': 1486632482016, 'sectorPreviousClose': 657.17, 'percentage': 0.5569335179633884, 'indexValue': 660.83, 'sectorVolumeToday': 19792, 'change': 3.66, 'sectorId': 7, 'id': 50628, 'sectorTurnoverToday': 254517, 'sectorTradeToday': 27.0, 'name': 'PLANTATIONS'}
+{'sectorTradeToday': 48.0, 'sectorPreviousClose': 687.55, 'sectorVolumeToday': 44323, 'symbol': 'PLT', 'id': 50783, 'percentage': -0.5250527234382953, 'sectorTurnoverToday': 958003, 'sectorId': 7, 'indexValue': 683.94, 'transactionTime': 1487582881885, 'change': -3.61, 'name': 'PLANTATIONS'}
 PLANTATIONS
-{'symbol': 'S&S', 'transactionTime': 1486632482013, 'sectorPreviousClose': 26415.83, 'percentage': 0.0, 'indexValue': 26415.83, 'sectorVolumeToday': 65, 'change': 0.0, 'sectorId': 3, 'id': 50619, 'sectorTurnoverToday': 36013, 'sectorTradeToday': 8.0, 'name': 'STORES SUPPLIES'}
+{'sectorTradeToday': 7.0, 'sectorPreviousClose': 25703.89, 'sectorVolumeToday': 1885, 'symbol': 'S&S', 'id': 50774, 'percentage': -0.08204983759267566, 'sectorTurnoverToday': 328650, 'sectorId': 3, 'indexValue': 25682.8, 'transactionTime': 1487582881883, 'change': -21.09, 'name': 'STORES SUPPLIES'}
 STORES SUPPLIES
-{'symbol': 'SRV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 16379.04, 'percentage': 0.0, 'indexValue': 16379.04, 'sectorVolumeToday': 86, 'change': 0.0, 'sectorId': 22, 'id': 50620, 'sectorTurnoverToday': 19550, 'sectorTradeToday': 6.0, 'name': 'SERVICES'}
+{'sectorTradeToday': 32.0, 'sectorPreviousClose': 17085.97, 'sectorVolumeToday': 229059, 'symbol': 'SRV', 'id': 50775, 'percentage': 0.5093652862553312, 'sectorTurnoverToday': 484625, 'sectorId': 22, 'indexValue': 17173.0, 'transactionTime': 1487582881883, 'change': 87.03, 'name': 'SERVICES'}
 SERVICES
-{'symbol': 'TLE', 'transactionTime': 1486632482015, 'sectorPreviousClose': 170.81, 'percentage': -2.131022773842281, 'indexValue': 167.17, 'sectorVolumeToday': 11511, 'change': -3.64, 'sectorId': 15, 'id': 50625, 'sectorTurnoverToday': 156187, 'sectorTradeToday': 9.0, 'name': 'TELECOMMUNICATIONS'}
+{'sectorTradeToday': 20.0, 'sectorPreviousClose': 168.8, 'sectorVolumeToday': 10366, 'symbol': 'TLE', 'id': 50780, 'percentage': -0.23696682464454977, 'sectorTurnoverToday': 250670, 'sectorId': 15, 'indexValue': 168.4, 'transactionTime': 1487582881885, 'change': -0.4, 'name': 'TELECOMMUNICATIONS'}
 TELECOMMUNICATIONS
-{'symbol': 'TRD', 'transactionTime': 1486632482016, 'sectorPreviousClose': 15676.19, 'percentage': -0.055370597064720445, 'indexValue': 15667.51, 'sectorVolumeToday': 401001, 'change': -8.68, 'sectorId': 19, 'id': 50627, 'sectorTurnoverToday': 525051, 'sectorTradeToday': 8.0, 'name': 'TRADING'}
+{'sectorTradeToday': 35.0, 'sectorPreviousClose': 15960.62, 'sectorVolumeToday': 89314, 'symbol': 'TRD', 'id': 50782, 'percentage': 0.2786232615023727, 'sectorTurnoverToday': 1325200, 'sectorId': 19, 'indexValue': 16005.09, 'transactionTime': 1487582881885, 'change': 44.47, 'name': 'TRADING'}
 TRADING
 Gemalto Monetary Bonds
 90.342
 Gemalto Obligetory Bonds
 46.253
-KHL Shares
-850.0
+JKH Shares
+200.0
 Gemalto Shares GESPP
 95.729
 Rocell Shares
 242.0
-AEL Shares
-1250.0
-JKH Shares
-200.0
-NDB Shares
-184.0
-JINS shares
-900.0
 SPEN Shares
 1170.0
-[{'symbol': 'ASI', 'transactionTime': 1486632482010, 'sectorPreviousClose': 6096.39, 'percentage': -0.03674305613650045, 'indexValue': 6094.15, 'sectorVolumeToday': None, 'change': -2.24, 'sectorId': 1, 'id': 50631, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'ALL SHARE PRICE INDEX'}, {'symbol': 'S&P SL20', 'transactionTime': 1486612829791, 'sectorPreviousClose': 3485.2, 'percentage': 0.09468610122805005, 'indexValue': 3488.5, 'sectorVolumeToday': None, 'change': 3.3, 'sectorId': 40, 'id': 50630, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'S&P SL20'}]
-{'symbol': 'ASI', 'transactionTime': 1486632482010, 'sectorPreviousClose': 6096.39, 'percentage': -0.03674305613650045, 'indexValue': 6094.15, 'sectorVolumeToday': None, 'change': -2.24, 'sectorId': 1, 'id': 50631, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'ALL SHARE PRICE INDEX'}
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+JKH Shares
+200.0
+Gemalto Shares GESPP
+95.729
+Rocell Shares
+242.0
+SPEN Shares
+1170.0
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+JKH Shares
+200.0
+Gemalto Shares GESPP
+95.729
+Rocell Shares
+242.0
+SPEN Shares
+1170.0
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
+[{'sectorTradeToday': None, 'sectorPreviousClose': 6139.51, 'sectorVolumeToday': None, 'symbol': 'ASI', 'id': 50809, 'percentage': -0.19578109653702006, 'sectorTurnoverToday': None, 'sectorId': 1, 'indexValue': 6127.49, 'transactionTime': 1487669281841, 'change': -12.02, 'name': 'ALL SHARE PRICE INDEX'}, {'sectorTradeToday': None, 'sectorPreviousClose': 3538.07, 'sectorVolumeToday': None, 'symbol': 'S&P SL20', 'id': 50808, 'percentage': 0.18795558030225518, 'sectorTurnoverToday': None, 'sectorId': 40, 'indexValue': 3544.72, 'transactionTime': 1487649629800, 'change': 6.65, 'name': 'S&P SL20'}]
+{'sectorTradeToday': None, 'sectorPreviousClose': 6139.51, 'sectorVolumeToday': None, 'symbol': 'ASI', 'id': 50809, 'percentage': -0.19578109653702006, 'sectorTurnoverToday': None, 'sectorId': 1, 'indexValue': 6127.49, 'transactionTime': 1487669281841, 'change': -12.02, 'name': 'ALL SHARE PRICE INDEX'}
 ALL SHARE PRICE INDEX
-{'symbol': 'S&P SL20', 'transactionTime': 1486612829791, 'sectorPreviousClose': 3485.2, 'percentage': 0.09468610122805005, 'indexValue': 3488.5, 'sectorVolumeToday': None, 'change': 3.3, 'sectorId': 40, 'id': 50630, 'sectorTurnoverToday': None, 'sectorTradeToday': None, 'name': 'S&P SL20'}
+{'sectorTradeToday': None, 'sectorPreviousClose': 3538.07, 'sectorVolumeToday': None, 'symbol': 'S&P SL20', 'id': 50808, 'percentage': 0.18795558030225518, 'sectorTurnoverToday': None, 'sectorId': 40, 'indexValue': 3544.72, 'transactionTime': 1487649629800, 'change': 6.65, 'name': 'S&P SL20'}
 S&P SL20
-[{'symbol': 'BFI', 'transactionTime': 1486632482011, 'sectorPreviousClose': 15110.58, 'percentage': -0.0068825948441423165, 'indexValue': 15109.54, 'sectorVolumeToday': 1808371, 'change': -1.04, 'sectorId': 14, 'id': 50609, 'sectorTurnoverToday': 101700898, 'sectorTradeToday': 531.0, 'name': 'BANK FINANCE AND INSURANCE'}, {'symbol': 'BFT', 'transactionTime': 1486632482011, 'sectorPreviousClose': 20933.8, 'percentage': 0.17158853146585903, 'indexValue': 20969.72, 'sectorVolumeToday': 434184, 'change': 35.92, 'sectorId': 10, 'id': 50610, 'sectorTurnoverToday': 74388978, 'sectorTradeToday': 104.0, 'name': 'BEVERAGE FOOD AND TOBACCO'}, {'symbol': 'C&E', 'transactionTime': 1486632482011, 'sectorPreviousClose': 2469.88, 'percentage': 0.12794143845045103, 'indexValue': 2473.04, 'sectorVolumeToday': 73308, 'change': 3.16, 'sectorId': 9, 'id': 50611, 'sectorTurnoverToday': 1632789, 'sectorTradeToday': 48.0, 'name': 'CONSTRUCTION AND ENGINEERING'}, {'symbol': 'C&P', 'transactionTime': 1486632482012, 'sectorPreviousClose': 6422.65, 'percentage': -0.1497824106871774, 'indexValue': 6413.03, 'sectorVolumeToday': 19355, 'change': -9.62, 'sectorId': 6, 'id': 50612, 'sectorTurnoverToday': 3641749, 'sectorTradeToday': 14.0, 'name': 'CHEMICALS AND PHARMACEUTICALS'}, {'symbol': 'CLF', 'transactionTime': 1486632482016, 'sectorPreviousClose': 91.43, 'percentage': 0.0, 'indexValue': 91.43, 'sectorVolumeToday': 0, 'change': 0.0, 'sectorId': 141, 'id': 50629, 'sectorTurnoverToday': 0, 'sectorTradeToday': 0.0, 'name': 'CLOSED END FUNDS'}, {'symbol': 'DIV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 1553.81, 'percentage': 0.36040442525147864, 'indexValue': 1559.41, 'sectorVolumeToday': 4056651, 'change': 5.6, 'sectorId': 11, 'id': 50621, 'sectorTurnoverToday': 429640594, 'sectorTradeToday': 530.0, 'name': 'DIVERSIFIED HOLDINGS'}, {'symbol': 'F&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 830.23, 'percentage': 4.083205858617491, 'indexValue': 864.13, 'sectorVolumeToday': 23823, 'change': 33.9, 'sectorId': 16, 'id': 50613, 'sectorTurnoverToday': 382576, 'sectorTradeToday': 38.0, 'name': 'FOOTWEAR AND TEXTILE'}, {'symbol': 'H&T', 'transactionTime': 1486632482012, 'sectorPreviousClose': 2958.71, 'percentage': -0.06523113113485268, 'indexValue': 2956.78, 'sectorVolumeToday': 1606196, 'change': -1.93, 'sectorId': 21, 'id': 50614, 'sectorTurnoverToday': 2636366, 'sectorTradeToday': 188.0, 'name': 'HOTELS AND TRAVELS'}, {'symbol': 'HLT', 'transactionTime': 1486632482014, 'sectorPreviousClose': 946.75, 'percentage': -1.0351201478743068, 'indexValue': 936.95, 'sectorVolumeToday': 55322, 'change': -9.8, 'sectorId': 17, 'id': 50623, 'sectorTurnoverToday': 805019, 'sectorTradeToday': 62.0, 'name': 'HEALTH CARE'}, {'symbol': 'INV', 'transactionTime': 1486632482012, 'sectorPreviousClose': 11781.19, 'percentage': -0.24657950512639215, 'indexValue': 11752.14, 'sectorVolumeToday': 158845, 'change': -29.05, 'sectorId': 4, 'id': 50615, 'sectorTurnoverToday': 2484738, 'sectorTradeToday': 68.0, 'name': 'INVESTMENT TRUSTS'}, {'symbol': 'IT', 'transactionTime': 1486632482015, 'sectorPreviousClose': 40.56, 'percentage': 0.0, 'indexValue': 40.56, 'sectorVolumeToday': 1301, 'change': 0.0, 'sectorId': 5, 'id': 50624, 'sectorTurnoverToday': 9107, 'sectorTradeToday': 5.0, 'name': 'INFORMATION TECHNOLOGY'}, {'symbol': 'L&P', 'transactionTime': 1486632482013, 'sectorPreviousClose': 596.95, 'percentage': -0.1323393919088701, 'indexValue': 596.16, 'sectorVolumeToday': 18266, 'change': -0.79, 'sectorId': 12, 'id': 50616, 'sectorTurnoverToday': 212720, 'sectorTradeToday': 38.0, 'name': 'LAND AND PROPERTY'}, {'symbol': 'MFG', 'transactionTime': 1486632482013, 'sectorPreviousClose': 4261.39, 'percentage': -0.4803596948413546, 'indexValue': 4240.92, 'sectorVolumeToday': 2571259, 'change': -20.47, 'sectorId': 18, 'id': 50617, 'sectorTurnoverToday': 93664750, 'sectorTradeToday': 363.0, 'name': 'MANUFACTURING'}, {'symbol': 'MTR', 'transactionTime': 1486632482013, 'sectorPreviousClose': 14710.32, 'percentage': 0.0057102768668526585, 'indexValue': 14711.16, 'sectorVolumeToday': 250, 'change': 0.84, 'sectorId': 8, 'id': 50618, 'sectorTurnoverToday': 17500, 'sectorTradeToday': 2.0, 'name': 'MOTORS'}, {'symbol': 'OIL', 'transactionTime': 1486632482015, 'sectorPreviousClose': 68378.65, 'percentage': 0.0, 'indexValue': 68378.65, 'sectorVolumeToday': 19, 'change': 0.0, 'sectorId': 20, 'id': 50626, 'sectorTurnoverToday': 5032, 'sectorTradeToday': 2.0, 'name': 'OIL PALMS'}, {'symbol': 'P&E', 'transactionTime': 1486632482014, 'sectorPreviousClose': 136.96, 'percentage': 1.7523364485981308, 'indexValue': 139.36, 'sectorVolumeToday': 648416, 'change': 2.4, 'sectorId': 13, 'id': 50622, 'sectorTurnoverToday': 7099378, 'sectorTradeToday': 88.0, 'name': 'POWER & ENERGY'}, {'symbol': 'PLT', 'transactionTime': 1486632482016, 'sectorPreviousClose': 657.17, 'percentage': 0.5569335179633884, 'indexValue': 660.83, 'sectorVolumeToday': 19792, 'change': 3.66, 'sectorId': 7, 'id': 50628, 'sectorTurnoverToday': 254517, 'sectorTradeToday': 27.0, 'name': 'PLANTATIONS'}, {'symbol': 'S&S', 'transactionTime': 1486632482013, 'sectorPreviousClose': 26415.83, 'percentage': 0.0, 'indexValue': 26415.83, 'sectorVolumeToday': 65, 'change': 0.0, 'sectorId': 3, 'id': 50619, 'sectorTurnoverToday': 36013, 'sectorTradeToday': 8.0, 'name': 'STORES SUPPLIES'}, {'symbol': 'SRV', 'transactionTime': 1486632482014, 'sectorPreviousClose': 16379.04, 'percentage': 0.0, 'indexValue': 16379.04, 'sectorVolumeToday': 86, 'change': 0.0, 'sectorId': 22, 'id': 50620, 'sectorTurnoverToday': 19550, 'sectorTradeToday': 6.0, 'name': 'SERVICES'}, {'symbol': 'TLE', 'transactionTime': 1486632482015, 'sectorPreviousClose': 170.81, 'percentage': -2.131022773842281, 'indexValue': 167.17, 'sectorVolumeToday': 11511, 'change': -3.64, 'sectorId': 15, 'id': 50625, 'sectorTurnoverToday': 156187, 'sectorTradeToday': 9.0, 'name': 'TELECOMMUNICATIONS'}, {'symbol': 'TRD', 'transactionTime': 1486632482016, 'sectorPreviousClose': 15676.19, 'percentage': -0.055370597064720445, 'indexValue': 15667.51, 'sectorVolumeToday': 401001, 'change': -8.68, 'sectorId': 19, 'id': 50627, 'sectorTurnoverToday': 525051, 'sectorTradeToday': 8.0, 'name': 'TRADING'}]
+[{'sectorTradeToday': 967.0, 'sectorPreviousClose': 15317.66, 'sectorVolumeToday': 6839096, 'symbol': 'BFI', 'id': 50787, 'percentage': -0.34554886320756567, 'sectorTurnoverToday': 63841467, 'sectorId': 14, 'indexValue': 15264.73, 'transactionTime': 1487669281842, 'change': -52.93, 'name': 'BANK FINANCE AND INSURANCE'}, {'sectorTradeToday': 110.0, 'sectorPreviousClose': 21094.84, 'sectorVolumeToday': 349501, 'symbol': 'BFT', 'id': 50788, 'percentage': -0.3234440270701271, 'sectorTurnoverToday': 91994982, 'sectorId': 10, 'indexValue': 21026.61, 'transactionTime': 1487669281842, 'change': -68.23, 'name': 'BEVERAGE FOOD AND TOBACCO'}, {'sectorTradeToday': 124.0, 'sectorPreviousClose': 2494.2, 'sectorVolumeToday': 800748, 'symbol': 'C&E', 'id': 50789, 'percentage': 0.5721273354181702, 'sectorTurnoverToday': 21170891, 'sectorId': 9, 'indexValue': 2508.47, 'transactionTime': 1487669281842, 'change': 14.27, 'name': 'CONSTRUCTION AND ENGINEERING'}, {'sectorTradeToday': 25.0, 'sectorPreviousClose': 6429.89, 'sectorVolumeToday': 247335, 'symbol': 'C&P', 'id': 50790, 'percentage': -0.5432441301484162, 'sectorTurnoverToday': 485058, 'sectorId': 6, 'indexValue': 6394.96, 'transactionTime': 1487669281843, 'change': -34.93, 'name': 'CHEMICALS AND PHARMACEUTICALS'}, {'sectorTradeToday': 2.0, 'sectorPreviousClose': 91.43, 'sectorVolumeToday': 114, 'symbol': 'CLF', 'id': 50807, 'percentage': -0.38280651864814613, 'sectorTurnoverToday': 900, 'sectorId': 141, 'indexValue': 91.08, 'transactionTime': 1487669281847, 'change': -0.35, 'name': 'CLOSED END FUNDS'}, {'sectorTradeToday': 193.0, 'sectorPreviousClose': 1562.79, 'sectorVolumeToday': 743675, 'symbol': 'DIV', 'id': 50799, 'percentage': -0.4018454174905138, 'sectorTurnoverToday': 7959710, 'sectorId': 11, 'indexValue': 1556.51, 'transactionTime': 1487669281845, 'change': -6.28, 'name': 'DIVERSIFIED HOLDINGS'}, {'sectorTradeToday': 20.0, 'sectorPreviousClose': 856.6, 'sectorVolumeToday': 26281, 'symbol': 'F&T', 'id': 50791, 'percentage': -1.2596310996964744, 'sectorTurnoverToday': 420692, 'sectorId': 16, 'indexValue': 845.81, 'transactionTime': 1487669281843, 'change': -10.79, 'name': 'FOOTWEAR AND TEXTILE'}, {'sectorTradeToday': 186.0, 'sectorPreviousClose': 2957.07, 'sectorVolumeToday': 489424, 'symbol': 'H&T', 'id': 50792, 'percentage': -0.37841512037253094, 'sectorTurnoverToday': 2391162, 'sectorId': 21, 'indexValue': 2945.88, 'transactionTime': 1487669281843, 'change': -11.19, 'name': 'HOTELS AND TRAVELS'}, {'sectorTradeToday': 54.0, 'sectorPreviousClose': 937.97, 'sectorVolumeToday': 129982, 'symbol': 'HLT', 'id': 50801, 'percentage': 1.8444086697868802, 'sectorTurnoverToday': 2296264, 'sectorId': 17, 'indexValue': 955.27, 'transactionTime': 1487669281846, 'change': 17.3, 'name': 'HEALTH CARE'}, {'sectorTradeToday': 34.0, 'sectorPreviousClose': 11806.91, 'sectorVolumeToday': 23715, 'symbol': 'INV', 'id': 50793, 'percentage': -1.3387922835017798, 'sectorTurnoverToday': 566616, 'sectorId': 4, 'indexValue': 11648.84, 'transactionTime': 1487669281843, 'change': -158.07, 'name': 'INVESTMENT TRUSTS'}, {'sectorTradeToday': 8.0, 'sectorPreviousClose': 39.45, 'sectorVolumeToday': 1231, 'symbol': 'IT', 'id': 50802, 'percentage': 0.0, 'sectorTurnoverToday': 8460, 'sectorId': 5, 'indexValue': 39.45, 'transactionTime': 1487669281846, 'change': 0.0, 'name': 'INFORMATION TECHNOLOGY'}, {'sectorTradeToday': 58.0, 'sectorPreviousClose': 604.82, 'sectorVolumeToday': 24370, 'symbol': 'L&P', 'id': 50794, 'percentage': 1.102807446843689, 'sectorTurnoverToday': 650327, 'sectorId': 12, 'indexValue': 611.49, 'transactionTime': 1487669281844, 'change': 6.67, 'name': 'LAND AND PROPERTY'}, {'sectorTradeToday': 512.0, 'sectorPreviousClose': 4300.24, 'sectorVolumeToday': 3042138, 'symbol': 'MFG', 'id': 50795, 'percentage': -0.1520845348166614, 'sectorTurnoverToday': 51325441, 'sectorId': 18, 'indexValue': 4293.7, 'transactionTime': 1487669281844, 'change': -6.54, 'name': 'MANUFACTURING'}, {'sectorTradeToday': 23.0, 'sectorPreviousClose': 14957.68, 'sectorVolumeToday': 24177, 'symbol': 'MTR', 'id': 50796, 'percentage': 0.2649475052280835, 'sectorTurnoverToday': 1994386, 'sectorId': 8, 'indexValue': 14997.31, 'transactionTime': 1487669281844, 'change': 39.63, 'name': 'MOTORS'}, {'sectorTradeToday': 14.0, 'sectorPreviousClose': 69664.27, 'sectorVolumeToday': 612, 'symbol': 'OIL', 'id': 50804, 'percentage': 0.0, 'sectorTurnoverToday': 170910, 'sectorId': 20, 'indexValue': 69664.27, 'transactionTime': 1487669281846, 'change': 0.0, 'name': 'OIL PALMS'}, {'sectorTradeToday': 115.0, 'sectorPreviousClose': 137.5, 'sectorVolumeToday': 5263792, 'symbol': 'P&E', 'id': 50800, 'percentage': -0.72, 'sectorTurnoverToday': 43700071, 'sectorId': 13, 'indexValue': 136.51, 'transactionTime': 1487669281845, 'change': -0.99, 'name': 'POWER & ENERGY'}, {'sectorTradeToday': 64.0, 'sectorPreviousClose': 683.94, 'sectorVolumeToday': 58969, 'symbol': 'PLT', 'id': 50806, 'percentage': 0.46202883293856184, 'sectorTurnoverToday': 1171637, 'sectorId': 7, 'indexValue': 687.1, 'transactionTime': 1487669281847, 'change': 3.16, 'name': 'PLANTATIONS'}, {'sectorTradeToday': 5.0, 'sectorPreviousClose': 25682.8, 'sectorVolumeToday': 2279, 'symbol': 'S&S', 'id': 50797, 'percentage': 1.8227373962340554, 'sectorTurnoverToday': 352540, 'sectorId': 3, 'indexValue': 26150.93, 'transactionTime': 1487669281844, 'change': 468.13, 'name': 'STORES SUPPLIES'}, {'sectorTradeToday': 19.0, 'sectorPreviousClose': 17173.0, 'sectorVolumeToday': 6236, 'symbol': 'SRV', 'id': 50798, 'percentage': -3.469399638968148, 'sectorTurnoverToday': 102387, 'sectorId': 22, 'indexValue': 16577.2, 'transactionTime': 1487669281845, 'change': -595.8, 'name': 'SERVICES'}, {'sectorTradeToday': 26.0, 'sectorPreviousClose': 168.4, 'sectorVolumeToday': 749818, 'symbol': 'TLE', 'id': 50803, 'percentage': 0.7779097387173397, 'sectorTurnoverToday': 8288541, 'sectorId': 15, 'indexValue': 169.71, 'transactionTime': 1487669281846, 'change': 1.31, 'name': 'TELECOMMUNICATIONS'}, {'sectorTradeToday': 40.0, 'sectorPreviousClose': 16005.09, 'sectorVolumeToday': 283989, 'symbol': 'TRD', 'id': 50805, 'percentage': -0.38950108996575467, 'sectorTurnoverToday': 1517664, 'sectorId': 19, 'indexValue': 15942.75, 'transactionTime': 1487669281847, 'change': -62.34, 'name': 'TRADING'}][21/Feb/2017 10:34:04] "GET /loadLatestData HTTP/1.1" 200 7
+[21/Feb/2017 13:47:50] "GET /invest HTTP/1.1" 200 3567
+[21/Feb/2017 13:47:53] "GET /favicon.ico HTTP/1.1" 404 5808
+[21/Feb/2017 13:47:53] "GET /investmetsList HTTP/1.1" 200 7759
+[21/Feb/2017 13:49:39] "GET /invest HTTP/1.1" 200 3567
+[21/Feb/2017 13:49:39] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[21/Feb/2017 13:49:39] "GET /static/js/jquery-3.1.0.js HTTP/1.1" 200 263767
+[21/Feb/2017 13:49:40] "GET /static/js/charts/charts.js HTTP/1.1" 200 1355
+[21/Feb/2017 13:49:41] "GET /favicon.ico HTTP/1.1" 404 5808
+[21/Feb/2017 13:49:41] "GET /investmetsList HTTP/1.1" 200 7759
+[21/Feb/2017 13:49:42] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+
+{'sectorTradeToday': 967.0, 'sectorPreviousClose': 15317.66, 'sectorVolumeToday': 6839096, 'symbol': 'BFI', 'id': 50787, 'percentage': -0.34554886320756567, 'sectorTurnoverToday': 63841467, 'sectorId': 14, 'indexValue': 15264.73, 'transactionTime': 1487669281842, 'change': -52.93, 'name': 'BANK FINANCE AND INSURANCE'}
+BANK FINANCE AND INSURANCE
+{'sectorTradeToday': 110.0, 'sectorPreviousClose': 21094.84, 'sectorVolumeToday': 349501, 'symbol': 'BFT', 'id': 50788, 'percentage': -0.3234440270701271, 'sectorTurnoverToday': 91994982, 'sectorId': 10, 'indexValue': 21026.61, 'transactionTime': 1487669281842, 'change': -68.23, 'name': 'BEVERAGE FOOD AND TOBACCO'}
+BEVERAGE FOOD AND TOBACCO
+{'sectorTradeToday': 124.0, 'sectorPreviousClose': 2494.2, 'sectorVolumeToday': 800748, 'symbol': 'C&E', 'id': 50789, 'percentage': 0.5721273354181702, 'sectorTurnoverToday': 21170891, 'sectorId': 9, 'indexValue': 2508.47, 'transactionTime': 1487669281842, 'change': 14.27, 'name': 'CONSTRUCTION AND ENGINEERING'}
+CONSTRUCTION AND ENGINEERING
+{'sectorTradeToday': 25.0, 'sectorPreviousClose': 6429.89, 'sectorVolumeToday': 247335, 'symbol': 'C&P', 'id': 50790, 'percentage': -0.5432441301484162, 'sectorTurnoverToday': 485058, 'sectorId': 6, 'indexValue': 6394.96, 'transactionTime': 1487669281843, 'change': -34.93, 'name': 'CHEMICALS AND PHARMACEUTICALS'}
+CHEMICALS AND PHARMACEUTICALS
+{'sectorTradeToday': 2.0, 'sectorPreviousClose': 91.43, 'sectorVolumeToday': 114, 'symbol': 'CLF', 'id': 50807, 'percentage': -0.38280651864814613, 'sectorTurnoverToday': 900, 'sectorId': 141, 'indexValue': 91.08, 'transactionTime': 1487669281847, 'change': -0.35, 'name': 'CLOSED END FUNDS'}
+CLOSED END FUNDS
+{'sectorTradeToday': 193.0, 'sectorPreviousClose': 1562.79, 'sectorVolumeToday': 743675, 'symbol': 'DIV', 'id': 50799, 'percentage': -0.4018454174905138, 'sectorTurnoverToday': 7959710, 'sectorId': 11, 'indexValue': 1556.51, 'transactionTime': 1487669281845, 'change': -6.28, 'name': 'DIVERSIFIED HOLDINGS'}
+DIVERSIFIED HOLDINGS
+{'sectorTradeToday': 20.0, 'sectorPreviousClose': 856.6, 'sectorVolumeToday': 26281, 'symbol': 'F&T', 'id': 50791, 'percentage': -1.2596310996964744, 'sectorTurnoverToday': 420692, 'sectorId': 16, 'indexValue': 845.81, 'transactionTime': 1487669281843, 'change': -10.79, 'name': 'FOOTWEAR AND TEXTILE'}
+FOOTWEAR AND TEXTILE
+{'sectorTradeToday': 186.0, 'sectorPreviousClose': 2957.07, 'sectorVolumeToday': 489424, 'symbol': 'H&T', 'id': 50792, 'percentage': -0.37841512037253094, 'sectorTurnoverToday': 2391162, 'sectorId': 21, 'indexValue': 2945.88, 'transactionTime': 1487669281843, 'change': -11.19, 'name': 'HOTELS AND TRAVELS'}
+HOTELS AND TRAVELS
+{'sectorTradeToday': 54.0, 'sectorPreviousClose': 937.97, 'sectorVolumeToday': 129982, 'symbol': 'HLT', 'id': 50801, 'percentage': 1.8444086697868802, 'sectorTurnoverToday': 2296264, 'sectorId': 17, 'indexValue': 955.27, 'transactionTime': 1487669281846, 'change': 17.3, 'name': 'HEALTH CARE'}
+HEALTH CARE
+{'sectorTradeToday': 34.0, 'sectorPreviousClose': 11806.91, 'sectorVolumeToday': 23715, 'symbol': 'INV', 'id': 50793, 'percentage': -1.3387922835017798, 'sectorTurnoverToday': 566616, 'sectorId': 4, 'indexValue': 11648.84, 'transactionTime': 1487669281843, 'change': -158.07, 'name': 'INVESTMENT TRUSTS'}
+INVESTMENT TRUSTS
+{'sectorTradeToday': 8.0, 'sectorPreviousClose': 39.45, 'sectorVolumeToday': 1231, 'symbol': 'IT', 'id': 50802, 'percentage': 0.0, 'sectorTurnoverToday': 8460, 'sectorId': 5, 'indexValue': 39.45, 'transactionTime': 1487669281846, 'change': 0.0, 'name': 'INFORMATION TECHNOLOGY'}
+INFORMATION TECHNOLOGY
+{'sectorTradeToday': 58.0, 'sectorPreviousClose': 604.82, 'sectorVolumeToday': 24370, 'symbol': 'L&P', 'id': 50794, 'percentage': 1.102807446843689, 'sectorTurnoverToday': 650327, 'sectorId': 12, 'indexValue': 611.49, 'transactionTime': 1487669281844, 'change': 6.67, 'name': 'LAND AND PROPERTY'}
+LAND AND PROPERTY
+{'sectorTradeToday': 512.0, 'sectorPreviousClose': 4300.24, 'sectorVolumeToday': 3042138, 'symbol': 'MFG', 'id': 50795, 'percentage': -0.1520845348166614, 'sectorTurnoverToday': 51325441, 'sectorId': 18, 'indexValue': 4293.7, 'transactionTime': 1487669281844, 'change': -6.54, 'name': 'MANUFACTURING'}
+MANUFACTURING
+{'sectorTradeToday': 23.0, 'sectorPreviousClose': 14957.68, 'sectorVolumeToday': 24177, 'symbol': 'MTR', 'id': 50796, 'percentage': 0.2649475052280835, 'sectorTurnoverToday': 1994386, 'sectorId': 8, 'indexValue': 14997.31, 'transactionTime': 1487669281844, 'change': 39.63, 'name': 'MOTORS'}
+MOTORS
+{'sectorTradeToday': 14.0, 'sectorPreviousClose': 69664.27, 'sectorVolumeToday': 612, 'symbol': 'OIL', 'id': 50804, 'percentage': 0.0, 'sectorTurnoverToday': 170910, 'sectorId': 20, 'indexValue': 69664.27, 'transactionTime': 1487669281846, 'change': 0.0, 'name': 'OIL PALMS'}
+OIL PALMS
+{'sectorTradeToday': 115.0, 'sectorPreviousClose': 137.5, 'sectorVolumeToday': 5263792, 'symbol': 'P&E', 'id': 50800, 'percentage': -0.72, 'sectorTurnoverToday': 43700071, 'sectorId': 13, 'indexValue': 136.51, 'transactionTime': 1487669281845, 'change': -0.99, 'name': 'POWER & ENERGY'}
+POWER & ENERGY
+{'sectorTradeToday': 64.0, 'sectorPreviousClose': 683.94, 'sectorVolumeToday': 58969, 'symbol': 'PLT', 'id': 50806, 'percentage': 0.46202883293856184, 'sectorTurnoverToday': 1171637, 'sectorId': 7, 'indexValue': 687.1, 'transactionTime': 1487669281847, 'change': 3.16, 'name': 'PLANTATIONS'}
+PLANTATIONS
+{'sectorTradeToday': 5.0, 'sectorPreviousClose': 25682.8, 'sectorVolumeToday': 2279, 'symbol': 'S&S', 'id': 50797, 'percentage': 1.8227373962340554, 'sectorTurnoverToday': 352540, 'sectorId': 3, 'indexValue': 26150.93, 'transactionTime': 1487669281844, 'change': 468.13, 'name': 'STORES SUPPLIES'}
+STORES SUPPLIES
+{'sectorTradeToday': 19.0, 'sectorPreviousClose': 17173.0, 'sectorVolumeToday': 6236, 'symbol': 'SRV', 'id': 50798, 'percentage': -3.469399638968148, 'sectorTurnoverToday': 102387, 'sectorId': 22, 'indexValue': 16577.2, 'transactionTime': 1487669281845, 'change': -595.8, 'name': 'SERVICES'}
+SERVICES
+{'sectorTradeToday': 26.0, 'sectorPreviousClose': 168.4, 'sectorVolumeToday': 749818, 'symbol': 'TLE', 'id': 50803, 'percentage': 0.7779097387173397, 'sectorTurnoverToday': 8288541, 'sectorId': 15, 'indexValue': 169.71, 'transactionTime': 1487669281846, 'change': 1.31, 'name': 'TELECOMMUNICATIONS'}
+TELECOMMUNICATIONS
+{'sectorTradeToday': 40.0, 'sectorPreviousClose': 16005.09, 'sectorVolumeToday': 283989, 'symbol': 'TRD', 'id': 50805, 'percentage': -0.38950108996575467, 'sectorTurnoverToday': 1517664, 'sectorId': 19, 'indexValue': 15942.75, 'transactionTime': 1487669281847, 'change': -62.34, 'name': 'TRADING'}
+TRADING
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+JKH Shares
+200.0
+Gemalto Shares GESPP
+95.729
+Rocell Shares
+242.0
+SPEN Shares
+1170.0
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+JKH Shares
+200.0
+Gemalto Shares GESPP
+95.729
+Rocell Shares
+242.0
+SPEN Shares
+1170.0
+JINS shares
+900.0
+KHL Shares
+850.0
+NDB Shares
+184.0
+AEL Shares
+1250.0
