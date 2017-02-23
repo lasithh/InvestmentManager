@@ -97,6 +97,11 @@ class CompanyFinanceReportSumary(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     totalShareHolderFunds = models.FloatField(default=0)
     numberOfShares = models.IntegerField(default=0)
+    currency = models.ForeignKey(Currency, default=1)
+    PERatio = models.FloatField(default=0)
+    earningsPerShare = models.FloatField(default=0)
+    sharePrice = models.FloatField(default=0)
+    type = models.IntegerField(default = 0)
     
 class Dividends(models.Model):
     investment = models.ForeignKey(Investment)

@@ -26,6 +26,11 @@ from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulat
 from _datetime import datetime
 from django.db.models.query_utils import Q
 from datetime import timedelta
+from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import processCompanyHistoryData
+from django.contrib.admin import widgets
+from django import forms
+from MyInvestementsManager.forms import CompanyFinanceReportSumaryForm
+
 
 # Create your views here.
 
@@ -167,10 +172,33 @@ class DividendsCreateView(CreateView):
         form.instance.env = Investment.objects.get(pk=self.kwargs['investmentId'])
         return super(DividendsCreateView, self).form_valid(form)
 
-#Daily Trading summary related views
+#Company financial data related views
 class CompanyFinanceReportSumaryListView(ListView):
     model = CompanyFinanceReportSumary
     template_name='MyInvestmentsManager/companyFinanceSummary/company_finance_summary_list.html'
+    
+    def get_queryset(self):
+        
+        aitkenCompany = ListedCompany.objects.filter(symbol = 'SPEN.N0000').first()
+        return CompanyFinanceReportSumary.objects.filter(company = aitkenCompany).order_by('issueDate')
+    
+    def get_context_data(self, **kwargs):
+        #Get the context object
+        context = super(CompanyFinanceReportSumaryListView, self).get_context_data(**kwargs)
+        
+        #Calculate the accumulated data 
+        processedData= processCompanyHistoryData(context['object_list'])
+        context.update(processedData)
+
+        return context
+
+class CompanyFinanceReportSumaryCreateView(CreateView):
+    form_class = CompanyFinanceReportSumaryForm
+    model = CompanyFinanceReportSumary
+    template_name="MyInvestmentsManager/companyFinanceSummary/add_company_finance_summary.html"
+              
+    def get_success_url(self):
+        return reverse('index')
 
 def storeSectorIndices(request):
     #Store data on the database    

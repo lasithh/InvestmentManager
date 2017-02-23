@@ -2,7 +2,7 @@
 {% load humanize %}
 {% block content %}
 
-<p> Investments Summary </p>
+<h3> Financial Summary </h3>
 
 <table class="table table-striped">
 	<tr>
@@ -12,8 +12,9 @@
 		<td>PAT</td>
 		<td>Dividends</td>
 		<td>Liability Ratio</td>
-		<td>EPS Ratio</td>
-		<td>P/E Ratio</td>
+		<td>EPS </td>
+		<td>P/E </td>
+		<td align="center" data-toggle="tooltip" title="Add Company Financial Data"><span class="glyphicon glyphicon-plus" aria-hidden = "true" id="addCompanyFinancialData"/></td>
 		
 	</tr>
 	{% for data in object_list %}
@@ -26,12 +27,18 @@
 		<td> {{data.currentRatio }}</td>
 		<td> {{data.profitAfterTax|div:data.numberOfShares}}</td>
 		<td> {{data.grossDividends|div:data.numberOfShares }}</td>
-		
+		<td><span class="glyphicon glyphicon-pencil" aria-hidden = "true"/></td>
 	</tr>
 	{% endfor%}
 </table>
 
 {% endblock %}
+<script>
 
+   $("#addCompanyFinancialData").click(function(event){
+       loadBody("/addCompanyFinancialData");
+    });    
+ 
+</script>
 
 

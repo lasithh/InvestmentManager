@@ -7,58 +7,7 @@
 
 	
 $(document).ready( function () {
-
-    var loadBody = function($url) {
-    	$.get( $url, function( data ) {
-    		  $( "#pageBody" ).html( data);
-    		});
-    };
  
-    
-/*     $("#showegistedCompanies").click(function(){
-        loadBody('companiesList');
-    }); 
-    
-    $("#reloadCompaniesList").click(function(){
-        loadBody('reloadCompaniesList');
-    }); 
-    
-    $("#showDailyTradingSummary").click(function(){
-        loadBody('dailyTradingSummaryList');
-    }); 
-    
-    $("#storeDailyTradingSummary").click(function(){
-        loadBody('storeDailyTradingSummary');
-    }); 
-    
-    $("#showDetailedTrades").click(function(){
-        loadBody('detailedTradesList');
-    }); 
-    
-    $("#storeDetailedTrades").click(function(){
-        loadBody('storeDetailedTrades');
-    });
-    
-    $("#viewSectorIndices").click(function(){
-        loadBody('sectorIndicesList');
-    }); 
-    
-    $("#storeSectorIndices").click(function(){
-        loadBody('storeSectorIndices');
-    });
-    
-    $("#addInvestment").click(function(){
-        loadBody('addInvestment');
-    });
-    
-    $("#readPdfData").click(function(){
-        loadBody('readPdfData');
-    });
-    
-    $("#readPdfData").click(function(){
-        loadBody('readPdfData');
-    });
-    ; */
     
     $("#sidebar").find("li").click(function(event){
         loadBody(event.target.id);
@@ -72,8 +21,9 @@ $(document).ready( function () {
   //setup the tooltips
     //$('[data-toggle="tooltip"]').tooltip();
 
- });
-	
+
+	  });
+    
 </script>
 
 {% endblock %}
