@@ -103,6 +103,7 @@ class CompanyFinanceReportSumary(models.Model):
     sharePrice = models.FloatField(default=0)
     type = models.IntegerField(default = 0)
     assetsPerShare = models.FloatField(default=0)
+    devidendsPerShare = models.FloatField(default=0)
     
 class Dividends(models.Model):
     investment = models.ForeignKey(Investment)
