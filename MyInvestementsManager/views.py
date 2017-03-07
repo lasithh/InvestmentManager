@@ -180,7 +180,7 @@ class CompanyFinanceReportSumaryListView(ListView):
     def get_queryset(self):
         
         aitkenCompany = ListedCompany.objects.filter(symbol = 'SPEN.N0000').first()
-        return CompanyFinanceReportSumary.objects.filter(company = aitkenCompany).order_by('issueDate')
+        return CompanyFinanceReportSumary.objects.filter(company = aitkenCompany).order_by('-issueDate')
     
     def get_context_data(self, **kwargs):
         #Get the context object
