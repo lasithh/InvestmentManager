@@ -1,11 +1,9 @@
 from MyInvestementsManager.models import DetailedTrade,\
     CompanyFinanceReportSumary, ListedCompany
 from django.utils.datastructures import OrderedSet
+
 def getCompanyListWithHistoryData(companyData):
     context = {}
-    
-    
-    
     #filter out all the intermediate reports and calculate the current EPS and PE value based on the new share price
     companiesList = OrderedSet()
     
@@ -26,7 +24,6 @@ def getCompanyListWithHistoryData(companyData):
 
 
 def getCompanyHistoryDataBySymbol (symbolToRead):
-    
     companyToRead = ListedCompany.objects.filter(symbol = symbolToRead).first()
     return getCompanyHistoryData(companyToRead)
 

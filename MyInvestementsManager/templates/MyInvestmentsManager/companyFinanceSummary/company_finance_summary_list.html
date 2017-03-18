@@ -20,7 +20,7 @@
 
 
 <table class="table table-bordered table-striped table-hover">
-	<tr>
+	<th>
 		<td>Released On</td>
 		<td>Profits After Tax</td>
 		<td>PAT Growth %</td>
@@ -35,7 +35,7 @@
 		<td>Interest Cover Ratio</td>
 		<td>Current Ratio</td>
 		
-	</tr>
+	</th>
 	
 	{% for data in historyData %}
 	<tr>
@@ -62,6 +62,8 @@
    $("#addCompanyFinancialData").click(function(event){
        loadBody("/addCompanyFinancialData");
     });    
+    
+    
  
 </script>
 
