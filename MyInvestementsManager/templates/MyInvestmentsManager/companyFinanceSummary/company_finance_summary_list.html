@@ -4,7 +4,21 @@
 
 <h3> Financial Summary </h3>
 
-<h4>Company : {{ company.companyName }}</h4>
+
+<select class="form-control">
+
+  
+  {% for data in companiesList %}
+  
+  <option>{{data.companyName}}</option>
+  
+  {% endfor%}
+  
+</select>
+
+
+
+
 <table class="table table-bordered table-striped table-hover">
 	<tr>
 		<td>Released On</td>
@@ -16,21 +30,26 @@
 		<td>P/E Growth %</td>
 		<td>Dividends Per Share</td>
 		<td>DPS Growth %</td>
+		<td>Net Assets Per Share</td>
+		<td>Net Assets Growth %</td>
 		<td>Interest Cover Ratio</td>
 		<td>Current Ratio</td>
 		
 	</tr>
-	{% for data in object_list %}
+	
+	{% for data in historyData %}
 	<tr>
 		<td> {{data.issueDate|date:"Y" }}</td>
 		<td> {{data.profitAfterTax| floatformat:2 | intcomma }}</td>
 		<td>{{data.patGrowthPercentage | floatformat:2 }}</td>
-		<td> {{data.earningsPerShare }}</td>
+		<td> {{data.earningsPerShare | floatformat:2}}</td>
 		<td> {{data.epsGrowthPercentage | floatformat:2}}</td>
-		<td> {{data.PERatio }}</td>
+		<td> {{data.PERatio | floatformat:2}}</td>
 		<td> {{data.peRatioGrowthPercentage | floatformat:2}}</td>
 		<td> {{data.devidendsPerShare }}</td>
 		<td> {{data.dpsGrowthPercentage | floatformat:2}}</td>
+		<td> {{data.assetsPerShare | floatformat:2}}</td>
+		<td> {{data.netAssetsGrowthPercentage | floatformat:2}}</td>
 		<td> {{data.interestCover }}</td>
 		<td> {{data.currentRatio }}</td>
 	</tr>

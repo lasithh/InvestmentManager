@@ -26,7 +26,7 @@ from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulat
 from _datetime import datetime
 from django.db.models.query_utils import Q
 from datetime import timedelta
-from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import processCompanyHistoryData
+from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompanyListWithHistoryData
 from django.contrib.admin import widgets
 from django import forms
 from MyInvestementsManager.forms import CompanyFinanceReportSumaryForm
@@ -178,16 +178,14 @@ class CompanyFinanceReportSumaryListView(ListView):
     template_name='MyInvestmentsManager/companyFinanceSummary/company_finance_summary_list.html'
     
     def get_queryset(self):
-        
-        aitkenCompany = ListedCompany.objects.filter(symbol = 'SPEN.N0000').first()
-        return CompanyFinanceReportSumary.objects.filter(company = aitkenCompany).order_by('-issueDate')
+        return CompanyFinanceReportSumary.objects.order_by('-issueDate')
     
     def get_context_data(self, **kwargs):
         #Get the context object
         context = super(CompanyFinanceReportSumaryListView, self).get_context_data(**kwargs)
         
         #Calculate the accumulated data 
-        processedData= processCompanyHistoryData(context['object_list'])
+        processedData= getCompanyListWithHistoryData(context['object_list'])
         context.update(processedData)
 
         return context
