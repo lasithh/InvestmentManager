@@ -12,7 +12,7 @@ def getCompanyListWithHistoryData(companyData):
         companiesList.add(data.company)
         if not readHistoryData:
             #load the history data for this symbol
-            historyData = getCompanyHistoryData(data.company)
+            historyData = getCompanyHistoryDataByCompany(data.company)
             context['historyData'] = historyData
             readHistoryData = True
                 
@@ -22,23 +22,22 @@ def getCompanyListWithHistoryData(companyData):
     context['companiesList'] = companiesList
     return context
 
-
-def getCompanyHistoryDataBySymbol (symbolToRead):
-    companyToRead = ListedCompany.objects.filter(symbol = symbolToRead).first()
-    return getCompanyHistoryData(companyToRead)
-
-def getCompanyHistoryData (companyToRead):
+def getCompanyHistoryDataByCompany (companyToRead):
     companyData = CompanyFinanceReportSumary.objects.filter(company = companyToRead).order_by('-issueDate')
+    return getCompanyHistoryData(companyData)
 
+def getCompanyHistoryData (companyData):
     nextIndex = 1
     totalItems = companyData.count()
-
+    
+    calculateNonExistingFinancialDataValues (companyData);
     
     for data in companyData:
         if data.type == 3 :
             data.earningsPerShare = (data.earningsPerShare * 4 ) / 3
             latestSharePrice = data.company.price
             data.PERatio = latestSharePrice / data.earningsPerShare
+            data.sharePrice = latestSharePrice
             
         if nextIndex < totalItems:
             if data.profitAfterTax > 0 :
@@ -69,3 +68,9 @@ def getCompanyHistoryData (companyToRead):
             nextIndex += 1
     
     return companyData
+
+def calculateNonExistingFinancialDataValues(companyData):
+    for data in companyData:
+        if data.PERatio <= 0:
+            calculatedPERatio = data.sharePrice / data.earningsPerShare
+            data.PERatio = calculatedPERatio

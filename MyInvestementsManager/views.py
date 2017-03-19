@@ -26,7 +26,8 @@ from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulat
 from _datetime import datetime
 from django.db.models.query_utils import Q
 from datetime import timedelta
-from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompanyListWithHistoryData
+from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompanyListWithHistoryData,\
+    getCompanyHistoryData
 from django.contrib.admin import widgets
 from django import forms
 from MyInvestementsManager.forms import CompanyFinanceReportSumaryForm
@@ -173,7 +174,7 @@ class DividendsCreateView(CreateView):
         return super(DividendsCreateView, self).form_valid(form)
 
 #Company financial data related views
-class CompanyFinanceReportSumaryListView(ListView):
+class CompaniesWithFinanceReportSumaryListView(ListView):
     model = CompanyFinanceReportSumary
     template_name='MyInvestmentsManager/companyFinanceSummary/company_finance_summary_list.html'
     
@@ -182,11 +183,31 @@ class CompanyFinanceReportSumaryListView(ListView):
     
     def get_context_data(self, **kwargs):
         #Get the context object
-        context = super(CompanyFinanceReportSumaryListView, self).get_context_data(**kwargs)
+        context = super(CompaniesWithFinanceReportSumaryListView, self).get_context_data(**kwargs)
         
         #Calculate the accumulated data 
         processedData= getCompanyListWithHistoryData(context['object_list'])
         context.update(processedData)
+
+        return context
+    
+#Company financial data related views
+class CompanyFinanceReportSumaryListView(ListView):
+    model = CompanyFinanceReportSumary
+    template_name='MyInvestmentsManager/companyFinanceSummary/company_finance_summary_table.html'
+    
+    def get_queryset(self):
+        symbolToRead = self.request.GET.get('symbol')
+        company = ListedCompany.objects.filter(symbol = symbolToRead).first()
+        return CompanyFinanceReportSumary.objects.filter(company = company).order_by('-issueDate')
+    
+    def get_context_data(self, **kwargs):
+        #Get the context object
+        context = super(CompanyFinanceReportSumaryListView, self).get_context_data(**kwargs)
+        
+        #Calculate the accumulated data 
+        processedData= getCompanyHistoryData(context['object_list'])
+        context['historyData'] = processedData;
 
         return context
 

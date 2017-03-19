@@ -5,66 +5,43 @@
 <h3> Financial Summary </h3>
 
 
-<select class="form-control">
+<select class="form-control" id="companyLists">
 
   
   {% for data in companiesList %}
   
-  <option>{{data.companyName}}</option>
+  <option>{{data.symbol}}</option>
   
   {% endfor%}
   
 </select>
 
 
+<div class="container-fluid" id="financialHistoryData"/>
 
-
-<table class="table table-bordered table-striped table-hover">
-	<th>
-		<td>Released On</td>
-		<td>Profits After Tax</td>
-		<td>PAT Growth %</td>
-		<td>EPS </td>
-		<td>EPS Growth %</td>
-		<td>P/E </td>
-		<td>P/E Growth %</td>
-		<td>Dividends Per Share</td>
-		<td>DPS Growth %</td>
-		<td>Net Assets Per Share</td>
-		<td>Net Assets Growth %</td>
-		<td>Interest Cover Ratio</td>
-		<td>Current Ratio</td>
-		
-	</th>
-	
-	{% for data in historyData %}
-	<tr>
-		<td> {{data.issueDate|date:"Y" }}</td>
-		<td> {{data.profitAfterTax| floatformat:2 | intcomma }}</td>
-		<td>{{data.patGrowthPercentage | floatformat:2 }}</td>
-		<td> {{data.earningsPerShare | floatformat:2}}</td>
-		<td> {{data.epsGrowthPercentage | floatformat:2}}</td>
-		<td> {{data.PERatio | floatformat:2}}</td>
-		<td> {{data.peRatioGrowthPercentage | floatformat:2}}</td>
-		<td> {{data.devidendsPerShare }}</td>
-		<td> {{data.dpsGrowthPercentage | floatformat:2}}</td>
-		<td> {{data.assetsPerShare | floatformat:2}}</td>
-		<td> {{data.netAssetsGrowthPercentage | floatformat:2}}</td>
-		<td> {{data.interestCover }}</td>
-		<td> {{data.currentRatio }}</td>
-	</tr>
-	{% endfor%}
-</table>
-
-{% endblock %}
 <script>
+	
 
    $("#addCompanyFinancialData").click(function(event){
        loadBody("/addCompanyFinancialData");
     });    
     
+   $("#companyLists").change(function(){
+   		symbolToLoad = $(this).val();
+   		dataToSend = new Object();
+   		dataToSend.symbol = symbolToLoad;
+   		jsonString = JSON.stringify(dataToSend);
+       loadDataToContainer("getCompanyFinancialHistory", dataToSend, "financialHistoryData");
+    });    
     
  
+    
+    dataToSend = new Object();
+   	dataToSend.symbol = $("#companyLists").val();
+   	jsonString = JSON.stringify(dataToSend);
+    loadDataToContainer("getCompanyFinancialHistory", dataToSend, "financialHistoryData");
+    
+  
 </script>
 
-
+{% endblock %}
