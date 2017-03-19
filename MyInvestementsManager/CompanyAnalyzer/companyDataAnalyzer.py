@@ -75,6 +75,6 @@ def calculateNonExistingFinancialDataValues(companyData):
             calculatedPERatio = data.sharePrice / data.earningsPerShare
             data.PERatio = calculatedPERatio
             
-        if data.devidendsPerShare <= 0:
+        if data.devidendsPerShare <= 0 and data.numberOfShares > 0:
             calculatedDPS = data.grossDividends / data.numberOfShares
             data.devidendsPerShare = calculatedDPS
