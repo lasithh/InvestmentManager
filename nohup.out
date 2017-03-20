@@ -116,3 +116,396 @@
 [19/Mar/2017 15:06:05] "POST /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 302 0
 [19/Mar/2017 15:06:06] "GET /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 200 33113
 [19/Mar/2017 15:06:06] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:09:52] "POST /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 302 0
+[19/Mar/2017 15:09:52] "GET /admin/MyInvestementsManager/companyfinancereportsumary/ HTTP/1.1" 200 14842
+[19/Mar/2017 15:09:52] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:10:38] "GET /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 200 32861
+[19/Mar/2017 15:10:38] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:14:39] "POST /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 200 33194
+[19/Mar/2017 15:14:39] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:14:39] "GET /static/admin/img/icon_error.gif HTTP/1.1" 200 319
+[19/Mar/2017 15:14:52] "POST /admin/MyInvestementsManager/companyfinancereportsumary/add/ HTTP/1.1" 302 0
+[19/Mar/2017 15:14:52] "GET /admin/MyInvestementsManager/companyfinancereportsumary/ HTTP/1.1" 200 15120
+[19/Mar/2017 15:14:52] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:15:55] "GET /financialDataList HTTP/1.1" 500 12358
+[19/Mar/2017 15:15:57] "GET /invest HTTP/1.1" 200 2708
+[19/Mar/2017 15:15:57] "GET /invest HTTP/1.1" 200 2708
+[19/Mar/2017 15:15:58] "GET /static/js/utils.js HTTP/1.1" 304 0
+[19/Mar/2017 15:15:58] "GET /investmetsList HTTP/1.1" 200 8345
+[19/Mar/2017 15:15:59] "GET /financialDataList HTTP/1.1" 500 12358
+[19/Mar/2017 15:16:02] "GET /financialDataList HTTP/1.1" 500 12358
+[19/Mar/2017 15:16:04] "GET /financialDataList HTTP/1.1" 500 12358
+[19/Mar/2017 15:16:28] "GET /financialDataList HTTP/1.1" 500 12358
+[19/Mar/2017 15:19:50] "GET /admin/ HTTP/1.1" 200 11931
+[19/Mar/2017 15:19:54] "GET /admin/MyInvestementsManager/companyfinancereportsumary/ HTTP/1.1" 200 14925
+[19/Mar/2017 15:19:54] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:19:57] "GET /admin/MyInvestementsManager/companyfinancereportsumary/32/ HTTP/1.1" 200 33326
+[19/Mar/2017 15:19:57] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:21:44] "GET /admin/MyInvestementsManager/companyfinancereportsumary/38/ HTTP/1.1" 200 33330
+[19/Mar/2017 15:21:44] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+[19/Mar/2017 15:29:23] "POST /admin/MyInvestementsManager/companyfinancereportsumary/38/ HTTP/1.1" 302 0
+[19/Mar/2017 15:29:23] "GET /admin/MyInvestementsManager/companyfinancereportsumary/ HTTP/1.1" 200 15122
+[19/Mar/2017 15:29:23] "GET /admin/jsi18n/ HTTP/1.1" 200 2344
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 19, 2017 - 13:35:13
+Django version 1.8.7, using settings 'InvestmentsHelper.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+SPEN Shares
+1170.0
+AEL Shares
+1250.0
+Rocell Shares
+242.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Shares GESPP
+95.729
+JINS shares
+900.0
+JKH Shares
+335.0
+KHL Shares
+850.0
+[19/Mar/2017 15:32:58] "GET /invest HTTP/1.1" 200 2708
+[19/Mar/2017 15:32:58] "GET /static/js/jquery-3.1.0.js HTTP/1.1" 304 0
+[19/Mar/2017 15:32:58] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[19/Mar/2017 15:32:58] "GET /static/js/charts/charts.js HTTP/1.1" 304 0
+[19/Mar/2017 15:32:58] "GET /static/js/utils.js HTTP/1.1" 304 0
+[19/Mar/2017 15:32:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[19/Mar/2017 15:32:59] "GET /investmetsList HTTP/1.1" 200 8343
+[19/Mar/2017 15:32:59] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[19/Mar/2017 15:33:02] "GET /financialDataList HTTP/1.1" 200 993
+[19/Mar/2017 15:33:02] "GET /getCompanyFinancialHistory?symbol=JKH.N0000 HTTP/1.1" 301 0
+[19/Mar/2017 15:33:02] "GET /getCompanyFinancialHistory/?symbol=JKH.N0000 HTTP/1.1" 200 3121
+[19/Mar/2017 15:33:10] "GET /getCompanyFinancialHistory/?symbol=SPEN.N0000 HTTP/1.1" 500 12201
+[19/Mar/2017 15:33:23] "GET /getCompanyFinancialHistory/?symbol=RCL.N0000 HTTP/1.1" 500 12198
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-03-20 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-03-21 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 19, 2017 - 15:32:58
+Django version 1.8.7, using settings 'InvestmentsHelper.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+AEL Shares
+1250.0
+JINS shares
+900.0
+KHL Shares
+850.0
+Rocell Shares
+242.0
+Gemalto Shares GESPP
+95.729
+SPEN Shares
+1170.0
+JKH Shares
+335.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+[{'symbol': 'ASI', 'id': 51246, 'sectorVolumeToday': None, 'sectorTurnoverToday': None, 'sectorId': 1, 'percentage': -0.11028730918807376, 'name': 'ALL SHARE PRICE INDEX', 'indexValue': 6041.17, 'sectorPreviousClose': 6047.84, 'change': -6.67, 'transactionTime': 1490002081871, 'sectorTradeToday': None}, {'symbol': 'S&P SL20', 'id': 51245, 'sectorVolumeToday': None, 'sectorTurnoverToday': None, 'sectorId': 40, 'percentage': -0.0918390701366577, 'name': 'S&P SL20', 'indexValue': 3448.52, 'sectorPreviousClose': 3451.69, 'change': -3.17, 'transactionTime': 1489982429716, 'sectorTradeToday': None}]
+{'symbol': 'ASI', 'id': 51246, 'sectorVolumeToday': None, 'sectorTurnoverToday': None, 'sectorId': 1, 'percentage': -0.11028730918807376, 'name': 'ALL SHARE PRICE INDEX', 'indexValue': 6041.17, 'sectorPreviousClose': 6047.84, 'change': -6.67, 'transactionTime': 1490002081871, 'sectorTradeToday': None}
+ALL SHARE PRICE INDEX
+{'symbol': 'S&P SL20', 'id': 51245, 'sectorVolumeToday': None, 'sectorTurnoverToday': None, 'sectorId': 40, 'percentage': -0.0918390701366577, 'name': 'S&P SL20', 'indexValue': 3448.52, 'sectorPreviousClose': 3451.69, 'change': -3.17, 'transactionTime': 1489982429716, 'sectorTradeToday': None}
+S&P SL20
+[{'symbol': 'BFI', 'id': 51224, 'sectorVolumeToday': 3612890, 'sectorTurnoverToday': 52546932, 'sectorId': 14, 'percentage': -0.18627235742609413, 'name': 'BANK FINANCE AND INSURANCE', 'indexValue': 14730.47, 'sectorPreviousClose': 14757.96, 'change': -27.49, 'transactionTime': 1490002081871, 'sectorTradeToday': 849.0}, {'symbol': 'BFT', 'id': 51225, 'sectorVolumeToday': 218211, 'sectorTurnoverToday': 71654035, 'sectorId': 10, 'percentage': 0.004459563603829093, 'name': 'BEVERAGE FOOD AND TOBACCO', 'indexValue': 21527.73, 'sectorPreviousClose': 21526.77, 'change': 0.96, 'transactionTime': 1490002081871, 'sectorTradeToday': 133.0}, {'symbol': 'C&E', 'id': 51226, 'sectorVolumeToday': 236632, 'sectorTurnoverToday': 4631636, 'sectorId': 9, 'percentage': -2.213520265605996, 'name': 'CONSTRUCTION AND ENGINEERING', 'indexValue': 2379.81, 'sectorPreviousClose': 2433.68, 'change': -53.87, 'transactionTime': 1490002081871, 'sectorTradeToday': 116.0}, {'symbol': 'C&P', 'id': 51227, 'sectorVolumeToday': 3498, 'sectorTurnoverToday': 252678, 'sectorId': 6, 'percentage': -0.38075322989720134, 'name': 'CHEMICALS AND PHARMACEUTICALS', 'indexValue': 6355.17, 'sectorPreviousClose': 6379.46, 'change': -24.29, 'transactionTime': 1490002081872, 'sectorTradeToday': 25.0}, {'symbol': 'CLF', 'id': 51244, 'sectorVolumeToday': 0, 'sectorTurnoverToday': 0, 'sectorId': 141, 'percentage': 0.0, 'name': 'CLOSED END FUNDS', 'indexValue': 91.44, 'sectorPreviousClose': 91.44, 'change': 0.0, 'transactionTime': 1490002081876, 'sectorTradeToday': 0.0}, {'symbol': 'DIV', 'id': 51236, 'sectorVolumeToday': 2779959, 'sectorTurnoverToday': 180253539, 'sectorId': 11, 'percentage': 0.13922820290540364, 'name': 'DIVERSIFIED HOLDINGS', 'indexValue': 1524.8, 'sectorPreviousClose': 1522.68, 'change': 2.12, 'transactionTime': 1490002081874, 'sectorTradeToday': 285.0}, {'symbol': 'F&T', 'id': 51228, 'sectorVolumeToday': 16540, 'sectorTurnoverToday': 223298, 'sectorId': 16, 'percentage': 0.20460294628242648, 'name': 'FOOTWEAR AND TEXTILE', 'indexValue': 808.09, 'sectorPreviousClose': 806.44, 'change': 1.65, 'transactionTime': 1490002081872, 'sectorTradeToday': 4.0}, {'symbol': 'H&T', 'id': 51229, 'sectorVolumeToday': 124666, 'sectorTurnoverToday': 1477361, 'sectorId': 21, 'percentage': -0.23455450053587998, 'name': 'HOTELS AND TRAVELS', 'indexValue': 2913.58, 'sectorPreviousClose': 2920.43, 'change': -6.85, 'transactionTime': 1490002081872, 'sectorTradeToday': 195.0}, {'symbol': 'HLT', 'id': 51238, 'sectorVolumeToday': 43344, 'sectorTurnoverToday': 765512, 'sectorId': 17, 'percentage': 0.0, 'name': 'HEALTH CARE', 'indexValue': 970.78, 'sectorPreviousClose': 970.78, 'change': 0.0, 'transactionTime': 1490002081875, 'sectorTradeToday': 29.0}, {'symbol': 'INV', 'id': 51230, 'sectorVolumeToday': 34353, 'sectorTurnoverToday': 1987746, 'sectorId': 4, 'percentage': 0.8667333360697641, 'name': 'INVESTMENT TRUSTS', 'indexValue': 10812.47, 'sectorPreviousClose': 10719.56, 'change': 92.91, 'transactionTime': 1490002081872, 'sectorTradeToday': 38.0}, {'symbol': 'IT', 'id': 51239, 'sectorVolumeToday': 0, 'sectorTurnoverToday': 0, 'sectorId': 5, 'percentage': 0.0, 'name': 'INFORMATION TECHNOLOGY', 'indexValue': 34.99, 'sectorPreviousClose': 34.99, 'change': 0.0, 'transactionTime': 1490002081875, 'sectorTradeToday': 0.0}, {'symbol': 'L&P', 'id': 51231, 'sectorVolumeToday': 37711, 'sectorTurnoverToday': 600671, 'sectorId': 12, 'percentage': -1.0905342953087076, 'name': 'LAND AND PROPERTY', 'indexValue': 594.98, 'sectorPreviousClose': 601.54, 'change': -6.56, 'transactionTime': 1490002081873, 'sectorTradeToday': 124.0}, {'symbol': 'MFG', 'id': 51232, 'sectorVolumeToday': 2338330, 'sectorTurnoverToday': 106941186, 'sectorId': 18, 'percentage': 0.27583111317039266, 'name': 'MANUFACTURING', 'indexValue': 4155.27, 'sectorPreviousClose': 4143.84, 'change': 11.43, 'transactionTime': 1490002081873, 'sectorTradeToday': 450.0}, {'symbol': 'MTR', 'id': 51233, 'sectorVolumeToday': 12403, 'sectorTurnoverToday': 993637, 'sectorId': 8, 'percentage': 0.7388522789867209, 'name': 'MOTORS', 'indexValue': 14466.21, 'sectorPreviousClose': 14360.11, 'change': 106.1, 'transactionTime': 1490002081873, 'sectorTradeToday': 27.0}, {'symbol': 'OIL', 'id': 51241, 'sectorVolumeToday': 100, 'sectorTurnoverToday': 25000, 'sectorId': 20, 'percentage': -1.2600304287660893, 'name': 'OIL PALMS', 'indexValue': 65282.0, 'sectorPreviousClose': 66115.07, 'change': -833.07, 'transactionTime': 1490002081875, 'sectorTradeToday': 1.0}, {'symbol': 'P&E', 'id': 51237, 'sectorVolumeToday': 2832620, 'sectorTurnoverToday': 11835122, 'sectorId': 13, 'percentage': 0.8562552095173145, 'name': 'POWER & ENERGY', 'indexValue': 133.1, 'sectorPreviousClose': 131.97, 'change': 1.13, 'transactionTime': 1490002081874, 'sectorTradeToday': 108.0}, {'symbol': 'PLT', 'id': 51243, 'sectorVolumeToday': 226473, 'sectorTurnoverToday': 4378437, 'sectorId': 7, 'percentage': -0.07028847561868502, 'name': 'PLANTATIONS', 'indexValue': 682.42, 'sectorPreviousClose': 682.9, 'change': -0.48, 'transactionTime': 1490002081876, 'sectorTradeToday': 58.0}, {'symbol': 'S&S', 'id': 51234, 'sectorVolumeToday': 440, 'sectorTurnoverToday': 188283, 'sectorId': 3, 'percentage': 0.0, 'name': 'STORES SUPPLIES', 'indexValue': 28152.88, 'sectorPreviousClose': 28152.88, 'change': 0.0, 'transactionTime': 1490002081874, 'sectorTradeToday': 12.0}, {'symbol': 'SRV', 'id': 51235, 'sectorVolumeToday': 13, 'sectorTurnoverToday': 678, 'sectorId': 22, 'percentage': 0.0, 'name': 'SERVICES', 'indexValue': 16055.58, 'sectorPreviousClose': 16055.58, 'change': 0.0, 'transactionTime': 1490002081874, 'sectorTradeToday': 2.0}, {'symbol': 'TLE', 'id': 51240, 'sectorVolumeToday': 1441, 'sectorTurnoverToday': 17721, 'sectorId': 15, 'percentage': -0.5292851741988018, 'name': 'TELECOMMUNICATIONS', 'indexValue': 171.02, 'sectorPreviousClose': 171.93, 'change': -0.91, 'transactionTime': 1490002081875, 'sectorTradeToday': 13.0}, {'symbol': 'TRD', 'id': 51242, 'sectorVolumeToday': 217791, 'sectorTurnoverToday': 597102, 'sectorId': 19, 'percentage': 0.022923187334907766, 'name': 'TRADING', 'indexValue': 16013.66, 'sectorPreviousClose': 16009.99, 'change': 3.67, 'transactionTime': 1490002081876, 'sectorTradeToday': 32.0}]
+{'symbol': 'BFI', 'id': 51224, 'sectorVolumeToday': 3612890, 'sectorTurnoverToday': 52546932, 'sectorId': 14, 'percentage': -0.18627235742609413, 'name': 'BANK FINANCE AND INSURANCE', 'indexValue': 14730.47, 'sectorPreviousClose': 14757.96, 'change': -27.49, 'transactionTime': 1490002081871, 'sectorTradeToday': 849.0}[20/Mar/2017 10:33:13] "GET /loadLatestData HTTP/1.1" 200 7
+[20/Mar/2017 13:23:56] "GET /invest HTTP/1.1" 200 2708
+[20/Mar/2017 13:23:56] "GET /static/js/utils.js HTTP/1.1" 304 0
+[20/Mar/2017 13:23:57] "GET /favicon.ico HTTP/1.1" 404 6437
+[20/Mar/2017 13:23:57] "GET /investmetsList HTTP/1.1" 200 8346
+[20/Mar/2017 14:28:11] "GET /invest HTTP/1.1" 200 2708
+[20/Mar/2017 14:28:14] "GET /investmetsList HTTP/1.1" 200 8346
+[20/Mar/2017 14:29:46] "GET /addInvestment HTTP/1.1" 200 18691
+[20/Mar/2017 14:30:27] "POST /addInvestment HTTP/1.1" 302 0
+[20/Mar/2017 14:30:27] "GET /invest HTTP/1.1" 200 2708
+[20/Mar/2017 14:30:27] "GET /investmetsList HTTP/1.1" 200 8349
+[20/Mar/2017 14:30:49] "GET /financialDataList HTTP/1.1" 200 993
+[20/Mar/2017 14:30:49] "GET /getCompanyFinancialHistory/?symbol=JKH.N0000 HTTP/1.1" 200 3121
+[20/Mar/2017 14:30:54] "GET /getCompanyFinancialHistory/?symbol=SPEN.N0000 HTTP/1.1" 500 12201
+[20/Mar/2017 14:30:59] "GET /getCompanyFinancialHistory/?symbol=RCL.N0000 HTTP/1.1" 500 12198
+[20/Mar/2017 14:31:02] "GET /getCompanyFinancialHistory/?symbol=AEL.N0000 HTTP/1.1" 200 1777
+[20/Mar/2017 14:31:05] "GET /getCompanyFinancialHistory/?symbol=SPEN.N0000 HTTP/1.1" 500 12201
+[20/Mar/2017 14:31:10] "GET /getCompanyFinancialHistory/?symbol=JKH.N0000 HTTP/1.1" 200 3121
+
+BANK FINANCE AND INSURANCE
+{'symbol': 'BFT', 'id': 51225, 'sectorVolumeToday': 218211, 'sectorTurnoverToday': 71654035, 'sectorId': 10, 'percentage': 0.004459563603829093, 'name': 'BEVERAGE FOOD AND TOBACCO', 'indexValue': 21527.73, 'sectorPreviousClose': 21526.77, 'change': 0.96, 'transactionTime': 1490002081871, 'sectorTradeToday': 133.0}
+BEVERAGE FOOD AND TOBACCO
+{'symbol': 'C&E', 'id': 51226, 'sectorVolumeToday': 236632, 'sectorTurnoverToday': 4631636, 'sectorId': 9, 'percentage': -2.213520265605996, 'name': 'CONSTRUCTION AND ENGINEERING', 'indexValue': 2379.81, 'sectorPreviousClose': 2433.68, 'change': -53.87, 'transactionTime': 1490002081871, 'sectorTradeToday': 116.0}
+CONSTRUCTION AND ENGINEERING
+{'symbol': 'C&P', 'id': 51227, 'sectorVolumeToday': 3498, 'sectorTurnoverToday': 252678, 'sectorId': 6, 'percentage': -0.38075322989720134, 'name': 'CHEMICALS AND PHARMACEUTICALS', 'indexValue': 6355.17, 'sectorPreviousClose': 6379.46, 'change': -24.29, 'transactionTime': 1490002081872, 'sectorTradeToday': 25.0}
+CHEMICALS AND PHARMACEUTICALS
+{'symbol': 'CLF', 'id': 51244, 'sectorVolumeToday': 0, 'sectorTurnoverToday': 0, 'sectorId': 141, 'percentage': 0.0, 'name': 'CLOSED END FUNDS', 'indexValue': 91.44, 'sectorPreviousClose': 91.44, 'change': 0.0, 'transactionTime': 1490002081876, 'sectorTradeToday': 0.0}
+CLOSED END FUNDS
+{'symbol': 'DIV', 'id': 51236, 'sectorVolumeToday': 2779959, 'sectorTurnoverToday': 180253539, 'sectorId': 11, 'percentage': 0.13922820290540364, 'name': 'DIVERSIFIED HOLDINGS', 'indexValue': 1524.8, 'sectorPreviousClose': 1522.68, 'change': 2.12, 'transactionTime': 1490002081874, 'sectorTradeToday': 285.0}
+DIVERSIFIED HOLDINGS
+{'symbol': 'F&T', 'id': 51228, 'sectorVolumeToday': 16540, 'sectorTurnoverToday': 223298, 'sectorId': 16, 'percentage': 0.20460294628242648, 'name': 'FOOTWEAR AND TEXTILE', 'indexValue': 808.09, 'sectorPreviousClose': 806.44, 'change': 1.65, 'transactionTime': 1490002081872, 'sectorTradeToday': 4.0}
+FOOTWEAR AND TEXTILE
+{'symbol': 'H&T', 'id': 51229, 'sectorVolumeToday': 124666, 'sectorTurnoverToday': 1477361, 'sectorId': 21, 'percentage': -0.23455450053587998, 'name': 'HOTELS AND TRAVELS', 'indexValue': 2913.58, 'sectorPreviousClose': 2920.43, 'change': -6.85, 'transactionTime': 1490002081872, 'sectorTradeToday': 195.0}
+HOTELS AND TRAVELS
+{'symbol': 'HLT', 'id': 51238, 'sectorVolumeToday': 43344, 'sectorTurnoverToday': 765512, 'sectorId': 17, 'percentage': 0.0, 'name': 'HEALTH CARE', 'indexValue': 970.78, 'sectorPreviousClose': 970.78, 'change': 0.0, 'transactionTime': 1490002081875, 'sectorTradeToday': 29.0}
+HEALTH CARE
+{'symbol': 'INV', 'id': 51230, 'sectorVolumeToday': 34353, 'sectorTurnoverToday': 1987746, 'sectorId': 4, 'percentage': 0.8667333360697641, 'name': 'INVESTMENT TRUSTS', 'indexValue': 10812.47, 'sectorPreviousClose': 10719.56, 'change': 92.91, 'transactionTime': 1490002081872, 'sectorTradeToday': 38.0}
+INVESTMENT TRUSTS
+{'symbol': 'IT', 'id': 51239, 'sectorVolumeToday': 0, 'sectorTurnoverToday': 0, 'sectorId': 5, 'percentage': 0.0, 'name': 'INFORMATION TECHNOLOGY', 'indexValue': 34.99, 'sectorPreviousClose': 34.99, 'change': 0.0, 'transactionTime': 1490002081875, 'sectorTradeToday': 0.0}
+INFORMATION TECHNOLOGY
+{'symbol': 'L&P', 'id': 51231, 'sectorVolumeToday': 37711, 'sectorTurnoverToday': 600671, 'sectorId': 12, 'percentage': -1.0905342953087076, 'name': 'LAND AND PROPERTY', 'indexValue': 594.98, 'sectorPreviousClose': 601.54, 'change': -6.56, 'transactionTime': 1490002081873, 'sectorTradeToday': 124.0}
+LAND AND PROPERTY
+{'symbol': 'MFG', 'id': 51232, 'sectorVolumeToday': 2338330, 'sectorTurnoverToday': 106941186, 'sectorId': 18, 'percentage': 0.27583111317039266, 'name': 'MANUFACTURING', 'indexValue': 4155.27, 'sectorPreviousClose': 4143.84, 'change': 11.43, 'transactionTime': 1490002081873, 'sectorTradeToday': 450.0}
+MANUFACTURING
+{'symbol': 'MTR', 'id': 51233, 'sectorVolumeToday': 12403, 'sectorTurnoverToday': 993637, 'sectorId': 8, 'percentage': 0.7388522789867209, 'name': 'MOTORS', 'indexValue': 14466.21, 'sectorPreviousClose': 14360.11, 'change': 106.1, 'transactionTime': 1490002081873, 'sectorTradeToday': 27.0}
+MOTORS
+{'symbol': 'OIL', 'id': 51241, 'sectorVolumeToday': 100, 'sectorTurnoverToday': 25000, 'sectorId': 20, 'percentage': -1.2600304287660893, 'name': 'OIL PALMS', 'indexValue': 65282.0, 'sectorPreviousClose': 66115.07, 'change': -833.07, 'transactionTime': 1490002081875, 'sectorTradeToday': 1.0}
+OIL PALMS
+{'symbol': 'P&E', 'id': 51237, 'sectorVolumeToday': 2832620, 'sectorTurnoverToday': 11835122, 'sectorId': 13, 'percentage': 0.8562552095173145, 'name': 'POWER & ENERGY', 'indexValue': 133.1, 'sectorPreviousClose': 131.97, 'change': 1.13, 'transactionTime': 1490002081874, 'sectorTradeToday': 108.0}
+POWER & ENERGY
+{'symbol': 'PLT', 'id': 51243, 'sectorVolumeToday': 226473, 'sectorTurnoverToday': 4378437, 'sectorId': 7, 'percentage': -0.07028847561868502, 'name': 'PLANTATIONS', 'indexValue': 682.42, 'sectorPreviousClose': 682.9, 'change': -0.48, 'transactionTime': 1490002081876, 'sectorTradeToday': 58.0}
+PLANTATIONS
+{'symbol': 'S&S', 'id': 51234, 'sectorVolumeToday': 440, 'sectorTurnoverToday': 188283, 'sectorId': 3, 'percentage': 0.0, 'name': 'STORES SUPPLIES', 'indexValue': 28152.88, 'sectorPreviousClose': 28152.88, 'change': 0.0, 'transactionTime': 1490002081874, 'sectorTradeToday': 12.0}
+STORES SUPPLIES
+{'symbol': 'SRV', 'id': 51235, 'sectorVolumeToday': 13, 'sectorTurnoverToday': 678, 'sectorId': 22, 'percentage': 0.0, 'name': 'SERVICES', 'indexValue': 16055.58, 'sectorPreviousClose': 16055.58, 'change': 0.0, 'transactionTime': 1490002081874, 'sectorTradeToday': 2.0}
+SERVICES
+{'symbol': 'TLE', 'id': 51240, 'sectorVolumeToday': 1441, 'sectorTurnoverToday': 17721, 'sectorId': 15, 'percentage': -0.5292851741988018, 'name': 'TELECOMMUNICATIONS', 'indexValue': 171.02, 'sectorPreviousClose': 171.93, 'change': -0.91, 'transactionTime': 1490002081875, 'sectorTradeToday': 13.0}
+TELECOMMUNICATIONS
+{'symbol': 'TRD', 'id': 51242, 'sectorVolumeToday': 217791, 'sectorTurnoverToday': 597102, 'sectorId': 19, 'percentage': 0.022923187334907766, 'name': 'TRADING', 'indexValue': 16013.66, 'sectorPreviousClose': 16009.99, 'change': 3.67, 'transactionTime': 1490002081876, 'sectorTradeToday': 32.0}
+TRADING
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+AEL Shares
+1250.0
+JINS shares
+900.0
+KHL Shares
+850.0
+Rocell Shares
+242.0
+Gemalto Shares GESPP
+95.729
+SPEN Shares
+1170.0
+JKH Shares
+335.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+AEL Shares
+1250.0
+JINS shares
+900.0
+KHL Shares
+850.0
+Rocell Shares
+242.0
+Gemalto Shares GESPP
+95.729
+SPEN Shares
+1170.0
+JKH Shares
+335.0
+Comb Shares
+250.0
+NDB Shares
+184.0
+Gemalto Monetary Bonds
+90.342
+Gemalto Obligetory Bonds
+46.253
+AEL Shares
+1250.0
+JINS shares
+900.0
+KHL Shares
+1840.0
+Rocell Shares
+242.0
+Gemalto Shares GESPP
+95.729
+SPEN Shares
+1170.0
+JKH Shares
+335.0
+Comb Shares
+250.0
+NDB Shares
+184.0
