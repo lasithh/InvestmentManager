@@ -65,6 +65,8 @@ def getCompanyHistoryData (companyData):
                 netAsetsGrowthPercentage = ( (data.assetsPerShare - previousYearNetAssets) / previousYearNetAssets ) * 100
                 data.netAssetsGrowthPercentage = netAsetsGrowthPercentage
             
+            if data.devidendsPerShare > 0 and data.sharePrice > 0:
+                data.devidendsYeild = (data.devidendsPerShare / data.sharePrice) * 100
             nextIndex += 1
     
     return companyData

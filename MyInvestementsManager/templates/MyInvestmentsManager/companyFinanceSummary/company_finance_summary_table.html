@@ -12,26 +12,30 @@
 		<td>P/E </td>
 		<td>P/E Growth %</td>
 		<td>Dividends Per Share</td>
+		<td>Devidends Yeild %</td>
 		<td>DPS Growth %</td>
 		<td>Net Assets Per Share</td>
 		<td>Net Assets Growth %</td>
 		<td>Share Price</td>
+		
 	</tr>
 	
 	{% for data in historyData %}
 	<tr>
 		<td> {{data.issueDate|date:"Y" }}</td>
 		<td> {{data.profitAfterTax| floatformat:2 | intcomma }}</td>
-		<td>{{data.patGrowthPercentage | floatformat:2 }}</td>
+		<td>{{data.patGrowthPercentage | floatformat:2 }}%</td>
 		<td> {{data.earningsPerShare | floatformat:2}}</td>
-		<td> {{data.epsGrowthPercentage | floatformat:2}}</td>
+		<td> {{data.epsGrowthPercentage | floatformat:2}}%</td>
 		<td> {{data.PERatio | floatformat:2}}</td>
-		<td> {{data.peRatioGrowthPercentage | floatformat:2}}</td>
+		<td> {{data.peRatioGrowthPercentage | floatformat:2}}%</td>
 		<td> {{data.devidendsPerShare| floatformat:2 }}</td>
-		<td> {{data.dpsGrowthPercentage | floatformat:2}}</td>
+		<td> {{data.devidendsYeild | floatformat:2}}%</td>
+		<td> {{data.dpsGrowthPercentage | floatformat:2}}%</td>
 		<td> {{data.assetsPerShare | floatformat:2}}</td>
-		<td> {{data.netAssetsGrowthPercentage | floatformat:2}}</td>
+		<td> {{data.netAssetsGrowthPercentage | floatformat:2}}%</td>
 		<td> {{data.sharePrice }}</td>
+		
 	</tr>
 	{% endfor%}
 </table>
