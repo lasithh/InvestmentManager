@@ -8,7 +8,7 @@ class ListedCompany(models.Model):
     issuedQuentity = models.BigIntegerField()
     marketCapitalisation = models.FloatField()
     marketCapitalisationPercentage = models.FloatField()
-    
+    stockExchange = models.CharField(max_length = 20, default = 'CSE')    
     def __str__(self):
         return self.companyName
 
@@ -71,7 +71,7 @@ class DailyTradeSummary(models.Model):
     lastTradedPrice = models.FloatField()
     priceChange = models.FloatField()
     priceChangePercentage = models.FloatField()
-    date = models.DateField()
+    date = models.DateField(auto_now=True)
     turnover = models.FloatField()
 
 

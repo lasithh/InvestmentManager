@@ -9,9 +9,8 @@ import json
 from MyInvestementsManager.util.ApplicationConstants import URL_CSE,\
     FILE_TYPE_DATA_FILES, FILE_NAME_SECTOR_DATA_DOWNLOAD,\
     FILE_NAME_COMPANY_DATA_DOWNLOAD, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD,\
-    FILE_NAME_DETAILED_TRADES_DATA_DOWNLOAD
-from django.db.models.query_utils import Q
-import csv
+    FILE_NAME_DETAILED_TRADES_DATA_DOWNLOAD, URL_TRADE_SUMMARY_DATA_DOWNLOAD,\
+    FILE_PATH_DATA
 
 def persistCompaniesList(url) :
     """
@@ -19,7 +18,7 @@ def persistCompaniesList(url) :
     If the symbol already exists following steps are taken.
     If the quantities of the symbol has been updated, update it on the database. And store the current status on the history table
     """
-    symbolsToUpdate = getDataByHttps(url)
+    symbolsToUpdate = getDataByHttps(URL_CSE, url)
     
     symbolsToUpdateJson = json.loads(symbolsToUpdate);
     
@@ -50,20 +49,28 @@ def persistCompaniesList(url) :
     saveFile(symbolsToUpdate, FILE_NAME_COMPANY_DATA_DOWNLOAD)
     
    
-                
-
-def persistDailyTradingSummary(url):
+def clenupTodaysData():         
+    today = datetime.date.today()
+    
+    #CSE trading summary
+    DailyTradeSummary.objects.filter(date__range=(today, today + timedelta(1))).delete()
+    
+    #For other markets, data receives tow days later
+    DailyTradeSummary.objects.filter(company__stockExchange = 'NYSE').filter(date__range=(today - timedelta(2), today - timedelta(1))).delete()
+    DailyTradeSummary.objects.filter(company__stockExchange = 'NASDAQ').filter(date__range=(today - timedelta(2), today - timedelta(1))).delete()
+    
+    
+def persistDailyTradingSummary():
     """
     Stores the daily trading summary information in the Database. if the data already exists for today, data is updated
     """
-    tradingSummaryInformation = getDataByHttps(url)  
+    tradingSummaryInformation = getDataByHttps(URL_CSE, URL_TRADE_SUMMARY_DATA_DOWNLOAD)  
     tradingSummaryInformationJson = json.loads(tradingSummaryInformation)
     
     #Skip the line with headers
     #$next(tradingSummaryInformation, None)
     
-    today = datetime.date.today()
-    DailyTradeSummary.objects.filter(date__range=(today, today + timedelta(1))).delete()
+
     
     for summary in tradingSummaryInformationJson['reqTradeSummery']:
         referencedCompany, created = ListedCompany.objects.get_or_create(symbol = summary['symbol'],
@@ -77,14 +84,17 @@ def persistDailyTradingSummary(url):
             summaryToBeSaved = DailyTradeSummary(company = referencedCompany, date = datetime.datetime.strptime(summary['issueDate'], "%d/%b/%Y").date(), shareVolume = int(summary['sharevolume'] or 0), tradeVolume = int(summary['tradevolume'] or 0), turnover = float(summary['turnover'] or 0), high = float(summary['high'] or 0), low = float(summary['low'] or 0), priceChange = float(summary['change'] or 0), priceChangePercentage = float(summary['percentageChange'] or 0), lastTradedPrice = float(summary['closingPrice'] or 0), previouseClose = float(summary['previousClose'] or 0), open = float(summary['open'] or 0))
             summaryToBeSaved.save()
 
-    saveFile(tradingSummaryInformation, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD)
+    saveFile(tradingSummaryInformation, FILE_PATH_DATA + '/CSE' + FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD)
         
+
+
+
                                                                            
 def persistDetailedTrades(url):
     """
     Stores the detailed trades information in the Database. if the data already exists for today, data is updated
     """
-    detailedTrades = getDataByHttps(url)
+    detailedTrades = getDataByHttps(URL_CSE, url)
     
     detailedTradesJson = json.loads(detailedTrades)
     
@@ -110,7 +120,7 @@ def persistSectorIndices(url):
     """
     Stores the Sctors Indices information in the Database. if the data already exists for today, data is updated. The input is a html document. It shall be parsed to extract the correct data.
     """    
-    sectorIndices = getDataByHttps(url)  
+    sectorIndices = getDataByHttps(URL_CSE, url)  
     
     today = datetime.date.today()
     SectorIndex.objects.filter(date__range=(today, today + timedelta(1))).delete()
@@ -135,10 +145,16 @@ def persistSectorIndices(url):
                 
     
     saveFile(sectorIndices, FILE_NAME_SECTOR_DATA_DOWNLOAD)                                                      
-                                                                
+                                      
+                                      
+#def loadLatestDataUnitedStates():
+    
+ #   print (getQuotes('AAPL'))     
+                         
             
-def saveFile(textContent, fileName):
-    date = datetime.date.today()
+def saveFile(textContent, fileName, date = None):
+    if date is None:
+        date = datetime.date.today()
     dateStr = date.strftime('_%d_%m_%Y')
     text_file = open(fileName + dateStr + FILE_TYPE_DATA_FILES, 'w')
     
@@ -146,8 +162,8 @@ def saveFile(textContent, fileName):
     text_file.close()
  
     
-def getDataByHttps(url):
-    conn = http.client.HTTPSConnection(URL_CSE, 443)
+def getDataByHttps(exchngeUrl, url):
+    conn = http.client.HTTPSConnection(exchngeUrl, 443)
     conn.putrequest('POST', url)
     conn.endheaders() # <---
     r = conn.getresponse()

@@ -9,10 +9,9 @@ from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.core.urlresolvers import reverse
 from django.http.response import HttpResponse
 
-import urllib
 from MyInvestementsManager.DataAccessModule.storeData import persistCompaniesList,\
     persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices,\
-    saveFile
+    clenupTodaysData
 from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY,\
     URL_SECTOR_DATA_DOWNLOAD, FILE_NAME_SECTOR_DATA_DOWNLOAD,\
     FILE_TYPE_DATA_FILES, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD,\
@@ -31,6 +30,7 @@ from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompany
 from django.contrib.admin import widgets
 from django import forms
 from MyInvestementsManager.forms import CompanyFinanceReportSumaryForm
+from MyInvestementsManager.DataAccessModule.storeDataUSMarkets import persistDailyTradingSummary_US
 
 
 # Create your views here.
@@ -109,7 +109,7 @@ class DailyTradingSummaryView(DetailView):
 
 def storeDailyTradingSummary(request):
     #Store data on the database
-    persistDailyTradingSummary(URL_TRADE_SUMMARY_DATA_DOWNLOAD)
+    persistDailyTradingSummary()
     
     return HttpResponse("Success")
 
@@ -226,13 +226,19 @@ def storeSectorIndices(request):
     return HttpResponse("Success")
 
 def loadLatestData(request):
+    
     storeSectorIndices(request)
     
     updateSymbolsList(request)
     
+    clenupTodaysData()
+    
     storeDailyTradingSummary(request)
     
     storeDetailedTrades(request)
+    
+
+    persistDailyTradingSummary_US()
     
     return HttpResponse("Success")
 

@@ -1,6 +1,7 @@
 from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
 from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
-from MyInvestementsManager.models import Dividends, DetailedTrade
+from MyInvestementsManager.models import Dividends, DetailedTrade,\
+    DailyTradeSummary
 
 
 def calculateAccumulatedInvestementData(investmentData):
@@ -38,7 +39,7 @@ def calculateAccumulatedInvestementData(investmentData):
         data.profitWithDividends = data.growth + data.dividends
             
     #Get the last updated date of the data --> select the last updated Trade Summary and get the date
-    latestDetailedTrade = DetailedTrade.objects.latest('date')
+    latestDetailedTrade = DailyTradeSummary.objects.latest('date')
     context['lastUpdateDate'] = latestDetailedTrade.date
     
     

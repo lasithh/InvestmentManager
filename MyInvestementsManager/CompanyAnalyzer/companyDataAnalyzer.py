@@ -1,5 +1,5 @@
 from MyInvestementsManager.models import DetailedTrade,\
-    CompanyFinanceReportSumary, ListedCompany
+    CompanyFinanceReportSumary, ListedCompany, DailyTradeSummary
 from django.utils.datastructures import OrderedSet
 
 def getCompanyListWithHistoryData(companyData):
@@ -17,7 +17,7 @@ def getCompanyListWithHistoryData(companyData):
             readHistoryData = True
                 
     #Get the last updated date of the data --> select the last updated Trade Summary and get the date
-    latestDetailedTrade = DetailedTrade.objects.latest('date')
+    latestDetailedTrade = DailyTradeSummary.objects.latest('date')
     context['lastUpdateDate'] = latestDetailedTrade.date
     context['companiesList'] = companiesList
     return context
