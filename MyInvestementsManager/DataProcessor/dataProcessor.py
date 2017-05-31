@@ -45,9 +45,6 @@ def calculateAccumulatedInvestementData(investmentData):
     
     #Group by symbols
     investmentData = groupInvestmentDataBySymbol(investmentData)
-    for data in investmentData:
-        print(data)
-        print(data.quantity)
     
     context['investDataBySymbol'] = investmentData
     # Calculate the total values of the investments

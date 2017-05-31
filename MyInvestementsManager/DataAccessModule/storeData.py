@@ -133,10 +133,8 @@ def persistSectorIndices(url):
     #    return
         
     for sectorIndex2 in sectorIndicesJson:
-        print(sectorIndex2)
+        
         for sectorIndex in sectorIndex2:
-            print(sectorIndex)
-            print(sectorIndex['name'])
             sectorName, created = SectorIndexNames.objects.get_or_create(name = sectorIndex['name'])
             
             if sectorName:

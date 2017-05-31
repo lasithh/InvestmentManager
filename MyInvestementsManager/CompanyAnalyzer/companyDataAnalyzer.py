@@ -24,7 +24,8 @@ def getCompanyListWithHistoryData(companyData):
 
 def getCompanyHistoryDataByCompany (companyToRead):
     companyData = CompanyFinanceReportSumary.objects.filter(company = companyToRead).order_by('-issueDate')
-    return getCompanyHistoryData(companyData)
+    calculatedFinancialHistoryData = getCompanyHistoryData(companyData)
+   # calculatedFinancialHistoryData = addTheRecordWithCurrentPriceAndValue
 
 def getCompanyHistoryData (companyData):
     nextIndex = 1

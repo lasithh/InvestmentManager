@@ -238,7 +238,7 @@ def loadLatestData(request):
     storeDetailedTrades(request)
     
 
-    persistDailyTradingSummary_US()
+   # persistDailyTradingSummary_US()
     
     return HttpResponse("Success")
 
