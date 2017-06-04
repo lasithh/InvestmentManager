@@ -39,6 +39,12 @@ def getCompanyHistoryData (companyData):
             latestSharePrice = data.company.price
             data.PERatio = latestSharePrice / data.earningsPerShare
             data.sharePrice = latestSharePrice
+        else :
+            if data.type == 1:
+                data.earningsPerShare = data.earningsPerShare * 4 
+                latestSharePrice = data.company.price
+                data.PERatio = latestSharePrice / data.earningsPerShare
+                data.sharePrice = latestSharePrice
             
         if nextIndex < totalItems:
             if data.profitAfterTax > 0 :
