@@ -438,4 +438,15 @@ CONSTRUCTION AND ENGINEERING
 CHEMICALS AND PHARMACEUTICALS
 {'sectorTurnoverToday': 443749, 'transactionTime': 1496222882292, 'sectorPreviousClose': 96.81, 'sectorVolumeToday': 51006, 'sectorTradeToday': 10.0, 'indexValue': 96.81, 'percentage': 0.0, 'change': 0.0, 'sectorId': 141, 'symbol': 'CLF', 'id': 52336, 'name': 'CLOSED END FUNDS'}
 CLOSED END FUNDS
-{'sectorTurnoverToday': 156290416, 'transactionTime': 1496222882290, 'sectorPreviousClose': 1769.47, 'sectorVolumeToday': 9829101, 'sectorTradeToday': 683.0, 'indexValue': 1781.42, 'percentage': 0.6753434644272014, 'change': 11.95, 'sectorId': 11, 'symbol': 'DIV', 'id': 52328, 'name': 'DIVERSIFIED HOLDINGS'}
+{'sectorTurnoverToday': 156290416, 'transactionTime': 1496222882290, 'sectorPreviousClose': 1769.47, 'sectorVolumeToday': 9829101, 'sectorTradeToday': 683.0, 'indexValue': 1781.42, 'percentage': 0.6753434644272014, 'change': 11.95, 'sectorId': 11, 'symbol': 'DIV', 'id': 52328, 'name': 'DIVERSIFIED HOLDINGS'}[31/May/2017 13:31:43] "GET /invest HTTP/1.1" 200 2708
+[31/May/2017 13:31:44] "GET /investmetsList HTTP/1.1" 200 7723
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-01 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-02 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[01/Jun/2017 09:33:03] "GET /loadLatestData HTTP/1.1" 200 7
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-03 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
