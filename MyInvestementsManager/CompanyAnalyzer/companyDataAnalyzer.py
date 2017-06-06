@@ -59,13 +59,15 @@ def getCompanyHistoryData (companyData):
                 
             if data.PERatio > 0 :
                 previousYearPERatio = companyData[nextIndex].PERatio
-                peRatioGrowthPercentage = ( (data.PERatio - previousYearPERatio) / previousYearPERatio ) * 100
-                data.peRatioGrowthPercentage = peRatioGrowthPercentage
+                if previousYearPERatio > 0:
+                    peRatioGrowthPercentage = ( (data.PERatio - previousYearPERatio) / previousYearPERatio ) * 100
+                    data.peRatioGrowthPercentage = peRatioGrowthPercentage
             
             if data.devidendsPerShare > 0 :
                 previousYearDPS = companyData[nextIndex].devidendsPerShare
-                dpsGrowthPercentage = ( (data.devidendsPerShare - previousYearDPS) / previousYearDPS ) * 100
-                data.dpsGrowthPercentage = dpsGrowthPercentage
+                if previousYearDPS > 0 :
+                    dpsGrowthPercentage = ( (data.devidendsPerShare - previousYearDPS) / previousYearDPS ) * 100
+                    data.dpsGrowthPercentage = dpsGrowthPercentage
                 
             if data.assetsPerShare > 0 :
                 previousYearNetAssets = companyData[nextIndex].assetsPerShare
