@@ -1,0 +1,65 @@
+[06/Jun/2017 15:35:45] "GET /invest HTTP/1.1" 200 2708
+[06/Jun/2017 15:35:46] "GET /invest HTTP/1.1" 200 2708
+[06/Jun/2017 15:35:47] "GET /investmetsList HTTP/1.1" 200 7732
+[06/Jun/2017 15:39:16] "GET /financialDataList HTTP/1.1" 200 1109
+[06/Jun/2017 15:39:16] "GET /getCompanyFinancialHistory/?symbol=CCS.N0000 HTTP/1.1" 200 2991
+[06/Jun/2017 15:39:17] "GET /financialDataList HTTP/1.1" 200 1109
+[06/Jun/2017 15:39:17] "GET /getCompanyFinancialHistory/?symbol=CCS.N0000 HTTP/1.1" 200 2991
+[06/Jun/2017 15:39:19] "GET /getCompanyFinancialHistory/?symbol=JINS.N0000 HTTP/1.1" 200 3193
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-07 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-08 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[07/Jun/2017 09:33:23] "GET /loadLatestData HTTP/1.1" 200 7
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[08/Jun/2017 09:33:49] "GET /loadLatestData HTTP/1.1" 200 7
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-10 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[12/Jun/2017 15:15:07] "GET /invest HTTP/1.1" 200 2708
+[12/Jun/2017 15:15:07] "GET /favicon.ico HTTP/1.1" 404 6437
+[12/Jun/2017 15:15:08] "GET /investmetsList HTTP/1.1" 200 7728
+[12/Jun/2017 15:15:35] "GET /financialDataList HTTP/1.1" 200 1109
+[12/Jun/2017 15:15:35] "GET /getCompanyFinancialHistory?symbol=CCS.N0000 HTTP/1.1" 301 0
+[12/Jun/2017 15:15:35] "GET /getCompanyFinancialHistory/?symbol=CCS.N0000 HTTP/1.1" 200 2991
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-12 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-13 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[12/Jun/2017 15:21:28] "GET /loadLatestData HTTP/1.1" 200 7
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-14 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[13/Jun/2017 09:32:58] "GET /loadLatestData HTTP/1.1" 200 7
+[13/Jun/2017 15:03:59] "GET /invest HTTP/1.1" 200 2708
+[13/Jun/2017 15:04:02] "GET /investmetsList HTTP/1.1" 200 7734
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-15 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[14/Jun/2017 09:33:20] "GET /loadLatestData HTTP/1.1" 200 7
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-16 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[15/Jun/2017 09:34:04] "GET /loadLatestData HTTP/1.1" 200 7
+[15/Jun/2017 15:15:00] "GET /invest HTTP/1.1" 200 2708
+[15/Jun/2017 15:15:00] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[15/Jun/2017 15:15:00] "GET /static/js/charts/charts.js HTTP/1.1" 304 0
+[15/Jun/2017 15:15:00] "GET /static/js/utils.js HTTP/1.1" 304 0
+[15/Jun/2017 15:15:01] "GET /investmetsList HTTP/1.1" 200 7730
+[15/Jun/2017 15:15:01] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[15/Jun/2017 15:16:09] "GET /financialDataList HTTP/1.1" 200 1109
+[15/Jun/2017 15:16:09] "GET /getCompanyFinancialHistory/?symbol=CCS.N0000 HTTP/1.1" 200 2991
+[15/Jun/2017 15:16:12] "GET /getCompanyFinancialHistory?symbol=JKH.N0000 HTTP/1.1" 301 0
+[15/Jun/2017 15:16:12] "GET /getCompanyFinancialHistory/?symbol=JKH.N0000 HTTP/1.1" 200 3317
+[15/Jun/2017 15:16:46] "GET /invest HTTP/1.1" 200 2708
+[15/Jun/2017 15:16:46] "GET /invest HTTP/1.1" 200 2708
+[15/Jun/2017 15:16:47] "GET /investmetsList HTTP/1.1" 200 7730
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-06-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
