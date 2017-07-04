@@ -1,0 +1,11 @@
+[04/Jul/2017 11:40:24] "GET /invest HTTP/1.1" 200 2706
+[04/Jul/2017 11:40:24] "GET /static/js/jquery-3.1.0.js HTTP/1.1" 304 0
+[04/Jul/2017 11:40:24] "GET /static/js/utils.js HTTP/1.1" 304 0
+[04/Jul/2017 11:40:26] "GET /favicon.ico HTTP/1.1" 404 6437
+[04/Jul/2017 11:40:27] "GET /investmetsList HTTP/1.1" 200 7730
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-07-04 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/lib/python3/dist-packages/django/db/models/fields/__init__.py:1414: RuntimeWarning: DateTimeField SectorIndex.date received a naive datetime (2017-07-05 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
