@@ -12,13 +12,13 @@
 		<td>Type</td>
 		<td>Symbol</td>
 		<td>Quantity</td>
-		<td>Current Value</td>
 		<td>Paid Price</td>
 		<td>Current Price</td>
-		<td>Growth</td>
+		<td>Current Value</td>
 		<td>Growth Pct.</td>
 		<td>Dividends</td>
 		<td>Profit with Dividends</td>
+		<td>Total Yeild</td>
 		<td>Invested Date</td>
 		<td colspan="2" align="center" data-toggle="tooltip" title="Add Investment"><a href="/addInvestment" ><span class="glyphicon glyphicon-plus" aria-hidden = "true"/></a></td>
 		
@@ -30,13 +30,13 @@
 		<td>{{ data.investmentType.name }}</td>		
 		<td>{{ data.symbol.symbol }}</td>
 		<td>{{ data.quantity| floatformat:2 | intcomma}}</td>
-		<td>{{ data.currentValue| floatformat:2 | intcomma}}</td>
 		<td>{{ data.paidPrice | floatformat:2 | intcomma}}</td>
 		<td>{{ data.symbol.price | floatformat:2 | intcomma}}</td>
-		<td>{{ data.growth| floatformat:2 | intcomma}}</td>
+		<td>{{ data.currentValue| floatformat:2 | intcomma}}</td>
 		<td>{{ data.growthPercentage | floatformat:2 | intcomma}}%</td>
 		<td>{{ data.dividends | floatformat:2 | intcomma}}</td>
 		<td>{{ data.profitWithDividends | floatformat:2 | intcomma}}</td>
+		<td>{{ data.growthPercentageWithDividends | floatformat:2 | intcomma}}%</td>
 		<td>{{ data.date.date }}</td>
 		<td><a href="deleteInvestment/{{ data.id }}/" ><span class="glyphicon glyphicon-remove" aria-hidden = "true"/></a></td>
 		<td><a href="addDividend/{{ data.id }}/" ><span class="glyphicon glyphicon-euro" aria-hidden = "true"/></a></td>
@@ -50,14 +50,13 @@
 		<th></th>		
 		<th></th>
 		<th></th>
-		<th>{{ totalCurrentValue | floatformat:2 | intcomma}}
 		<th></th>
 		<th></th>
-		<th>{{ totalGrowth| floatformat:2 | intcomma}}</th>
+		<th>{{ totalCurrentValue | floatformat:2 | intcomma}}</th>
 		<th>{{ totalGrowthPercentage| floatformat:2 | intcomma}}%</th>
 		<th>{{ totalDividends | floatformat:2 | intcomma}}</th>
 		<th>{{ totalProfitWithDividends | floatformat:2 | intcomma}}</th>
-		<th></th>
+		<th>{{ totalProfitPctWithDividends | floatformat:2 | intcomma}}%</th>
 		<th></th>
 	
 	</tr>

@@ -25,18 +25,11 @@ def calculateAccumulatedInvestementData(investmentData):
             data.growthPercentage = (data.growth) * 100 / data.amount
         else :
             data.growthPercentage = 0
+        
                 
             
         data.paidPrice = data.amount / data.quantity
         
-        dividendsForInvestment = Dividends.objects.filter(investment = data)
-        
-        if(dividendsForInvestment):
-            for dividend in dividendsForInvestment:
-                cumulativeDividendValue += dividend.amount
-        
-        data.dividends = cumulativeDividendValue
-        data.profitWithDividends = data.growth + data.dividends
             
     #Get the last updated date of the data --> select the last updated Trade Summary and get the date
     latestDetailedTrade = DailyTradeSummary.objects.latest('date')
@@ -66,17 +59,27 @@ def groupInvestmentDataBySymbol (investmentData):
             else :
                 dataForSymbol = dataGroupedBySymbol.get(symbol)
                 if dataForSymbol is None:
+                    #Calculate the dividends for the symbol
+                    data.dividends = getCumulativeDividedsValueForTheInvestment(data)
+                    
+                    #Calculate the profit with dividends for the symbol
+                    data.profitWithDividends = data.growth + data.dividends
+                    if data.amount and float(data.amount) > 0:
+                        data.growthPercentageWithDividends = (data.profitWithDividends) * 100 / data.amount
+                    else :
+                        data.growthPercentageWithDividends = 0
+                        
                     dataGroupedBySymbol[symbol] = data
                 else :
                     dataForSymbol.currentValue += data.currentValue
                     dataForSymbol.growth += data.growth
                     dataForSymbol.amount += data.amount
                     dataForSymbol.quantity += data.quantity
-                    dataForSymbol.dividends += data.dividends
+                    dataForSymbol.profitWithDividends += data.growth
                     
                     dataForSymbol.growthPercentage = (dataForSymbol.growth * 100) / dataForSymbol.amount
                     dataForSymbol.paidPrice = dataForSymbol.amount / dataForSymbol.quantity
-                    
+                    dataForSymbol.growthPercentageWithDividends = (dataForSymbol.profitWithDividends * 100) / dataForSymbol.amount
     
     groupedEquities = list(dataGroupedBySymbol.values())
     finalResult += groupedEquities
@@ -118,6 +121,7 @@ def calculateTotalValuesOfInvestmentData(investmentData):
     context['totalEquityValue'] = totalEquityValue
     context['totalDividends'] = totalDividends
     context['totalProfitWithDividends'] = totalProfitWithDividends
+    context['totalProfitPctWithDividends'] = totalProfitWithDividends * 100 / totalAmount
     
     return context
 
@@ -154,3 +158,11 @@ def calculateAccumulatedSectorData(sectorData):
 
 def sortByPrice(item):
     return item.price
+
+def getCumulativeDividedsValueForTheInvestment(data):
+    dividendsForInvestment = Dividends.objects.filter(investment = data)
+    cumulativeDividendValue = 0
+    if(dividendsForInvestment):
+        for dividend in dividendsForInvestment:
+            cumulativeDividendValue += dividend.amount
+    return cumulativeDividendValue
