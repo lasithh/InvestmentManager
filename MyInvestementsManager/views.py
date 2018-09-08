@@ -22,7 +22,7 @@ from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY,\
 from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
 from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulatedInvestementData,\
     calculateAccumulatedSectorData
-from _datetime import datetime
+from datetime import datetime
 from django.db.models.query_utils import Q
 from datetime import timedelta
 from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompanyListWithHistoryData,\
@@ -79,7 +79,7 @@ class InvestmentUpdateView(UpdateView):
 class InvestmentCreateView(CreateView):
     model = Investment
     template_name="MyInvestmentsManager/add_investment.html"
-    fields = ['name', 'amount', 'investmentType', 'symbol', 'quantity', 'currentValue']
+    fields = ['name', 'amount', 'investmentType', 'symbol', 'quantity', 'currentValue', 'date']
     def get_success_url(self):
         return reverse('index')
 

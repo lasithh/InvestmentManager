@@ -32,7 +32,7 @@ class Investment(models.Model):
     name = models.CharField(max_length = 100)
     amount = models.FloatField()
     currency = models.ForeignKey(Currency, default=1)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField()
     investmentType = models.ForeignKey(InvestmentType)
     symbol = models.ForeignKey(ListedCompany, null = True, default = None)
     quantity = models.FloatField()

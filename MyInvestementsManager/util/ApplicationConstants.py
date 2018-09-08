@@ -1,4 +1,3 @@
-import enum
 from MyInvestementsManager.util import ExchangeInformation
 DEFAULT_CURRENCY = "LKR"
 

@@ -3,8 +3,9 @@ from MyInvestementsManager.models import ListedCompany,\
     SectorIndex, SectorIndexNames, CompanyIssuedQuantitiesHistory
     
 import datetime
+import os
 from datetime import timedelta
-import http
+import httplib
 import json
 from MyInvestementsManager.util.ApplicationConstants import URL_CSE,\
     FILE_TYPE_DATA_FILES, FILE_NAME_SECTOR_DATA_DOWNLOAD,\
@@ -64,7 +65,7 @@ def persistDailyTradingSummary():
     """
     Stores the daily trading summary information in the Database. if the data already exists for today, data is updated
     """
-    tradingSummaryInformation = getDataByHttps(URL_CSE, URL_TRADE_SUMMARY_DATA_DOWNLOAD)  
+    tradingSummaryInformation = getDataByHttps(URL_CSE, URL_TRADE_SUMMARY_DATA_DOWNLOAD)
     tradingSummaryInformationJson = json.loads(tradingSummaryInformation)
     
     #Skip the line with headers
@@ -138,11 +139,11 @@ def persistSectorIndices(url):
             sectorName, created = SectorIndexNames.objects.get_or_create(name = sectorIndex['name'])
             
             if sectorName:
-                sectorIndexToSave = SectorIndex(sector = sectorName, price = float(sectorIndex['indexValue']), value= float(sectorIndex['indexValue']), volume = int(getNumericalValue(sectorIndex['sectorVolumeToday'])), trades = int(getNumericalValue(sectorIndex['sectorTradeToday'] )), date = datetime.date.today())
+                sectorIndexToSave = SectorIndex(sector = sectorName, price = float(sectorIndex['indexValue']), value= float(sectorIndex['sectorTurnoverToday'] or 0), volume = int(getNumericalValue(sectorIndex['sectorVolumeToday'] or 0)), trades=float(sectorIndex['sectorTradeToday'] or 0), date = datetime.date.today())
                 sectorIndexToSave.save()   
                 
     
-    saveFile(sectorIndices, FILE_NAME_SECTOR_DATA_DOWNLOAD)                                                      
+    saveFile(sectorIndices, FILE_NAME_SECTOR_DATA_DOWNLOAD)
                                       
                                       
 #def loadLatestDataUnitedStates():
@@ -154,16 +155,22 @@ def saveFile(textContent, fileName, date = None):
     if date is None:
         date = datetime.date.today()
     dateStr = date.strftime('_%d_%m_%Y')
-    text_file = open(fileName + dateStr + FILE_TYPE_DATA_FILES, 'w')
+
+    cwd = os.getcwd()
+    print(cwd)
+
+    print(fileName + dateStr + FILE_TYPE_DATA_FILES);
+
+    text_file = open(fileName + dateStr + FILE_TYPE_DATA_FILES, "w+")
     
     text_file.write(textContent)
     text_file.close()
  
     
 def getDataByHttps(exchngeUrl, url):
-    conn = http.client.HTTPSConnection(exchngeUrl, 443)
-    conn.putrequest('POST', url)
-    conn.endheaders() # <---
+    conn = httplib.HTTPSConnection(exchngeUrl)
+    conn.request('POST', url)
+    #conn.endheaders() # <---
     r = conn.getresponse()
     return r.read().decode('utf-8')
 
