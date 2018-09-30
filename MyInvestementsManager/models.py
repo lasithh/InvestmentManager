@@ -104,8 +104,19 @@ class CompanyFinanceReportSumary(models.Model):
     type = models.IntegerField(default = 0)
     assetsPerShare = models.FloatField(default=0)
     devidendsPerShare = models.FloatField(default=0)
+
+class DividendType(models.Model):
+    name = models.CharField(max_length=20);
     
-class Dividends(models.Model):
-    investment = models.ForeignKey(Investment)
-    amount = models.FloatField()
-    date = models.DateField(auto_now_add=True)
+class Dividend(models.Model):
+    company = models.ForeignKey(ListedCompany)
+    type = models.ForeignKey(DividendType)
+    amountPerShare = models.FloatField()
+    announced_date = models.DateField(null = True)
+    entitled_date = models.DateField(null = True)
+    payment_date = models.DateField(null = True)
+
+    unique_together = ((company, type, entitled_date),)
+
+    def __str__(self):
+        return " Company : " + self.company.symbol + " Type: " + self.type.name + " Amount: " + str(self.amountPerShare) + " announced date: " + str(self.announced_date) + " entitled date = " + str(self.entitled_date) + " payment date: " + str(self.payment_date)

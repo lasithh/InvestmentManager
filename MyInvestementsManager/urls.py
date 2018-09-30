@@ -1,16 +1,15 @@
 from django.conf.urls import url
 from . import views
-from MyInvestementsManager.views import InvestmentsListView,\
-    InvestmentDetailView, InvestmentDeleteView,\
-    InvestmentUpdateView,  ListedCompanyView, ListedCompanyListView,\
-    DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView,\
-    DetailedTradeView, SectorIndexListView, SectorIndexView,\
-    InvestmentCreateView, DividendsCreateView,\
-    CompanyFinanceReportSumaryListView, CompanyFinanceReportSumaryCreateView,\
-    CompaniesWithFinanceReportSumaryListView
+from MyInvestementsManager.views import InvestmentsListView, \
+    InvestmentDetailView, InvestmentDeleteView, \
+    InvestmentUpdateView, ListedCompanyView, ListedCompanyListView, \
+    DailyTradingSummaryListView, DailyTradingSummaryView, DetailedTradeListView, \
+    DetailedTradeView, SectorIndexListView, SectorIndexView, \
+    InvestmentCreateView, DividendsCreateView, \
+    CompanyFinanceReportSumaryListView, CompanyFinanceReportSumaryCreateView, \
+    CompaniesWithFinanceReportSumaryListView, DividendListView
 
-
-urlpatterns = [ 
+urlpatterns = [
     url(r'^invest$', views.index, name='index'),
                #investmets related urls   
     url(r'^investmetsList$', InvestmentsListView.as_view()),
@@ -44,6 +43,7 @@ urlpatterns = [
     
     #Dividends 
     url(r'^addDividend/(?P<investmentId>[0-9]+)/$', DividendsCreateView.as_view(), name='add_dividend'),
+    url(r'^loadDividends$', DividendListView.as_view()),
     
     #Finacial Data
     url(r'^financialDataList$', CompaniesWithFinanceReportSumaryListView.as_view(), name='companies_with_finance_report_summary'),

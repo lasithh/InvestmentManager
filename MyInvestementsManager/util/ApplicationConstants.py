@@ -1,7 +1,6 @@
 from MyInvestementsManager.util import ExchangeInformation
 DEFAULT_CURRENCY = "LKR"
 
-FILE_TYPE_DATA_FILES = '.txt'
 
 URL_NET_FONDS = "www.netfonds.no"
 

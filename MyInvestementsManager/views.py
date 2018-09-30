@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
+
+from MyInvestementsManager.DividendsManager.dividend_api import retrieve_store_latest_dividends, \
+    getAggrigatedDividendData, retrieve_aggrigated_div_data
+from MyInvestementsManager.DividendsManager.dividend_extractor import read_latest_devidends
 from MyInvestementsManager.models import Investment, ListedCompany,\
-    DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames, Dividends,\
+    DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames, Dividend,\
     CompanyFinanceReportSumary
     
 from django.views.generic.detail import DetailView
@@ -9,17 +13,11 @@ from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.core.urlresolvers import reverse
 from django.http.response import HttpResponse
 
-from MyInvestementsManager.DataAccessModule.storeData import persistCompaniesList,\
+from MyInvestementsManager.EODDataStoreModule.storeData import persistCompaniesList,\
     persistDailyTradingSummary, persistDetailedTrades, persistSectorIndices,\
     clenupTodaysData
-from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY,\
-    URL_SECTOR_DATA_DOWNLOAD, FILE_NAME_SECTOR_DATA_DOWNLOAD,\
-    FILE_TYPE_DATA_FILES, FILE_NAME_TRADE_SUMMARY_DATA_DOWNLOAD,\
-    URL_TRADE_SUMMARY_DATA_DOWNLOAD, URL_COMPANY_DATA_DOWNLOAD,\
-    FILE_NAME_COMPANY_DATA_DOWNLOAD, URL_DETAILED_TRADES_DATA_DOWNLOAD,\
-    FILE_NAME_DETAILED_TRADES_DATA_DOWNLOAD, \
-    URL_CSE
-from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
+from MyInvestementsManager.util.ApplicationConstants import URL_SECTOR_DATA_DOWNLOAD, URL_COMPANY_DATA_DOWNLOAD,\
+    URL_DETAILED_TRADES_DATA_DOWNLOAD
 from MyInvestementsManager.DataProcessor.dataProcessor import calculateAccumulatedInvestementData,\
     calculateAccumulatedSectorData
 from datetime import datetime
@@ -27,10 +25,7 @@ from django.db.models.query_utils import Q
 from datetime import timedelta
 from MyInvestementsManager.CompanyAnalyzer.companyDataAnalyzer import getCompanyListWithHistoryData,\
     getCompanyHistoryData
-from django.contrib.admin import widgets
-from django import forms
 from MyInvestementsManager.forms import CompanyFinanceReportSumaryForm
-from MyInvestementsManager.DataAccessModule.storeDataUSMarkets import persistDailyTradingSummary_US
 
 
 # Create your views here.
@@ -55,6 +50,22 @@ class InvestmentsListView(ListView):
         context.update(processedData)
 
         return context
+
+
+class DividendListView(ListView):
+    model = Dividend
+    template_name = 'MyInvestmentsManager/dividend/dividends_list.html'
+
+    def get_context_data(self, **kwargs):
+        # Get the context object
+        context = super(DividendListView, self).get_context_data(**kwargs)
+
+        # Calculate the accumulated data
+        agg_dividends = retrieve_aggrigated_div_data(context['object_list'])
+        context['divAggData'] = agg_dividends
+
+        return context
+
     
 class InvestementDetailView(DetailView):
     model = Investment    
@@ -165,7 +176,7 @@ class SectorIndexView(DetailView):
     template_name = "MyInvestmentsManager/sectorIndices/view_sector_index.html"
     
 class DividendsCreateView(CreateView):
-    model = Dividends
+    model = Dividend
     fields = ['investment', 'amount']
     template_name = 'MyInvestmentsManager/dividend/add_dividend.html'
 
@@ -226,19 +237,20 @@ def storeSectorIndices(request):
     return HttpResponse("Success")
 
 def loadLatestData(request):
+    retrieve_store_latest_dividends()
+
+    #storeSectorIndices(request)
     
-    storeSectorIndices(request)
+    #updateSymbolsList(request)
     
-    updateSymbolsList(request)
+    #clenupTodaysData()
     
-    clenupTodaysData()
+    #storeDailyTradingSummary(request)
     
-    storeDailyTradingSummary(request)
-    
-    storeDetailedTrades(request)
+    #storeDetailedTrades(request)
     
 
-   # persistDailyTradingSummary_US()
+    #persistDailyTradingSummary_US()
     
     return HttpResponse("Success")
 

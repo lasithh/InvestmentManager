@@ -1,0 +1,28 @@
+{% load custom_filters %}
+{% load humanize %}
+{% block content %}
+
+<table class="table table-striped table-bordered" id = "investmentsList">
+	<tr>
+		<td>Company</td>
+		<td>Div Yeild %</td>
+		<td>Last Year Dividend</td>
+		<td>Number of Dividends</td>
+		<td>Last Dividend Date</td>
+		<td>5 Years Dividend Growth</td>
+		<td>Last Traded Price</td>
+	</tr>
+	{% for data in divAggData %}
+	<tr>
+		<td><a href="listDividendByCompany/{{ data.company.id }}/" >{{data.company.symbol }}</a></td>
+		<td>{{ data.currentDivYeild | floatformat:2 | intcomma}}</td>
+		<td> {{ data.lastYerTotalDividend}}</td>
+		<td>{{ data.numberOfDividends }}</td>
+		<td>{{ data.latestDividendDate }}</td>
+		<td>{{ data.dividendGrowthLastFiveYears | floatformat:2 | intcomma}}</td>
+		<td>{{ data.lastTradedPrice }}</td>
+	</tr>
+	{% endfor%}
+</table>
+
+{% endblock %}

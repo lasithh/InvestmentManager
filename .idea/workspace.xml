@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17576f2e-61c8-478e-81f4-83a1ecd30909" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeDataUSMarkets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -17,42 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="storeData.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py">
+      <file leaf-file-name="devidend_data_processor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="161" column="21" lean-forward="true" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="62" />
+            <state relative-caret-position="185">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="40" />
               <folding>
-                <element signature="e#0#161#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posix.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/348993582/posix.py">
+      <file leaf-file-name="EOD_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="231" column="4" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="4" />
+            <state relative-caret-position="120">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/InvestmentsHelper/urls.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationConstants.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py">
+      <file leaf-file-name="dividends_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="330">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -60,8 +62,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="229" selection-start-line="229" selection-end-line="229" />
+            <state relative-caret-position="325">
+              <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -69,39 +71,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="184" selection-start-line="184" selection-end-line="184" />
+            <state relative-caret-position="154">
+              <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exception.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/exception.py">
+      <file leaf-file-name="dividend_store.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_store.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="75">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/InvestmentsHelper/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataProcessor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -113,6 +108,28 @@
       <find>URL_TRADE_SUMMARY_DATA_DOWNLOAD</find>
       <find>trade_summ</find>
       <find>admin</find>
+      <find>name</find>
+      <find>self</find>
+      <find>https</find>
+      <find>scrip di</find>
+      <find>devidendtypes</find>
+      <find>devidendty</find>
+      <find>devidend</find>
+      <find>devi</find>
+      <find>devide</find>
+      <find>lister</find>
+      <find>date</find>
+      <find>edited</find>
+      <find>DIVIDEND ANNOUNCEMENT</find>
+      <find>Disclosure</find>
+      <find>print</find>
+      <find>print(</find>
+      <find>unique</find>
+      <find>uget</find>
+      <find>null</find>
+      <find>filter</find>
+      <find>Load la</find>
+      <find>divide</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,23 +138,45 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
-        <option value="$PROJECT_DIR$/MyInvestementsManager/models.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/load_devidend_from_exchange.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/external_api.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/db_manager.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/HTTPModule/HttpInterface.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_html_parser.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/util/HTTPModule/HttpInterface.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/migrations/0029_auto_20180908_2235.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/migrations/0030_auto_20180909_2341.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/admin.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/util/FIleModule/FileAccessor.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/storeData.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/exchange_reader.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_analyzer.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/models.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_store.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/urls.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="823" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,52 +187,37 @@
             <path>
               <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="InvestmentsHelper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
               <item name="MyInvestementsManager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
               <item name="MyInvestementsManager" type="462c0819:PsiDirectoryNode" />
-              <item name="CompanyAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="DividendsManager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
               <item name="MyInvestementsManager" type="462c0819:PsiDirectoryNode" />
-              <item name="DataAccessModule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="MyInvestementsManager" type="462c0819:PsiDirectoryNode" />
-              <item name="DataProcessor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="MyInvestementsManager" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="EODDataStoreModule" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="views&#9;null&#9;null&#10;application&#9;null&#9;null&#10;store.&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/DataAccessModule/storeData.py" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/DividendsManager/dividend_extractor.py&#10;views&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/views.py&#10;model&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;application&#9;null&#9;null&#10;store.&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/DataAccessModule/storeData.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MyInvestementsManager/util" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,20 +265,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="823" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24305555" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37708333" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38135594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.54470426" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44309926" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -270,176 +294,105 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/storeData.py</url>
+          <line>69</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_store.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="124" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="contents" />
+        <watch expression="propotion" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>getNumericalValue(sectorIndex['sectorVolumeToday'] or 0)</expression-string>
+        <expression-string>re.findall('\d+.\d+', content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>float(sectorIndex['sectorTradeToday'])</expression-string>
+        <expression-string>re.findall('\d+', content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sectorIndex['sectorTradeToday']</expression-string>
+        <expression-string>re.findall('RATEOFDIVIDEND\d+', content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>getNumericalValue(sectorIndex['sectorTradeToday'])</expression-string>
+        <expression-string>re.findall('RATEOFDIVIDEND(\d+)', content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sectorIndex['name']</expression-string>
+        <expression-string>re.findall('RATEOFDIVIDEND\.(\d+)', content)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.findall('RATEOFDIVIDEND\.(\d+)', val)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>content.split('DATEOFANNOUNCEMENT.')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(result) == 0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(result)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/update_investment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvestmentsHelper/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvestmentsHelper/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/investments_list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/add_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/view_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/update_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvestmentsHelper/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvestmentsHelper/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/investments_list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/add_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/view_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/update_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="111" column="32" lean-forward="true" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py">
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/storeData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
           <caret line="159" column="21" lean-forward="true" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
           <folding>
-            <element signature="e#0#161#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -447,9 +400,6 @@
     <entry file="file://$PROJECT_DIR$/.python-version">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/view_investment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/update_investment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -457,27 +407,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/investments_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/add_investment.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -486,29 +417,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -520,32 +429,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeDataUSMarkets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py">
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/storeDataUSMarkets.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/__init__.py">
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="729" column="8" selection-start-line="729" selection-start-column="8" selection-end-line="729" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
@@ -566,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -590,12 +473,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py">
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/external_api.py" />
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/db_manager.py" />
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/ExchangeInformation.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/HTMLParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="161" column="21" lean-forward="true" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="62" />
+        <state relative-caret-position="1710">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_html_parser.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="1052" column="22" selection-start-line="1052" selection-start-column="22" selection-end-line="1052" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/utils/html_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/migrations/0030_auto_20180909_2341.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/migrations/0029_auto_20180908_2235.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/migrations/0031_auto_20180909_2357.py" />
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2/re.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/HTTPModule/HttpInterface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_strptime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4770">
+          <caret line="324" selection-start-line="324" selection-end-line="324" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/util/FIleModule/FileAccessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/storeData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="9" />
           <folding>
-            <element signature="e#0#161#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/investments_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/view_investment.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

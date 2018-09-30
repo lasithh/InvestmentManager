@@ -1,7 +1,6 @@
 from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
 from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
-from MyInvestementsManager.models import Dividends, DetailedTrade,\
-    DailyTradeSummary
+from MyInvestementsManager.models import DailyTradeSummary
 
 
 def calculateAccumulatedInvestementData(investmentData):
@@ -160,9 +159,9 @@ def sortByPrice(item):
     return item.price
 
 def getCumulativeDividedsValueForTheInvestment(data):
-    dividendsForInvestment = Dividends.objects.filter(investment = data)
+    #dividendsForInvestment = Devidends.objects.filter(investment = data)
     cumulativeDividendValue = 0
-    if(dividendsForInvestment):
-        for dividend in dividendsForInvestment:
-            cumulativeDividendValue += dividend.amount
+    #if(dividendsForInvestment):
+     #   for dividend in dividendsForInvestment:
+      #      cumulativeDividendValue += dividend.amount
     return cumulativeDividendValue
