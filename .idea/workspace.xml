@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17576f2e-61c8-478e-81f4-83a1ecd30909" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_analyzer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeData.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataAccessModule/storeDataUSMarkets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/util/ApplicationConstants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="devidend_data_processor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="devidend_data_processor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="15">
               <caret line="31" column="40" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -59,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+            <state relative-caret-position="449">
+              <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -74,7 +59,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="930">
               <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
             </state>
           </provider>
@@ -160,10 +145,10 @@
         <option value="$PROJECT_DIR$/MyInvestementsManager/urls.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/EODDataStoreModule/EOD_api.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" />
-        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
       </list>
     </option>
   </component>
@@ -176,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,6 +189,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,13 +253,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37708333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21180555" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38135594" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2306003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -285,6 +269,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -616,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="930">
           <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
         </state>
       </provider>
@@ -632,16 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,10 +646,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="15">
           <caret line="31" column="40" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="40" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
