@@ -239,16 +239,15 @@ def storeSectorIndices(request):
 def loadLatestData(request):
     retrieve_store_latest_dividends()
 
-    #storeSectorIndices(request)
+    storeSectorIndices(request)
     
-    #updateSymbolsList(request)
+    updateSymbolsList(request)
     
-    #clenupTodaysData()
+    clenupTodaysData()
     
-    #storeDailyTradingSummary(request)
+    storeDailyTradingSummary(request)
     
-    #storeDetailedTrades(request)
-    
+    storeDetailedTrades(request)
 
     #persistDailyTradingSummary_US()
     
