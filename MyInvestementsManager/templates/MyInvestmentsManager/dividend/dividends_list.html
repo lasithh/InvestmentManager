@@ -6,23 +6,25 @@
 	<tr>
 		<td>Company</td>
 		<td>Div Yeild %</td>
-		<td>Last Year Dividend</td>
-		<td>Number of Dividends</td>
+		<td>Dividend Profile</td>
 		<td>Last Dividend Date</td>
-		<td>5 Years Dividend Growth</td>
+		<td>Consistency Indicator</td>
 		<td>Last Traded Price</td>
 	</tr>
 	{% for data in divAggData %}
 	<tr>
-		<td><a href="listDividendByCompany/{{ data.company.id }}/" >{{data.company.symbol }}</a></td>
+		<td><a href="https://www.cse.lk/home/company-info/{{ data.company.symbol}}/financial" target="_blank">{{data.company.symbol }}</a></td>
 		<td>{{ data.currentDivYeild | floatformat:2 | intcomma}}</td>
-		<td> {{ data.lastYerTotalDividend}}</td>
-		<td>{{ data.numberOfDividends }}</td>
+		<td>
+		{% for year, value in data.yearlyDividend.items %}
+		 {{ year }}-{{ value }}|
+		{% endfor %}
+		</td>
 		<td>{{ data.latestDividendDate }}</td>
 		<td>{{ data.dividendGrowthLastFiveYears | floatformat:2 | intcomma}}</td>
 		<td>{{ data.lastTradedPrice }}</td>
 	</tr>
-	{% endfor%}
+	{% endfor %}
 </table>
 
 {% endblock %}

@@ -3,7 +3,7 @@ from django.views.generic.list import ListView
 
 from MyInvestementsManager.DividendsManager.dividend_api import retrieve_store_latest_dividends, \
     getAggrigatedDividendData, retrieve_aggrigated_div_data
-from MyInvestementsManager.DividendsManager.dividend_extractor import read_latest_devidends
+from MyInvestementsManager.DividendsManager.dividend_extractor import read_latest_dividends
 from MyInvestementsManager.models import Investment, ListedCompany,\
     DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames, Dividend,\
     CompanyFinanceReportSumary

@@ -1,12 +1,12 @@
 import datetime
+from collections import OrderedDict
 
 from MyInvestementsManager.EODDataStoreModule.EOD_api import getLastTradedPrice
 
 
 class DividendView:
     currentDivYeild = 0.0
-    lastYerTotalDividend = 0.0
-    numberOfDividends = 0
+    yearlyDividend = OrderedDict()
     company = None
     latestDividendDate = None
     dividendGrowthLastFiveYears = 0
@@ -20,7 +20,6 @@ def getAggrigatedDividendData(dividends):
         dividends.sort(key=lambda dividend: dividend.entitled_date, reverse=True)
         divView = DividendView()
         divView.company = company
-        divView.numberOfDividends = len(dividends)
 
         lastTradedPrice = getLastTradedPrice(company)
 
@@ -29,10 +28,10 @@ def getAggrigatedDividendData(dividends):
             thisYearDividend = getDividendCountForYear(dividends, currentYear, lastTradedPrice)
 
             divView.currentDivYeild = (thisYearDividend / lastTradedPrice) * 100
-            divView.lastYerTotalDividend = getDividendCountForYear(dividends, currentYear - 1, lastTradedPrice)
             divView.dividendGrowthLastFiveYears = getDividendGrowth(dividends, currentYear - 5, currentYear, lastTradedPrice)
             divView.lastTradedPrice = lastTradedPrice
             divView.latestDividendDate = dividends[0].entitled_date
+            divView.yearlyDividend = getDividendForEachYear(dividends, lastTradedPrice)
 
         aggrigates.append(divView)
 
@@ -40,7 +39,7 @@ def getAggrigatedDividendData(dividends):
     return aggrigates
 
 def groupByCompany(dividends):
-    groupByCompany = dict()
+    groupByCompany = OrderedDict()
     for dividend in dividends:
         if not groupByCompany.has_key(dividend.company):
             groupByCompany[dividend.company] = list()
@@ -48,6 +47,15 @@ def groupByCompany(dividends):
         groupByCompany[dividend.company].append(dividend)
     return groupByCompany
 
+def getDividendForEachYear(dividends, lastTradedPrice):
+    yearlyDiv = OrderedDict()
+    for dividend in dividends:
+        year = dividend.entitled_date.year
+        if not yearlyDiv.has_key(year):
+            totalDiv = getDividendCountForYear(dividends, year, lastTradedPrice)
+            yearlyDiv[year] = totalDiv
+
+    return yearlyDiv
 
 def getDividendCountForYear(dividends, year, lastTradePrice):
     divCount = 0;

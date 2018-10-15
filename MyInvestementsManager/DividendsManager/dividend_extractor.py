@@ -7,7 +7,7 @@ from MyInvestementsManager.util.ApplicationConstants import URL_CSE
 from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWithBody
 
 
-def read_latest_devidends(symbol):
+def read_latest_dividends(symbol):
     print('******************************' + symbol + '*************************')
 
     dividends = []
@@ -35,7 +35,7 @@ def filter_dividends(announcements, symbol):
         if title:
             title = title.replace(' ', '').upper()
             body = announcement['body']
-            if title == 'DIVIDENDANNOUNCEMENT' or title == 'DIVIDENDANNOUNCEMENTS' or title == 'DIVIDENDANNOUNCEMENT(AMENDED)' or title == 'DIVIDENDANNOUNCEMENTS(INTERIMANDFINAL)':
+            if title == 'DIVIDENDANNOUNCEMENT' or title == 'DIVIDENDANNOUNCEMENTS' or title == 'DIVIDENDANNOUNCEMENT(AMENDED)' or title == 'DIVIDENDANNOUNCEMENTS(INTERIMANDFINAL)' or title in 'DIVIDENDANNOUNCEMENT':
                 dividend = create_dividends(body, company)
                 if dividend:
                     dividends.extend(dividend)
