@@ -2,13 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17576f2e-61c8-478e-81f4-83a1ecd30909" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/CSE/trade_summary/trade_summary_02_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/CSE/trade_summary/trade_summary_12_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/CSE/trade_summary/trade_summary_13_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/CSE/trade_summary/trade_summary_14_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/company/company_data_02_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/company/company_data_12_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/company/company_data_13_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/company/company_data_14_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/detailed_trades/detailed_trades_data_12_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/detailed_trades/detailed_trades_data_14_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sector/sector_data_02_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sector/sector_data_12_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sector/sector_data_13_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sector/sector_data_14_10_2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvestmentsHelper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvestmentsHelper/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eod.sh" beforeDir="false" afterPath="$PROJECT_DIR$/eod.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" afterPath="$PROJECT_DIR$/nohup.out" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -724,7 +737,7 @@
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
