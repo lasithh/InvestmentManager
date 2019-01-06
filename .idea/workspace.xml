@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17576f2e-61c8-478e-81f4-83a1ecd30909" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,10 +39,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dividend_extractor.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="dividend_extractor.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
+                <state relative-caret-position="423">
                   <caret line="38" column="256" selection-start-line="38" selection-start-column="256" selection-end-line="38" selection-end-column="256" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
@@ -74,11 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="426">
-                  <caret line="239" column="28" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
+                <state relative-caret-position="606">
+                  <caret line="249" column="32" selection-start-line="249" selection-start-column="32" selection-end-line="249" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -212,9 +207,9 @@
         <option value="$PROJECT_DIR$/MyInvestementsManager/templates/MyInvestmentsManager/dividend/dividends_list.html" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DataProcessor/dataProcessor.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/devidend_data_processor.py" />
-        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/views.py" />
       </list>
     </option>
   </component>
@@ -324,7 +319,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24806201" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24806201" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275218" />
@@ -728,16 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="239" column="28" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -750,10 +735,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/DividendsManager/dividend_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="423">
           <caret line="38" column="256" selection-start-line="38" selection-start-column="256" selection-end-line="38" selection-end-column="256" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="249" column="32" selection-start-line="249" selection-start-column="32" selection-end-line="249" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
