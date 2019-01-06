@@ -37,6 +37,9 @@ def calculateAccumulatedInvestementData(investmentData):
     
     #Group by symbols
     investmentData = groupInvestmentDataBySymbol(investmentData)
+
+    #Sort the list
+    investmentData = sorted(investmentData, key=lambda x: x.symbol.symbol)
     
     context['investDataBySymbol'] = investmentData
     # Calculate the total values of the investments
