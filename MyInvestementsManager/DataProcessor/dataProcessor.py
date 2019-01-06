@@ -11,7 +11,7 @@ def calculateAccumulatedInvestementData(investmentData):
         cumulativeDividendValue = 0.0
         
         #Perform the currency Conversion
-        data = valueInDefaultCurrency(data)
+        #data = valueInDefaultCurrency(data)
             
         #Set the current value based on teh symbol
         if data.symbol and data.symbol.symbol != 'NA' :
@@ -55,6 +55,7 @@ def groupInvestmentDataBySymbol (investmentData):
         if data.investmentType.name != 'Equity':
             finalResult.append(data)
         else :
+            print ('Symbol: ' + data.symbol.symbol + ' amount: ' + str(data.amount) + ' Quatity: ' + str(data.quantity) + 'Current value: ' + str(data.currentValue))
             symbol = data.symbol.symbol
             if symbol == 'NA':
                 finalResult.append(data)
