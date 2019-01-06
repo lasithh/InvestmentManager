@@ -34,8 +34,9 @@ def filter_dividends(announcements, symbol):
         title = announcement['title']
         if title:
             title = title.replace(' ', '').upper()
+            #Try with the body
             body = announcement['body']
-            if title == 'DIVIDENDANNOUNCEMENT' or title == 'DIVIDENDANNOUNCEMENTS' or title == 'DIVIDENDANNOUNCEMENT(AMENDED)' or title == 'DIVIDENDANNOUNCEMENTS(INTERIMANDFINAL)' or title in 'DIVIDENDANNOUNCEMENT':
+            if title == 'DIVIDENDANNOUNCEMENT' or title == 'DIVIDENDANNOUNCEMENTS' or title == 'DIVIDENDANNOUNCEMENT(AMENDED)' or title == 'DIVIDENDANNOUNCEMENTS(INTERIMANDFINAL)' or title in 'DIVIDENDANNOUNCEMENT' or title in 'DIVIDENDANNOUNCEMENT(DATES)':
                 dividend = create_dividends(body, company)
                 if dividend:
                     dividends.extend(dividend)
