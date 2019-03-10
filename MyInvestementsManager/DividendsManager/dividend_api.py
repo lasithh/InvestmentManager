@@ -10,9 +10,8 @@ def retrieve_store_latest_dividends():
     all_companies = ListedCompany.objects.all()
     for company in all_companies:
         symbol = company.symbol
-        if symbol == 'DIAL.N0000':
-            dividends = read_latest_dividends(symbol)
-            store_dividends(dividends)
+        dividends = read_latest_dividends(symbol)
+        store_dividends(dividends)
 
 def retrieve_aggrigated_div_data(dividends):
     return getAggrigatedDividendData(dividends)
