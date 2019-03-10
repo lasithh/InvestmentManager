@@ -8,8 +8,6 @@ from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWi
 
 
 def read_latest_dividends(symbol):
-    print('******************************' + symbol + '*************************')
-
     dividends = []
 
     foo = {'symbol': str(symbol)}

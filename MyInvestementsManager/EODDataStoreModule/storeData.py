@@ -98,7 +98,6 @@ def persistDetailedTrades(url):
     Stores the detailed trades information in the Database. if the data already exists for today, data is updated
     """
     detailedTrades = getDataByHttps(URL_CSE, url)
-    print(detailedTrades)
     
     detailedTradesJson = json.loads(detailedTrades)
     

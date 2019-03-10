@@ -12,14 +12,10 @@ def persistDailyTradingSummary_US(date  = datetime.date.today() - timedelta(2)):
     """
     tradeSummaryURL = URL_TRADE_SUMMARY_DATA_DOWNLOAD_NASDQ.format(date.day, date.month, date.year)
     
-    print(tradeSummaryURL)
-    
     tradingSummaryInformation = getDataByHttps(URL_NASDQ, tradeSummaryURL)  
     storeDailyTradinSummaryData(tradingSummaryInformation, "NASDQ", date)
     
     tradeSummaryURL = URL_TRADE_SUMMARY_DATA_DOWNLOAD_NYSE.format(date.day, date.month, date.year)
-    
-    print(tradeSummaryURL)
     
     tradingSummaryInformation = getDataByHttps(URL_NYSE, tradeSummaryURL)  
     storeDailyTradinSummaryData(tradingSummaryInformation, "NYSE", date)

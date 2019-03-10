@@ -35,7 +35,6 @@ def getCompanyHistoryData (companyData):
     annualReportsList = list()
     
     latestData = populateCurrentFinancialStatus(companyData)
-    print(latestData.profitAfterTax)
     
     annualReportsList.append(latestData)
     #filter annual reports
