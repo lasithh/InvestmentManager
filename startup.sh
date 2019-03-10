@@ -1,6 +1,5 @@
 #!/bin/bash
-cd /home/computer/workspace/MyProject1
-
+cd /home/computer/myprojects/InvestmentManager
 #Pulls latest changes
 git pull
 
