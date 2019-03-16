@@ -83,7 +83,7 @@ def persistDailyTradingSummary():
                                                                                     'marketCapitalisation' : 0,
                                                                                     'marketCapitalisationPercentage' : 0})
         
-        if referencedCompany :
+        if referencedCompany:
             summaryToBeSaved = DailyTradeSummary(company = referencedCompany, date = datetime.datetime.strptime(summary['issueDate'], "%d/%b/%Y").date(), shareVolume = int(summary['sharevolume'] or 0), tradeVolume = int(summary['tradevolume'] or 0), turnover = float(summary['turnover'] or 0), high = float(summary['high'] or 0), low = float(summary['low'] or 0), priceChange = float(summary['change'] or 0), priceChangePercentage = float(summary['percentageChange'] or 0), lastTradedPrice = float(summary['closingPrice'] or 0), previouseClose = float(summary['previousClose'] or 0), open = float(summary['open'] or 0))
             summaryToBeSaved.save()
 

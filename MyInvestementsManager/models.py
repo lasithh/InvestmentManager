@@ -74,6 +74,9 @@ class DailyTradeSummary(models.Model):
     date = models.DateField(auto_now=True)
     turnover = models.FloatField()
 
+    def __str__(self):
+        return "Symbol: " + self.company.symbol + "LTP: " + str(self.lastTradedPrice)
+
 
 class DetailedTrade(models.Model):
     company = models.ForeignKey(ListedCompany)

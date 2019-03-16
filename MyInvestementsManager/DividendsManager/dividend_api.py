@@ -7,6 +7,7 @@ from MyInvestementsManager.models import ListedCompany
 
 
 def retrieve_store_latest_dividends():
+    print("Store Dividends")
     all_companies = ListedCompany.objects.all()
     for company in all_companies:
         symbol = company.symbol
@@ -14,6 +15,7 @@ def retrieve_store_latest_dividends():
         store_dividends(dividends)
 
 def retrieve_aggrigated_div_data(dividends):
+    print("Retrieve Aggrigated Dividend Data")
     return getAggrigatedDividendData(dividends)
 
 

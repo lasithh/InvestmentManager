@@ -237,6 +237,7 @@ def storeSectorIndices(request):
     return HttpResponse("Success")
 
 def loadLatestData(request):
+    print("Loading Latest Data")
     retrieve_store_latest_dividends()
 
     storeSectorIndices(request)

@@ -12,6 +12,11 @@ class DividendView:
     dividendGrowthLastFiveYears = 0
     lastTradedPrice = 0
 
+    def __str__(self):
+        return "CurrentDivYeild : " + str(self.currentDivYeild) + " YearlyDividend: " + str(self.yearlyDividend) + " Company: " + str(
+            self.company.symbol) + " Latest Div date: " + str(self.latestDividendDate) + " Growth Last 5 Years = " + str(
+            self.dividendGrowthLastFiveYears) + " Last Traded Price: " + str(self.lastTradedPrice)
+
 def getAggrigatedDividendData(dividends):
     group = groupByCompany(dividends)
 
@@ -21,7 +26,10 @@ def getAggrigatedDividendData(dividends):
         divView = DividendView()
         divView.company = company
 
+        print(company)
+
         lastTradedPrice = getLastTradedPrice(company)
+
 
         if lastTradedPrice:
             currentYear = datetime.date.today().year
@@ -33,8 +41,13 @@ def getAggrigatedDividendData(dividends):
             dividendByYear = getDividendForEachYear(dividends, lastTradedPrice)
             divView.yearlyDividend = dividendByYear
 
-            latestYear = dividendByYear.items()[0][0]
-            latestDividend = dividendByYear.items()[0][1]
+            if (currentYear - 1) in dividendByYear:
+                #Get last year's Dividend if there was a last year
+                latestDividend = dividendByYear[currentYear - 1]
+            else:
+                #If not get the latest dividend
+                latestDividend = dividendByYear.items()[0][1]
+
             divView.currentDivYeild = (latestDividend / lastTradedPrice) * 100
 
         aggrigates.append(divView)
