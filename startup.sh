@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /Users/hapu/myprojects/InvestmentAnalyser
+cd /home/computer/myprojects/InvestmentManager
 #Pulls latest changes
 git pull
 
