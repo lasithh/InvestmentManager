@@ -1,8 +1,8 @@
 #!/bin/bash
-cd /Users/hapu/myprojects/InvestmentAnalyser/MyProject1
+cd /Users/hapu/myprojects/InvestmentAnalyser
 #Pulls latest changes
 git pull
 
 #Start the service
-python manage.py runserver 0.0.0.0:8000 > output
+nohup python manage.py runserver 0.0.0.0:8000 > output
 
