@@ -21,7 +21,6 @@ def read_latest_dividends(symbol):
     return dividends
 
 
-
 def filter_dividends(announcements, symbol):
     json_data = json.loads(announcements)
 
@@ -32,20 +31,21 @@ def filter_dividends(announcements, symbol):
         title = announcement['title']
         if title:
             title = title.replace(' ', '').upper()
-            #Try with the body
+            # Try with the body
             body = announcement['body']
             if title == 'DIVIDENDANNOUNCEMENT' or title == 'DIVIDENDANNOUNCEMENTS' or title == 'DIVIDENDANNOUNCEMENT(AMENDED)' or title == 'DIVIDENDANNOUNCEMENTS(INTERIMANDFINAL)' or title in 'DIVIDENDANNOUNCEMENT' or title in 'DIVIDENDANNOUNCEMENT(DATES)':
                 dividend = create_dividends(body, company)
                 if dividend:
                     dividends.extend(dividend)
-            elif title == "SCRIPDIVIDEND" or title =='CASHANDSCRIPDIVIDEND' or title =='CASH&SCRIPDIVIDEND' or title == 'CASH&SCRIPDIVIDENDANNOUNCEMENT' or title =='CASH&SCRIPDIVIDENDS' or title == 'DIVIDENDANNOUNCEMENTS(CASH&SCRIP)' or title == 'CASHANDSCRIPDIVIDENDANNOUNCEMENT' or ("DIVIDEND" in title and "RIGHTSISSUE" in title):
+            elif title == "SCRIPDIVIDEND" or title == 'CASHANDSCRIPDIVIDEND' or title == 'CASH&SCRIPDIVIDEND' or title == 'CASH&SCRIPDIVIDENDANNOUNCEMENT' or title == 'CASH&SCRIPDIVIDENDS' or title == 'DIVIDENDANNOUNCEMENTS(CASH&SCRIP)' or title == 'CASHANDSCRIPDIVIDENDANNOUNCEMENT' or (
+                    "DIVIDEND" in title and "RIGHTSISSUE" in title):
                 dividend = create_dividends(body, company)
                 if dividend:
                     dividends.extend(dividend)
-            elif 'EMPLOYEESHAREOPTIONSCHEME' in title or 'GENERALMEETING' in title or 'CHANGEINDIRECTORATE' in title or title == 'EMPLOYEESHAREOPTIONSCHEME' or title =='EMPLOYEESHAREOPTIONSHCEME' or title == 'DEALINGSBYDIRECTORS' \
-                    or 'DISCLOSURE' in title or 'NOTIFICATIONONTHELISTINGSOFSHARES' in title or 'WARRANT' in title or 'PRESSRELEASE' in title or title == 'EMPLOYEESHAREOPTIONPLAN' or title == 'SUBDIVISIONOFSHARES' or 'GeneralMeeting' in title\
-                    or title == 'RATINGREVIEW' or 'RIGHTSISSUE' in title or title == 'ANNOUNCEMENT' or 'PURCHASEOFSHARES' in title or 'CHANGEOFREGISTEREDOFFICE' == title or 'FITCH' in title or 'CLARIFICATION' in title or 'Disclosure' in title or 'RETIREMENT' in title\
-                    or 'CHANGEOF' in title or 'FINANCIALSTATEMENT' in title or 'CHAIRMAN' in title or 'Financial' in title or 'TRANSACTION' in title or 'CIRCULAR' in title or 'DEBENTURE' in title or 'NOTIFICATION' in title or 'DATES' in title or 'DISLCOSURE' in title\
+            elif 'EMPLOYEESHAREOPTIONSCHEME' in title or 'GENERALMEETING' in title or 'CHANGEINDIRECTORATE' in title or title == 'EMPLOYEESHAREOPTIONSCHEME' or title == 'EMPLOYEESHAREOPTIONSHCEME' or title == 'DEALINGSBYDIRECTORS' \
+                    or 'DISCLOSURE' in title or 'NOTIFICATIONONTHELISTINGSOFSHARES' in title or 'WARRANT' in title or 'PRESSRELEASE' in title or title == 'EMPLOYEESHAREOPTIONPLAN' or title == 'SUBDIVISIONOFSHARES' or 'GeneralMeeting' in title \
+                    or title == 'RATINGREVIEW' or 'RIGHTSISSUE' in title or title == 'ANNOUNCEMENT' or 'PURCHASEOFSHARES' in title or 'CHANGEOFREGISTEREDOFFICE' == title or 'FITCH' in title or 'CLARIFICATION' in title or 'Disclosure' in title or 'RETIREMENT' in title \
+                    or 'CHANGEOF' in title or 'FINANCIALSTATEMENT' in title or 'CHAIRMAN' in title or 'Financial' in title or 'TRANSACTION' in title or 'CIRCULAR' in title or 'DEBENTURE' in title or 'NOTIFICATION' in title or 'DATES' in title or 'DISLCOSURE' in title \
                     or 'Halted' in title or 'SUBSIDIARY' in title or 'SUMMARY':
                 pass
             else:
@@ -53,8 +53,9 @@ def filter_dividends(announcements, symbol):
 
     return dividends
 
-#def parse_date(date):
-    #return datetime.datetime.strptime(summary['issueDate'], "%d/%b/%Y").date()
+
+# def parse_date(date):
+# return datetime.datetime.strptime(summary['issueDate'], "%d/%b/%Y").date()
 
 
 def create_dividends(body, company):
@@ -81,7 +82,7 @@ def create_dividends(body, company):
                 elif ":" in content:
                     key_val = content.split(':')
                 elif content.startswith("DATEOFANNOUNCEMENT."):
-                    key_val.append( 'DATEOFANNOUNCEMENT')
+                    key_val.append('DATEOFANNOUNCEMENT')
                     key_val.append(content.split('DATEOFANNOUNCEMENT.')[1])
                 elif content.startswith('RATEOFDIVIDEND'):
                     key_val.append('RATEOFDIVIDEND')
@@ -122,16 +123,17 @@ def create_dividends(body, company):
                     terminate = True
                     break
 
-
         dividends = []
 
         if entitled_date:
-            #cash dividend
+            # cash dividend
             if amount:
                 dividend_type = DividendType.objects.get(name='CASH')
-                dividend = Dividend(type=dividend_type, company=company, amountPerShare=amount, announced_date=announced_date, entitled_date=entitled_date, payment_date=payment_date)
+                dividend = Dividend(type=dividend_type, company=company, amountPerShare=amount,
+                                    announced_date=announced_date, entitled_date=entitled_date,
+                                    payment_date=payment_date)
                 dividends.append(dividend)
-            #Scrip Dividend
+            # Scrip Dividend
             if scripDividendPerShare:
                 dividend_type = DividendType.objects.get(name='SCRIP')
                 dividend = Dividend(type=dividend_type, company=company, amountPerShare=scripDividendPerShare,
@@ -145,6 +147,7 @@ def create_dividends(body, company):
         else:
             raise ValueError("Dividend does not have all the necessary values for " + body)
         return dividends
+
 
 def parse_date(date_str):
     date_str = date_str.replace('ARP', 'APR')
@@ -160,10 +163,11 @@ def parse_date(date_str):
             except Exception:
                 return datetime.datetime.strptime(date_str, "%d.%b%Y").date()
 
+
 def get_amount_from_propotion(propotion):
-    #check the type using a regxp
-    #if matches to a certain type, parse using that type
-    #define all the accepted types in a constant array
+    # check the type using a regxp
+    # if matches to a certain type, parse using that type
+    # define all the accepted types in a constant array
     propotion = propotion.upper()
     dataToProcess = None
     if '/' in propotion:
@@ -190,9 +194,6 @@ def get_amount_from_propotion(propotion):
 
     raise ValueError("Could not extract the Scrip Dividend proportions for : " + propotion)
 
+
 def extract_number(str):
     return float(re.findall("\d+\.\d+|\d+", str)[0])
-
-
-
-

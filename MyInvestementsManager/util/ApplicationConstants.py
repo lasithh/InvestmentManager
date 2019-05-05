@@ -45,6 +45,9 @@ TRADE_SUMMARY_FORMAT_CSE = {
 
 #meta data for CSE
 URL_CSE = 'www.cse.lk'
+URL_CDN = 'https://cdn.cse.lk/cmt'
+
+
 FILE_PATH_DATA = 'data'
 
 

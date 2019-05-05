@@ -14,10 +14,7 @@ def retrieve_store_latest_dividends():
         dividends = read_latest_dividends(symbol)
         store_dividends(dividends)
 
+
 def retrieve_aggrigated_div_data(dividends):
     print("Retrieve Aggrigated Dividend Data")
     return getAggrigatedDividendData(dividends)
-
-
-
-

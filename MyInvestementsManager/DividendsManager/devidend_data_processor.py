@@ -26,8 +26,6 @@ def getAggrigatedDividendData(dividends):
         divView = DividendView()
         divView.company = company
 
-        print(company)
-
         lastTradedPrice = getLastTradedPrice(company)
 
 
