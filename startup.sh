@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/computer/myprojects/InvestmentManager
+cd /home/pi/InvestmentManager
 #Pulls latest changes
 git pull
 
