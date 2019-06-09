@@ -9,11 +9,8 @@ from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWi
 
 def extract_annual_report_data(symbol):
     urls = extract_annual_report_urls(symbol)
-    print(symbol)
     for url in urls:
         complete_url = URL_CDN + "/" + url[1]
-
-        print(complete_url)
 
         download_file(complete_url, "temp_file.pdf")
         tables = extract_tables("temp_file.pdf")

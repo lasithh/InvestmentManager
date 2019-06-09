@@ -1,34 +1,21 @@
-from MyInvestementsManager.currency.CurrencyConverter import valueInDefaultCurrency
+from MyInvestementsManager.DividendsManager.dividend_api import get_div_data
+from MyInvestementsManager.EODDataStoreModule.EOD_api import getLastTradedPrice
 from MyInvestementsManager.util.ApplicationConstants import DEFAULT_CURRENCY
-from MyInvestementsManager.models import DailyTradeSummary
+from MyInvestementsManager.models import DailyTradeSummary, Investment
 
 
 def calculateAccumulatedInvestementData(investmentData):
-    cumulativeDividendValue = 0.0
     context = {}
     
     for data in investmentData:
-        cumulativeDividendValue = 0.0
-        
-        #Perform the currency Conversion
-        #data = valueInDefaultCurrency(data)
-            
-        #Set the current value based on teh symbol
-        if data.symbol and data.symbol.symbol != 'NA' :
-            data.currentValue = data.symbol.price * data.quantity
-        else:
-            data.currentValue = data.amount
-                    
-        data.growth = data.currentValue - data.amount    
-        if data.amount and float(data.amount) > 0:
-            data.growthPercentage = (data.growth) * 100 / data.amount
-        else :
-            data.growthPercentage = 0
-        
-                
-            
+        data.currentValue = data.symbol.price * data.quantity
+        data.growth = data.currentValue - data.amount
         data.paidPrice = data.amount / data.quantity
-        
+
+        #calculate dividends
+        data.dividends = calculateDividends(data)
+        data.profitWithDividends = data.growth + data.dividends
+
             
     #Get the last updated date of the data --> select the last updated Trade Summary and get the date
     latestDetailedTrade = DailyTradeSummary.objects.latest('date')
@@ -48,45 +35,54 @@ def calculateAccumulatedInvestementData(investmentData):
     context.update(totalValues)
     return context
 
+
 def groupInvestmentDataBySymbol (investmentData):
-    dataGroupedBySymbol = {}
-    finalResult = []
+    data_grouped_by_symbol = {}
+    final_result = []
     for data in investmentData:
-        if data.investmentType.name != 'Equity':
-            finalResult.append(data)
-        else :
-            print ('Symbol: ' + data.symbol.symbol + ' amount: ' + str(data.amount) + ' Quatity: ' + str(data.quantity) + 'Current value: ' + str(data.currentValue))
-            symbol = data.symbol.symbol
-            if symbol == 'NA':
-                finalResult.append(data)
-            else :
-                dataForSymbol = dataGroupedBySymbol.get(symbol)
-                if dataForSymbol is None:
-                    #Calculate the dividends for the symbol
-                    data.dividends = getCumulativeDividedsValueForTheInvestment(data)
-                    
-                    #Calculate the profit with dividends for the symbol
-                    data.profitWithDividends = data.growth + data.dividends
-                    if data.amount and float(data.amount) > 0:
-                        data.growthPercentageWithDividends = (data.profitWithDividends) * 100 / data.amount
-                    else :
-                        data.growthPercentageWithDividends = 0
-                        
-                    dataGroupedBySymbol[symbol] = data
-                else :
-                    dataForSymbol.currentValue += data.currentValue
-                    dataForSymbol.growth += data.growth
-                    dataForSymbol.amount += data.amount
-                    dataForSymbol.quantity += data.quantity
-                    dataForSymbol.profitWithDividends += data.growth
-                    
-                    dataForSymbol.growthPercentage = (dataForSymbol.growth * 100) / dataForSymbol.amount
-                    dataForSymbol.paidPrice = dataForSymbol.amount / dataForSymbol.quantity
-                    dataForSymbol.growthPercentageWithDividends = (dataForSymbol.profitWithDividends * 100) / dataForSymbol.amount
+        symbol = data.symbol.symbol
+        data_for_symbol = data_grouped_by_symbol.get(symbol)
+        if data_for_symbol is None:
+
+            # Create empty object
+            data_for_symbol = Investment()
+
+            # Set the symbol
+            data_for_symbol.symbol = data.symbol
+            data_for_symbol.investmentType = data.investmentType
+            data_for_symbol.name = data.name
+
+            # Initialize with 0 values
+            data_for_symbol.currentValue = 0
+            data_for_symbol.growth = 0
+            data_for_symbol.amount = 0
+            data_for_symbol.quantity = 0
+            data_for_symbol.profitWithDividends = 0
+            data_for_symbol.growthPercentage = 0
+            data_for_symbol.paidPrice = 0
+            data_for_symbol.growthPercentageWithDividends = 0
+            data_for_symbol.dividends = 0
+
+
+            #Add it to the map
+            data_grouped_by_symbol[symbol] = data_for_symbol
+
+        #Accumulate individual investment data in to a single investment object
+        data_for_symbol.currentValue += data.currentValue
+        data_for_symbol.growth += data.growth
+        data_for_symbol.amount += data.amount
+        data_for_symbol.quantity += data.quantity
+        data_for_symbol.dividends += data.dividends
+        data_for_symbol.profitWithDividends += data.profitWithDividends
+
+        data_for_symbol.growthPercentage = (data_for_symbol.growth * 100) / data_for_symbol.amount
+        data_for_symbol.paidPrice = data_for_symbol.amount / data_for_symbol.quantity
+        data_for_symbol.growthPercentageWithDividends = (data_for_symbol.profitWithDividends * 100) / data_for_symbol.amount
     
-    groupedEquities = list(dataGroupedBySymbol.values())
-    finalResult += groupedEquities
-    return finalResult;
+    grouped_equities = list(data_grouped_by_symbol.values())
+    final_result += grouped_equities
+    return final_result
+
 
 def calculateTotalValuesOfInvestmentData(investmentData):
     totalAmount = 0.0
@@ -128,6 +124,7 @@ def calculateTotalValuesOfInvestmentData(investmentData):
     
     return context
 
+
 def calculateAccumulatedSectorData(sectorData):    
     totalValue = 0.0
     currentDate = sectorData[0].date.date()
@@ -159,13 +156,24 @@ def calculateAccumulatedSectorData(sectorData):
     
     return context
 
+
 def sortByPrice(item):
     return item.price
 
-def getCumulativeDividedsValueForTheInvestment(data):
-    #dividendsForInvestment = Devidends.objects.filter(investment = data)
-    cumulativeDividendValue = 0
-    #if(dividendsForInvestment):
-     #   for dividend in dividendsForInvestment:
-      #      cumulativeDividendValue += dividend.amount
-    return cumulativeDividendValue
+
+def calculateDividends(investment):
+    dividends = get_div_data(investment.symbol)
+    total_dividend = 0
+    last_traded_price = getLastTradedPrice(investment.symbol)
+    for dividend in dividends:
+        #If dividend was offered after you made the investment
+        if investment.date <= dividend.entitled_date:
+            if dividend.type.name == 'SCRIP':
+                total_dividend += dividend.amountPerShare * investment.quantity * last_traded_price
+            else:
+                if investment.symbol == 'ALLI.N0000':
+                    print (dividend)
+                    print (investment)
+
+                total_dividend += dividend.amountPerShare * investment.quantity
+    return total_dividend

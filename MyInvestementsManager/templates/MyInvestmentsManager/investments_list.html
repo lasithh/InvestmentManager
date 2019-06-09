@@ -7,9 +7,6 @@
         
 <table class="table table-striped table-bordered" id = "investmentsList">
 	<tr>
-		<td>Name</td>
-		<td>Currency</td>
-		<td>Type</td>
 		<td>Symbol</td>
 		<td>Quantity</td>
 		<td>Paid Price</td>
@@ -19,15 +16,11 @@
 		<td>Dividends</td>
 		<td>Profit with Dividends</td>
 		<td>Total Yeild</td>
-		<td>Invested Date</td>
-		<td colspan="2" align="center" data-toggle="tooltip" title="Add Investment"><a href="/addInvestment" ><span class="glyphicon glyphicon-plus" aria-hidden = "true"/></a></td>
+		<td align="center" data-toggle="tooltip" title="Add Investment"><a href="/addInvestment" ><span class="glyphicon glyphicon-plus" aria-hidden = "true"/></a></td>
 		
 	</tr>
 	{% for data in investDataBySymbol %}
 	<tr>
-		<td><a href="viewInvestment/{{ data.id }}/" >{{ data.name }}</a></td>
-		<td>{{ data.currency }}</td>
-		<td>{{ data.investmentType.name }}</td>		
 		<td>{{ data.symbol.symbol }}</td>
 		<td>{{ data.quantity| floatformat:2 | intcomma}}</td>
 		<td>{{ data.paidPrice | floatformat:2 | intcomma}}</td>
@@ -37,17 +30,13 @@
 		<td>{{ data.dividends | floatformat:2 | intcomma}}</td>
 		<td>{{ data.profitWithDividends | floatformat:2 | intcomma}}</td>
 		<td>{{ data.growthPercentageWithDividends | floatformat:2 | intcomma}}%</td>
-		<td>{{ data.date.date }}</td>
 		<td><a href="deleteInvestment/{{ data.id }}/" ><span class="glyphicon glyphicon-remove" aria-hidden = "true"/></a></td>
-		<td><a href="addDividend/{{ data.id }}/" ><span class="glyphicon glyphicon-euro" aria-hidden = "true"/></a></td>
+
 	
 	</tr>
 	{% endfor%}
 	
 	<tr>
-		<th>Total</th>
-		<th>{{ currency }}</th>
-		<th></th>		
 		<th></th>
 		<th></th>
 		<th></th>
@@ -57,8 +46,6 @@
 		<th>{{ totalDividends | floatformat:2 | intcomma}}</th>
 		<th>{{ totalProfitWithDividends | floatformat:2 | intcomma}}</th>
 		<th>{{ totalProfitPctWithDividends | floatformat:2 | intcomma}}%</th>
-		<th></th>
-	
 	</tr>
 	
 </table>
@@ -67,9 +54,6 @@
     <div class="row">
         <div class="col-lg-6" id="investmentsView">
             Container Left
-        </div>
-        <div class="col-lg-6" id="investmentRatios">
-            Container Right
         </div>
     </div>
 </div>
@@ -90,21 +74,6 @@ var jsonTextInvestments ='[' +
 	//draw the chart for investments
 	drawPieChart('investmentsView', 'Investments By Current Value', 'Investment', jsonObjectInvestments);
 
-	
-	
-//JSON text for BOND / STOCKS ratio
-var jsonTextBondStocksRatio ='[' +
-	
-		'{"name" : "Bonds", "y" :  {{ totalBondValue|div:totalCurrentValue }} },'+
-		'{"name" : "Equity", "y" :  {{ totalEquityValue|div:totalCurrentValue }} }'+
-	
-		']';
-		
-var jsonObjectInvestmentRatios = jQuery.parseJSON(jsonTextBondStocksRatio);
-
-	
-//draw the chart for Bond / Stock ratio
-drawPieChart('investmentRatios', 'Bond / Stocks Ratio', 'Investment', jsonObjectInvestmentRatios);
 
 
 

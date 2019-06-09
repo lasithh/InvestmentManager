@@ -2,6 +2,8 @@ import datetime
 import json
 import re
 
+import pytz
+
 from MyInvestementsManager.models import ListedCompany, DividendType, Dividend
 from MyInvestementsManager.util.ApplicationConstants import URL_CSE
 from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWithBody
@@ -152,16 +154,20 @@ def create_dividends(body, company):
 def parse_date(date_str):
     date_str = date_str.replace('ARP', 'APR')
     date_str = date_str.replace('TH', '')
+
     try:
-        return datetime.datetime.strptime(date_str, "%d.%b.%Y").date()
+        date_time = datetime.datetime.strptime(date_str, "%d.%b.%Y")
     except Exception:
         try:
-            return datetime.datetime.strptime(date_str, "%d.%B.%Y").date()
+            date_time = datetime.datetime.strptime(date_str, "%d.%B.%Y")
         except Exception:
             try:
-                return datetime.datetime.strptime(date_str, "%d.%m.%Y").date()
+                date_time = datetime.datetime.strptime(date_str, "%d.%m.%Y")
             except Exception:
-                return datetime.datetime.strptime(date_str, "%d.%b%Y").date()
+                date_time = datetime.datetime.strptime(date_str, "%d.%b%Y")
+
+
+    return pytz.utc.localize(date_time)
 
 
 def get_amount_from_propotion(propotion):
@@ -190,7 +196,7 @@ def get_amount_from_propotion(propotion):
         perShares = extract_number(propotion[1])
 
         if (numberOfShares > 0 and perShares > 0):
-            return perShares / numberOfShares
+            return numberOfShares / perShares
 
     raise ValueError("Could not extract the Scrip Dividend proportions for : " + propotion)
 

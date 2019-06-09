@@ -115,9 +115,9 @@ class Dividend(models.Model):
     company = models.ForeignKey(ListedCompany)
     type = models.ForeignKey(DividendType)
     amountPerShare = models.FloatField()
-    announced_date = models.DateField(null = True)
-    entitled_date = models.DateField(null = True)
-    payment_date = models.DateField(null = True)
+    announced_date = models.DateTimeField(null = True)
+    entitled_date = models.DateTimeField(null = True)
+    payment_date = models.DateTimeField(null = True)
 
     unique_together = ((company, type, entitled_date),)
 

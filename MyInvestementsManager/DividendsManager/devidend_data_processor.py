@@ -17,6 +17,7 @@ class DividendView:
             self.company.symbol) + " Latest Div date: " + str(self.latestDividendDate) + " Growth Last 5 Years = " + str(
             self.dividendGrowthLastFiveYears) + " Last Traded Price: " + str(self.lastTradedPrice)
 
+
 def getAggrigatedDividendData(dividends):
     group = groupByCompany(dividends)
 
@@ -28,15 +29,14 @@ def getAggrigatedDividendData(dividends):
 
         lastTradedPrice = getLastTradedPrice(company)
 
-
         if lastTradedPrice:
             currentYear = datetime.date.today().year
 
-            divView.dividendGrowthLastFiveYears = getDividendGrowth(dividends, currentYear - 5, currentYear, lastTradedPrice)
+            divView.dividendGrowthLastFiveYears = getDividendGrowth(dividends, currentYear - 5, currentYear)
             divView.lastTradedPrice = lastTradedPrice
             divView.latestDividendDate = dividends[0].entitled_date
 
-            dividendByYear = getDividendForEachYear(dividends, lastTradedPrice)
+            dividendByYear = getDividendForEachYear(dividends)
             divView.yearlyDividend = dividendByYear
 
             if (currentYear - 1) in dividendByYear:
@@ -46,12 +46,13 @@ def getAggrigatedDividendData(dividends):
                 #If not get the latest dividend
                 latestDividend = dividendByYear.items()[0][1]
 
-            divView.currentDivYeild = (latestDividend / lastTradedPrice) * 100
+            divView.currentDivYeild = (latestDividend[0] / lastTradedPrice) * 100
 
         aggrigates.append(divView)
 
     aggrigates.sort(key=lambda aggrigate: aggrigate.currentDivYeild, reverse=True)
     return aggrigates
+
 
 def groupByCompany(dividends):
     groupByCompany = OrderedDict()
@@ -62,30 +63,34 @@ def groupByCompany(dividends):
         groupByCompany[dividend.company].append(dividend)
     return groupByCompany
 
-def getDividendForEachYear(dividends, lastTradedPrice):
+
+def getDividendForEachYear(dividends):
     yearlyDiv = OrderedDict()
     for dividend in dividends:
         year = dividend.entitled_date.year
         if not yearlyDiv.has_key(year):
-            totalDiv = getDividendCountForYear(dividends, year, lastTradedPrice)
-            yearlyDiv[year] = totalDiv
+            total_div, total_scrip_div = getDividendCountForYear(dividends, year)
+            yearlyDiv[year] = total_div, total_scrip_div
     return yearlyDiv
 
-def getDividendCountForYear(dividends, year, lastTradePrice):
-    divCount = 0;
+
+def getDividendCountForYear(dividends, year):
+    divCount = 0
+    scripDivCount = 0
     for dividend in dividends:
         if year == dividend.entitled_date.year:
             if dividend.type.name == 'SCRIP':
-                divCount += ((1 / dividend.amountPerShare) * lastTradePrice)
+                scripDivCount += dividend.amountPerShare
             else:
                 divCount += dividend.amountPerShare
-    return divCount
+    return divCount, scripDivCount
 
-def getDividendGrowth(dividends, fromYear, toYear, lastTradedPrice):
+
+def getDividendGrowth(dividends, fromYear, toYear):
     dividendToYear = 0
     dividendFromYear = 0
     while (toYear > fromYear):
-        dividendToYear = getDividendCountForYear(dividends, toYear, lastTradedPrice)
+        dividendToYear = getDividendCountForYear(dividends, toYear)[0]
 
         if dividendToYear == 0:
             toYear = toYear - 1
@@ -93,7 +98,7 @@ def getDividendGrowth(dividends, fromYear, toYear, lastTradedPrice):
             break
 
     while (toYear > fromYear):
-        dividendFromYear = getDividendCountForYear(dividends, fromYear, lastTradedPrice)
+        dividendFromYear = getDividendCountForYear(dividends, fromYear)[0]
 
         if dividendToYear == 0:
             fromYear = fromYear + 1

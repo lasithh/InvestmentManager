@@ -263,6 +263,7 @@ def storeSectorIndices(request):
 
 def loadLatestData(request):
     print("Loading Latest Data")
+
     retrieve_store_latest_dividends()
 
     storeSectorIndices(request)

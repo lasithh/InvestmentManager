@@ -7,6 +7,7 @@
 		<td>Company</td>
 		<td>Div Yeild %</td>
 		<td>Dividend Profile</td>
+		<td>Scrip Dividend Profile</td>
 		<td>Last Dividend Date</td>
 		<td>Consistency Indicator</td>
 		<td>Last Traded Price</td>
@@ -17,8 +18,15 @@
 		<td>{{ data.currentDivYeild | floatformat:2 | intcomma}}</td>
 		<td>
 		{% for year, value in data.yearlyDividend.items %}
-		 {{ year }}-{{ value }}|
+		 {{ year }}-{{ value.0 }}|
 		{% endfor %}
+		</td>
+		<td>
+		{% for year, value in data.yearlyDividend.items %}
+            {% if value.1 > 0 %}
+		        {{ year }}-{{ value.1 }}|
+            {% endif %}
+            {% endfor %}
 		</td>
 		<td>{{ data.latestDividendDate }}</td>
 		<td>{{ data.dividendGrowthLastFiveYears | floatformat:2 | intcomma}}</td>

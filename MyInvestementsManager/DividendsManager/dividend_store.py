@@ -1,4 +1,4 @@
-from MyInvestementsManager.models import Dividend
+from MyInvestementsManager.models import Dividend, ListedCompany
 
 
 def store_dividends(dividends):
@@ -15,3 +15,6 @@ def store_dividends(dividends):
                     existing_dividend.save()
         else:
             dividend.save()
+
+def get_dividends(company):
+    return Dividend.objects.filter(company = company)
