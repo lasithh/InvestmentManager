@@ -7,13 +7,10 @@ from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWi
 
 
 def extract_annual_report_data(symbol):
-    print("Symbol: " + symbol)
     metadata = extract_annual_report_metadata(symbol)
     all_tables = list()
     for metadata_one_report in metadata:
         complete_url = URL_CDN + "/" + metadata_one_report['url']
-
-        print("url : " + complete_url)
 
         download_file(complete_url, "temp_file.pdf")
         tables = extract_tables("temp_file.pdf")
@@ -28,7 +25,6 @@ def extract_annual_report_metadata(symbol):
     params = {'symbol': str(symbol)}
     all_reports = getDataByHttpsWithBody('https://' + URL_CSE + '/api/financials', params)
     json_data = json.loads(all_reports)
-    print(json_data)
     for report in json_data['infoAnnualData']:
         metadata = dict()
         if 'Annual Report' in report['fileText']:
