@@ -4,7 +4,7 @@
 git pull
 
 #Download latest data
-curl -v http://127.0.0.1:8000/loadLatestData
+#curl -v http://127.0.0.1:8000/loadLatestData
 
 #Git commit and push
 git add -A
