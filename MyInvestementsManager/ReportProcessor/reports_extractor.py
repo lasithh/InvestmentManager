@@ -1,6 +1,5 @@
 import json
 import os
-import urllib2
 
 from MyInvestementsManager.ReportProcessor.pdf_reader import extract_tables
 from MyInvestementsManager.util.ApplicationConstants import URL_CSE, URL_CDN
@@ -8,28 +7,36 @@ from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWi
 
 
 def extract_annual_report_data(symbol):
-    urls = extract_annual_report_urls(symbol)
-    for url in urls:
-        complete_url = URL_CDN + "/" + url[1]
+    print("Symbol: " + symbol)
+    metadata = extract_annual_report_metadata(symbol)
+    all_tables = list()
+    for metadata_one_report in metadata:
+        complete_url = URL_CDN + "/" + metadata_one_report['url']
+
+        print("url : " + complete_url)
 
         download_file(complete_url, "temp_file.pdf")
         tables = extract_tables("temp_file.pdf")
+        metadata_one_report['tables'] = tables
+        all_tables.append(metadata_one_report)
 
-        total_tables = sum(len(v) for v in tables.itervalues())
+    return all_tables
 
-        print("number of tables: " + str(total_tables))
 
-def extract_annual_report_urls(symbol):
-    paths = list()
+def extract_annual_report_metadata(symbol):
+    return_data = list()
     params = {'symbol': str(symbol)}
     all_reports = getDataByHttpsWithBody('https://' + URL_CSE + '/api/financials', params)
     json_data = json.loads(all_reports)
+    print(json_data)
     for report in json_data['infoAnnualData']:
+        metadata = dict()
         if 'Annual Report' in report['fileText']:
-            path = report['path']
-            name = report['fileText']
-            paths.append(tuple((name, path)))
-    return paths
+            metadata['url'] = report['path']
+            metadata['name'] = report['fileText']
+            metadata['date'] = report['uploadedDate']
+            return_data.append(metadata)
+    return return_data
 
 def delete_file(file_path):
     os.remove(file_path)

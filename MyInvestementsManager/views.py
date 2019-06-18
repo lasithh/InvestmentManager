@@ -2,9 +2,8 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 
 from MyInvestementsManager.DividendsManager.dividend_api import retrieve_store_latest_dividends, \
-    getAggrigatedDividendData, retrieve_aggrigated_div_data
-from MyInvestementsManager.DividendsManager.dividend_extractor import read_latest_dividends
-from MyInvestementsManager.ReportProcessor.reports_api import process_annual_report_data
+    retrieve_aggrigated_div_data
+from MyInvestementsManager.ReportProcessor.reports_api import process_tables_from_annual_reports
 from MyInvestementsManager.models import Investment, ListedCompany, \
     DailyTradeSummary, DetailedTrade, SectorIndex, SectorIndexNames, Dividend, \
     CompanyFinanceReportSumary
@@ -280,6 +279,6 @@ def loadLatestData(request):
 
 
 def extractFinancialReports(request):
-    process_annual_report_data()
+    process_tables_from_annual_reports()
 
     return HttpResponse("Success")
