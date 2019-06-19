@@ -15,7 +15,7 @@ def extract_annual_report_data(symbol):
         download_file(complete_url, "/tmp/temp_file.pdf")
         tables = extract_tables("/tmp/temp_file.pdf")
         metadata_one_report['tables'] = tables
-        print(tables.shape)
+        print(len(tables))
         all_tables.append(metadata_one_report)
 
         # Delete file
