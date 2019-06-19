@@ -10,11 +10,12 @@ def extract_annual_report_data(symbol):
     metadata = extract_annual_report_metadata(symbol)
     all_tables = list()
     for metadata_one_report in metadata:
+        print(metadata_one_report['name'])
         complete_url = URL_CDN + "/" + metadata_one_report['url']
-
         download_file(complete_url, "temp_file.pdf")
         tables = extract_tables("temp_file.pdf")
         metadata_one_report['tables'] = tables
+        print(tables.shape)
         all_tables.append(metadata_one_report)
 
     return all_tables
