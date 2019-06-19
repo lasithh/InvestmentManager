@@ -5,7 +5,7 @@ output
 nohup.out
 # Folder config file
 Desktop.ini
-
+venv
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
