@@ -8,6 +8,10 @@ def extract_tables(file_path):
     reader = pyPdf.PdfFileReader(fh)
     n = reader.getNumPages()
     fh.close()
+    print("**********************")
+    print("filepath: " + file_path)
+    print("pages: " + str(n))
+
     for i in range(n):
         df = read_pdf(file_path, pages=str(i + 1), multiple_tables=True)
         if df:
