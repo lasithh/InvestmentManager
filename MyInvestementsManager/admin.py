@@ -2,7 +2,7 @@ from django.contrib import admin
 from MyInvestementsManager.models import Investment, ListedCompany, \
     DailyTradeSummary, CompanyIssuedQuantitiesHistory, DetailedTrade, \
     InvestmentType, Currency, CompanyFinanceReportSumary, SectorIndexNames, \
-    SectorIndex, Dividend, DividendType
+    SectorIndex, Dividend, DividendType, ReportTables
 
 admin.site.register(Currency)
 admin.site.register(InvestmentType)
@@ -16,5 +16,6 @@ admin.site.register(SectorIndexNames)
 admin.site.register(SectorIndex)
 admin.site.register(Dividend)
 admin.site.register(DividendType)
+admin.site.register(ReportTables)
 
 # Register your models here.

@@ -11,6 +11,8 @@ def extract_tables(file_path):
     for i in range(n):
         df = read_pdf(file_path, pages=str(i + 1), multiple_tables=True)
         if df:
-            output[i] = df
-
+            list_of_tables = list()
+            for df_table in df:
+                list_of_tables.append(df_table.to_json())
+            output[i] = list_of_tables
     return output

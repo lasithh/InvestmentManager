@@ -109,7 +109,8 @@ class CompanyFinanceReportSumary(models.Model):
     devidendsPerShare = models.FloatField(default=0)
 
 class DividendType(models.Model):
-    name = models.CharField(max_length=20);
+    name = models.CharField(max_length=20)
+
     
 class Dividend(models.Model):
     company = models.ForeignKey(ListedCompany)
@@ -123,3 +124,10 @@ class Dividend(models.Model):
 
     def __str__(self):
         return " Company : " + self.company.symbol + " Type: " + self.type.name + " Amount: " + str(self.amountPerShare) + " announced date: " + str(self.announced_date) + " entitled date = " + str(self.entitled_date) + " payment date: " + str(self.payment_date)
+
+
+class ReportTables(models.Model):
+    company = models.ForeignKey(ListedCompany)
+    date = models.DateTimeField()
+    name = models.CharField(max_length=30)
+    tables = models.TextField()

@@ -1,6 +1,14 @@
-def store_report_tables(symbol, date, tables):
-    print(symbol)
-    print(date)
-    print(tables)
+import datetime
+
+from MyInvestementsManager.models import ReportTables
+
+
+def store_report_tables(company, date, name, tables):
+    print ("Storing: company " + company.symbol + " name: " + name)
+    ReportTables.objects.get_or_create(company=company,
+                                       date = datetime.datetime.fromtimestamp(date).strftime('%Y-%m-%d %H'),
+                                       name = name,
+                                       tables = tables
+                                       )
 
 
