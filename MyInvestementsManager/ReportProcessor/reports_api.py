@@ -9,7 +9,7 @@ def process_tables_from_annual_reports():
     for company in all_companies:
         print(company.symbol)
         tables_in_reports = extract_annual_report_data(company.symbol)
-        print("Number of reports = " + len(tables_in_reports))
+        print("Number of reports = " + str(len(tables_in_reports)))
         for tables_in_one_report in tables_in_reports:
             store_report_tables(company, tables_in_one_report['date'], tables_in_one_report['name'],
                                 tables_in_one_report['tables'])
