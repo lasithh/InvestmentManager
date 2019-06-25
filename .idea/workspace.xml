@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="17576f2e-61c8-478e-81f4-83a1ecd30909" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,23 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reports_store.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="reports_extractor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            <state relative-caret-position="194">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -38,13 +28,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reports_api.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reports_api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state relative-caret-position="237">
+              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding>
                 <element signature="e#0#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reports_store.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,7 +93,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
+            <state relative-caret-position="591">
               <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
             </state>
           </provider>
@@ -196,8 +198,8 @@
         <option value="$PROJECT_DIR$/MyInvestementsManager/admin.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_extractor.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/pdf_reader.py" />
-        <option value="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py" />
         <option value="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py" />
+        <option value="$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py" />
       </list>
     </option>
   </component>
@@ -239,7 +241,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="mode&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;models&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;mod&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;model&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;views&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/views.py&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;application&#9;null&#9;null&#10;store.&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/DataAccessModule/storeData.py" />
+    <property name="SearchEverywhereHistoryKey" value="models&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;mode&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;mod&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;model&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/models.py&#10;views&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/views.py&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;application&#9;null&#9;null&#10;store.&#9;FILE&#9;file:///Users/hapu/myprojects/InvestmentAnalyser/MyProject1/MyInvestementsManager/DataAccessModule/storeData.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -304,13 +306,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24806201" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44956413" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44956413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32905984" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44084683" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -375,9 +377,9 @@
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="135" />
+          <url>file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_extractor.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="136" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -390,7 +392,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="136" />
+      <option name="time" value="137" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -719,25 +721,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/main.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/pdf_reader.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,22 +734,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py">
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="591">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="e#0#94#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_store.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+        <state relative-caret-position="105">
+          <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInvestementsManager/ReportProcessor/reports_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
