@@ -17,7 +17,7 @@ def extract_annual_report_data(company):
          complete_url = URL_CDN + "/" + metadata_one_report['url']
          download_file(complete_url, "/tmp/temp_file.pdf")
 
-         if not is_report_exists():
+         if not is_report_exists(company, metadata_one_report['date'], metadata_one_report['name']):
             tables = extract_tables("/tmp/temp_file.pdf")
             store_report_tables(company, metadata_one_report['date'], metadata_one_report['name'],tables)
          else:
