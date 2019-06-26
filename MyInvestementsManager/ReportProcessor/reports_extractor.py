@@ -4,20 +4,24 @@ import os
 import time
 
 from MyInvestementsManager.ReportProcessor.pdf_reader import extract_tables
+from MyInvestementsManager.ReportProcessor.reports_store import store_report_tables, is_report_exists
 from MyInvestementsManager.util.ApplicationConstants import URL_CSE, URL_CDN
 from MyInvestementsManager.util.HTTPModule.HttpInterface import getDataByHttpsWithBody, download_file
 
 
-def extract_annual_report_data(symbol):
-     metadata = extract_annual_report_metadata(symbol)
+def extract_annual_report_data(company):
+     metadata = extract_annual_report_metadata(company.symbol)
      all_tables = list()
      for metadata_one_report in metadata:
          print("Downloading report: " + metadata_one_report['name'])
          complete_url = URL_CDN + "/" + metadata_one_report['url']
          download_file(complete_url, "/tmp/temp_file.pdf")
-         tables = extract_tables("/tmp/temp_file.pdf")
-         metadata_one_report['tables'] = tables
-         all_tables.append(metadata_one_report)
+
+         if not is_report_exists():
+            tables = extract_tables("/tmp/temp_file.pdf")
+            store_report_tables(company, metadata_one_report['date'], metadata_one_report['name'],tables)
+         else:
+             print("Report Exists. Company: " + company.symbol + "Name: " + metadata_one_report['name'])
 
          # Delete file
          os.remove("/tmp/temp_file.pdf")

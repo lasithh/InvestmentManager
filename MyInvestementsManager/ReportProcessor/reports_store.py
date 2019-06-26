@@ -10,4 +10,8 @@ def store_report_tables(company, date, name, tables):
                                        tables = tables
                                        )
 
+def is_report_exists(company, date, name):
+    return ReportTables.objects.filter(company=company, date = datetime.datetime.utcfromtimestamp(date / 1000.0),
+                                name = name).exists()
+
 
